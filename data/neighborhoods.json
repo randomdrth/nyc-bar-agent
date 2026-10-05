@@ -1,0 +1,32 @@
+{
+  "west_village": {
+    "name": "West Village",
+    "note": "14th St to Houston St, Hudson River to 6th Ave",
+    "polygon": [
+      [40.7380, -73.9963],
+      [40.7425, -74.0105],
+      [40.7290, -74.0112],
+      [40.7285, -74.0030]
+    ]
+  },
+  "east_village": {
+    "name": "East Village",
+    "note": "14th St to Houston St, Bowery/3rd Ave to the East River",
+    "polygon": [
+      [40.7330, -73.9875],
+      [40.7270, -73.9720],
+      [40.7190, -73.9770],
+      [40.7246, -73.9925]
+    ]
+  },
+  "upper_west_side": {
+    "name": "Upper West Side",
+    "note": "59th St to 110th St, Hudson River to Central Park West",
+    "polygon": [
+      [40.7681, -73.9819],
+      [40.7738, -73.9952],
+      [40.8055, -73.9700],
+      [40.7999, -73.9581]
+    ]
+  }
+}

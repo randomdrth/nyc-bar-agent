@@ -1,0 +1,4682 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "West Village"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.9963,
+              40.738
+            ],
+            [
+              -74.0105,
+              40.7425
+            ],
+            [
+              -74.0112,
+              40.729
+            ],
+            [
+              -74.003,
+              40.7285
+            ],
+            [
+              -73.9963,
+              40.738
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "East Village"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.9875,
+              40.733
+            ],
+            [
+              -73.972,
+              40.727
+            ],
+            [
+              -73.977,
+              40.719
+            ],
+            [
+              -73.9925,
+              40.7246
+            ],
+            [
+              -73.9875,
+              40.733
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Upper West Side"
+      },
+      "geometry": {
+        "type": "Polygon",
+        "coordinates": [
+          [
+            [
+              -73.9819,
+              40.7681
+            ],
+            [
+              -73.9952,
+              40.7738
+            ],
+            [
+              -73.97,
+              40.8055
+            ],
+            [
+              -73.9581,
+              40.7999
+            ],
+            [
+              -73.9819,
+              40.7681
+            ]
+          ]
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dante West Village",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0062505,
+          40.7352026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Greenwich Treehouse",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00035980000001,
+          40.7355824
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Art Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0034972,
+          40.7384694
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Johnny's Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.001677,
+          40.737869
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hudson Bar and Books",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0053039,
+          40.7385812
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hudson Hound",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0061111,
+          40.736111099999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St Jardim",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00284789999999,
+          40.7343755
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Garret",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.003783,
+          40.7323715
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Due West",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00323949999999,
+          40.734331499999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Galway Hooker Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0020067,
+          40.7345608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orient Express Cocktail Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0074551,
+          40.735747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Flannerys Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9998818,
+          40.7389356
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "WXOU Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0058212,
+          40.7354431
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Julius'",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0015246,
+          40.7345416
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Katana Kitten",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0064852,
+          40.7342547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "American Bar - New York",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0003959,
+          40.735064699999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Down the Hatch",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00163359999999,
+          40.732467199999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Beer Garage",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0054821,
+          40.7330647
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ty's Bar NYC",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00535219999999,
+          40.733134899999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Otheroom",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0080346,
+          40.7349704
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rockbar NYC",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0097278,
+          40.7327194
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wogies Bar & Grill , West Village",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0005877,
+          40.735382699999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Entwine Cocktail Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.007977,
+          40.737398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barrow's Pub",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00689899999999,
+          40.731578
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barrow Street Ale House",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0025296,
+          40.7326444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "LELABAR",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006554,
+          40.730384
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bar Pisellino",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0034603,
+          40.732934799999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Serpentine",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00062129999999,
+          40.7361254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grove Street Social",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0033181,
+          40.7332134
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Marie's Crisis Caf\u00e9",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00340229999999,
+          40.733221
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gottino Enoteca e Salumeria",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0004556,
+          40.7357702
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Stafili Wine Cafe",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0065965,
+          40.7373928
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ama Raw Bar West Village",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0039621,
+          40.7293501
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Stonewall Inn",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00216259999999,
+          40.7338326
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "BAR V",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.003548,
+          40.7311638
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Moonflower",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00148460000001,
+          40.736582899999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Henrietta Hudson",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0064209,
+          40.7310687
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Employees Only",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0061109,
+          40.733434599999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Do Not Disturb",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0041054,
+          40.737697
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "WEST10WEST",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0057112,
+          40.7336769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sip&Guzzle",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0024921,
+          40.731477500000004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Little Branch",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0050449,
+          40.730118
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Spaniard",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0021952,
+          40.7327473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dandelion",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00543569999999,
+          40.733406200000005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Downstairs at Drai's",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00194119999999,
+          40.739236999999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aubi & Ramsa",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0076004,
+          40.7399703
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kees",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.001396,
+          40.731832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bar Nena",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00460389999999,
+          40.7298848
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Perle Cocktail and Raw Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99987519999999,
+          40.7348777
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Coffee + Cocktails",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0058639,
+          40.7399278
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Turks & Frogs",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0073917,
+          40.735766700000006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Angel\u2019s Share",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00425940000001,
+          40.7329799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Keepers",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00412299999999,
+          40.7379113
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Felice on Hudson",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00587469999999,
+          40.737906699999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Grace's",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00222389999999,
+          40.739398
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Happiest Hour",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9996815,
+          40.7348417
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Walls\u00e9 Next Door",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0082135,
+          40.7352433
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dejavu",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0100037,
+          40.733046699999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Donna",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00168459999999,
+          40.7316508
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bobo",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0026304,
+          40.7344552
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bangkok Supper Club",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00573849999999,
+          40.739047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St Tropez West Village",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0039038,
+          40.737054
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le Dive West Village",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0015123,
+          40.7363455
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Lavaux",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0053442,
+          40.7383739
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MAMALI NYC",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0031254,
+          40.733495
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Codino",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0040626,
+          40.7297404
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CARTA Wine Bar New York",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00388749999999,
+          40.7295047
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "PATULA Wine Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0074565,
+          40.739600599999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "APERITIVO by CARTA",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9988927,
+          40.734949199999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nightingale",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0034562,
+          40.7302627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Orova Cafe & Wine Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0079604,
+          40.7322375
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Aria Wine Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00345469999999,
+          40.729147399999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "L'Accolade",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0039498,
+          40.7324838
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Radiant Caf\u00e9 & Wine Bar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0013903,
+          40.734024
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The C Cafe & Wine",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0058897,
+          40.7352786
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Demo",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0029971,
+          40.7299274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "b'artusi",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0058847,
+          40.733881499999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buvette",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00432839999999,
+          40.732625899999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Justine's on Hudson",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00607839999999,
+          40.7336903
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wilfie & Nell",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00307049999999,
+          40.7340642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Four Faced Liar",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0013889,
+          40.732222199999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fiddlesticks Pub",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00046499999999,
+          40.735879
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tavern On Jane",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0042589,
+          40.7382236
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Blind Tiger",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0032253,
+          40.7318858
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Village Tavern",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00417329999999,
+          40.7305845
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "White Horse Tavern",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.006192,
+          40.735697699999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Keg & Lantern West Village",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0042107,
+          40.730764
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kettle of Fish",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.002394,
+          40.7337968
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Brass Monkey",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00848309999999,
+          40.7407627
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bayard's Ale House",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0064028,
+          40.7343379
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Parkgate",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0019667,
+          40.732442999999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Warren",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0067112,
+          40.7331377
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cellar Dog",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0032027,
+          40.7336448
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The One Trick Pony",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00150599999999,
+          40.739163399999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Carmine Street Beers",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0036147,
+          40.7298395
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Corner Bistro",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.003741,
+          40.7380482
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fairfax",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0031358,
+          40.734351
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Standard Biergarten",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0079928,
+          40.7408378
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "New York Beer Dispensary",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00043769999999,
+          40.739284399999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arthur's Tavern",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0034518,
+          40.7332013
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Talea Beer Co. West Village",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00479519999999,
+          40.733136099999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Automatic Slim\u2019s",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0081522,
+          40.7363205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cubbyhole",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0037742,
+          40.737690099999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Duplex",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0024993,
+          40.733773299999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Judy Z\u2019s Sports Tavern & Kitchen",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.0048157,
+          40.7296988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rosemary's West Village",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9998009,
+          40.734836800000004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mixteca",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.001396,
+          40.731832
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Standard Grill",
+        "neighborhood": "west_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -74.00787629999999,
+          40.7406769
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ten Degrees Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98348,
+          40.7269497
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Drop Off Service",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9809209,
+          40.729913599999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Juke Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985612,
+          40.731088
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Library",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.986389,
+          40.7226196
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mama's Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9831628,
+          40.722622099999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "11th St. Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9812525,
+          40.7280546
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Big Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9864037,
+          40.727486899999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "One and One",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9881314,
+          40.723273999999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Augurs Well Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9836802,
+          40.727040099999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Eastpoint Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9830259,
+          40.7222292
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "AURA Tapas & Cocktail Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9860913,
+          40.726950599999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Headless Widow",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9863511,
+          40.726620499999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Summit Bar & Cafe",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97846,
+          40.725031
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bar Monto",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9899318,
+          40.726042299999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "KGB Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.989891,
+          40.7265091
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tile Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9858603,
+          40.727151
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Area 140 First Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98486489999999,
+          40.72783
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dream Baby Bar and Cocktail Parlour",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97987499999999,
+          40.72714
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "7B Horseshoe Bar aka Vazacs",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98141439999999,
+          40.7250535
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hidden Tiger",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98048539999999,
+          40.729821199999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The International Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98590089999999,
+          40.7264731
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Death & Co East Village",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9846452,
+          40.725919999999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kelly's Sports Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98591449999999,
+          40.7225274
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ace Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98286519999999,
+          40.7243881
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fish Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9894766,
+          40.7271025
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Wonderland Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9884895,
+          40.7270204
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "96 Tears",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98348510000001,
+          40.7258393
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Limo Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9829025,
+          40.7225107
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Book Club Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.983206,
+          40.723003999999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lucky",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9798419,
+          40.727255
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Lions Bar & Grill",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98514229999999,
+          40.7274064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ama Raw Bar East Village",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97937189999999,
+          40.7280242
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buena Vista Restaurant & Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9886355,
+          40.726813899999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bob\u2019s Bar NYC",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9854197,
+          40.7309674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bar Snack",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9885382,
+          40.726923299999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jones Street Wine Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.984274,
+          40.7261988
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bar Veloce",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98656629999999,
+          40.7307062
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Rake Wine Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98792519999999,
+          40.724656
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "DiVin Wine Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98624339999999,
+          40.7302245
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Accidental Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9788339,
+          40.7237441
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bibi Wine Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98356710000002,
+          40.723900199999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fat Buddha",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9805954,
+          40.7298049
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sake Bar Satsko",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9802093,
+          40.7245026
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sake Bar Decibel",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9877458,
+          40.729300599999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hard to Explain",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98560379999999,
+          40.729126099999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "HiLot",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9788238,
+          40.7238208
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Madeline's Martini",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9775392,
+          40.7263349
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Oddball",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9793478,
+          40.7279323
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Holiday Cocktail Lounge",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985732,
+          40.727955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Copper Still East Village",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9871679,
+          40.7295878
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lovers of Today",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9834216,
+          40.7258254
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bateman's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98807790000001,
+          40.7269931
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Please Don't Tell",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98374110000002,
+          40.7271371
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sweet Linda",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9908769,
+          40.724694799999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pineapple Club",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9832095,
+          40.7253444
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Little Rebel",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9854656,
+          40.7320414
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amor y Amargo",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9842719,
+          40.7257333
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Superbueno",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9885737,
+          40.7234473
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Wayland",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9778508,
+          40.7251329
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Motel No Tell",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9806069,
+          40.729735399999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mister Paradise",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.986222,
+          40.7267727
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Two Perrys",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9785271,
+          40.7248799
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Studio 151",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9780286,
+          40.7256585
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mayamezcal",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98818560000001,
+          40.7271235
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Goodnight Sonny",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985094,
+          40.7276202
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cooper's Craft & Cocktails",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9890629,
+          40.7269839
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Waiting on a Friend",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980738,
+          40.7294639
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sauced",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9902639,
+          40.725448899999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ruffian",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9841019,
+          40.7264264
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Immigrant",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985416,
+          40.728542999999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Art Laboratory",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9830447,
+          40.722917599999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nine Cases",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98821509999999,
+          40.7246617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salumeria Rosi East Village",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9786603,
+          40.7291442
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Soda Club",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98408189999999,
+          40.7256613
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nudibranch",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9857285,
+          40.7274205
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Maiden Lane",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9799755,
+          40.7270314
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gomi Korean wine Bar",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9812623,
+          40.728806999999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Giano",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98416,
+          40.726212200000006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Adore",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9875806,
+          40.7268273
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Il Posto Accanto",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9840517,
+          40.7224092
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alphabet City Beer Co.",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9789528,
+          40.7236833
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ladybird",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9845333,
+          40.726680099999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Supper",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9852071,
+          40.722955299999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Fabulae Italian wine",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9831177,
+          40.723362099999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "McSorley\u2019s Old Ale House",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9896791,
+          40.7288053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Conor's Goat",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98606339999999,
+          40.722963799999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Conall's Public House",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98776339999999,
+          40.724972
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The York",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97941030000001,
+          40.7278642
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Penny Farthing",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9875483,
+          40.732388900000004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Grafton",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98527519999999,
+          40.7272259
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "12th Street Ale House",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985573,
+          40.731023199999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "St. Dymphna's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9835768,
+          40.7264391
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Spotted Owl Tavern",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9809747,
+          40.729892
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mary O's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.985222,
+          40.723282999999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Scratcher",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9904637,
+          40.727686600000006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Long Pour",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9871459,
+          40.7296506
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Doc Holliday's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98299,
+          40.72726
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whiskey Town",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.99021309999999,
+          40.7258509
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bull McCabes",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.988308,
+          40.729045
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sly Fox",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98715,
+          40.7289167
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cherry Tavern",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98431219999999,
+          40.7258174
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "d.b.a.",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.987991,
+          40.72432690000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lucy's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9830509,
+          40.7270179
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Banshee",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9853309,
+          40.728176399999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Josie's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9829505,
+          40.724871
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Hairy Lemon",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98336189999999,
+          40.722486800000006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Mona's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.978372,
+          40.729179599999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Standings",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.988579,
+          40.7283142
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Burp Castle",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9885774,
+          40.7283732
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bua",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9838067,
+          40.7268537
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Royale",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97786599999999,
+          40.725806999999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Double Down Saloon",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98574099999999,
+          40.722516
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Blue & Gold Tavern",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9862831,
+          40.727325
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Paradise Lost",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9884302,
+          40.727254200000004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sophie's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9838372,
+          40.724798199999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Last Resort",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9818349,
+          40.72996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "B-Side",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97852999999999,
+          40.7249955
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Niagara",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98346140000001,
+          40.725913399999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Otto's Shrunken Head",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9786985,
+          40.7294629
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "2A",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9860427,
+          40.7229989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Spike's",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980462,
+          40.7300514
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Berlin",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9860427,
+          40.7229989
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Barcade",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98953929999999,
+          40.72911560000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Craft + Carry Saint Marks",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9841393,
+          40.726934
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "A10",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9818324,
+          40.728089399999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Kingston Hall",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9872627,
+          40.729503699999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Romeos",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98408189999999,
+          40.7268969
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "11 Tigers",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9781845,
+          40.7290747
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jackdaw",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9855862,
+          40.7318571
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "El Camino",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9853499,
+          40.7278987
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "La Linea",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9885007,
+          40.7235161
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Downtown Social",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98738759999999,
+          40.729528300000005
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Solas",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9880826,
+          40.7293818
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lydia\u2019s",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9880268,
+          40.7234079
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "345 Cantina",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98643919999999,
+          40.7266608
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bobby's Night Out",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9780487,
+          40.7254621
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "MONO+MONO",
+        "neighborhood": "east_village"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9881049,
+          40.7254016
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Broadway Dive",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9690754,
+          40.7979406
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dive 106",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9658536,
+          40.8007864
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Nobody Told Me",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9651925,
+          40.8008064
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Hamilton",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9644004,
+          40.8027674
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bob's Your Uncle",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96286169999999,
+          40.7988421
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Ellington | NYC",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9682423,
+          40.800806
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amity Hall Uptown",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96465409999999,
+          40.8022664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tap a Keg",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9684499,
+          40.800335499999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dive Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97069479999999,
+          40.7939548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lion's Head Tavern",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96418369999999,
+          40.802235499999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Upside Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97411,
+          40.789457
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "e's BAR",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9754856,
+          40.7867058
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Calaveras NYC",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9623648,
+          40.799571799999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Prohibition",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.972764,
+          40.7852428
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Suite",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.964501,
+          40.802645
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Dead Poet",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9773209,
+          40.78496080000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Hoptimist",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977963,
+          40.784102999999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dive 75",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9777173,
+          40.779636599999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Smoke Jazz & Supper Club",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9682369,
+          40.801110099999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Throwback",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9713636,
+          40.7932012
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bodega 88",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9710403,
+          40.787522599999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arthouse Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9803859,
+          40.7821594
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Caledonia Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9778419,
+          40.7841154
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "City Coffee & Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9637097,
+          40.798515099999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Amsterdam Ale House",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9799412,
+          40.781423499999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Dakota Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9783988,
+          40.77753010000001
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jake's Dilemma",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9777082,
+          40.7843586
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dublin House",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9792219,
+          40.783842
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Buceo 95",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9711111,
+          40.7936111
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Gin Mill",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.977537,
+          40.784754
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Scarlet Lounge",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97677569999999,
+          40.7855688
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vanguard Wine Bar (Upper West Side)",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9830566,
+          40.7763129
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vin Sur Vingt Wine Bar - Upper West Side",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9727989,
+          40.7848882
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Hi Life Bar & Grill",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97631129999999,
+          40.7855601
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ellington in the Park",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97192199999999,
+          40.8025996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Pico De Gallo Bar & Kitchen",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9698463,
+          40.795178899999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Jacob's Pickles",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9690457,
+          40.7911551
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Dark Bullet Sake & Oyster Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9808312,
+          40.7780463
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Zizi Wine Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981884,
+          40.7757803
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Trattoria iL Gusto Wine Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96977580000001,
+          40.789298699999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "CLAIRE'S WINE BAR",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9609863,
+          40.7990533
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vanguard Wine Bar (The Ansonia)",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98218349999999,
+          40.7803152
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Talia's Steakhouse and Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97214029999999,
+          40.7919997
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Vin Sur Vingt Wine Bar - Riverside Blvd",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98985909999999,
+          40.7756885
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Ashford & Simpson's Sugar Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98387410000001,
+          40.7793548
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Crave Fishbar Upper West Side | Raw Bar & Seafood restaurant",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9777849,
+          40.784271
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Owl's Tail",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98088589999999,
+          40.7809794
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Allure Cocktail Lounge",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9811603,
+          40.782424999999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Wallace Lounge",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98190989999999,
+          40.7819052
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "222 Thai Speakeasy",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97945610000001,
+          40.7833293
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Le Vin Coeur",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97516310000002,
+          40.783375299999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tiki Chick",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9754304,
+          40.7868177
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Lilly's Cocktail and Wine",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9784501,
+          40.777093199999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Alice Speakeasy",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97398079999999,
+          40.789639099999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Speakeasy at The Gin Mill",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9773867,
+          40.784745099999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Empire Rooftop",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9826783,
+          40.7713523
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Shalel",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9794058,
+          40.7760901
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Da Capo",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9774656,
+          40.779654300000004
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Consulate - UWS",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9724287,
+          40.785832299999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Cafe Luxembourg",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9831418,
+          40.7774232
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Tarallucci e Vino Upper West Side",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97349,
+          40.784365
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Sipsteria UWS",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9696878,
+          40.7953038
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Morty's Wine & Beer Bar",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9904633,
+          40.7718602
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bin 71",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97923899999999,
+          40.776492999999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Osteria Cotta",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9726719,
+          40.785524599999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Whole Foods Wine Store",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96683999999999,
+          40.7941299
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Salumeria Rosi Upper West Side",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.980857,
+          40.779368999999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Panineria - Upper West Side",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9734072,
+          40.7902053
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Arte Cafe",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9788193,
+          40.778137799999996
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Felice Columbus",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.979355,
+          40.776916
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Bellini",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.973303,
+          40.784664
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Malachy's Irish Pub",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97899699999999,
+          40.777747700000006
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "George Keeley",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.97598599999999,
+          40.785837
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Westland Roe",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.981527,
+          40.7782547
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Blondies Sports",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9791073,
+          40.7832617
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "5 Napkin Burger",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9780435,
+          40.787122
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Gebhard's Beer Culture",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.98321899999999,
+          40.778946
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Craft+Carry Upper West Side",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9768625,
+          40.785481999999995
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Beer Run UWS",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9717038,
+          40.7867868
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Noche Mexicana",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9681429,
+          40.7974295
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "Serafina West 105 (UWS)",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.96833939999999,
+          40.8004853
+        ]
+      }
+    },
+    {
+      "type": "Feature",
+      "properties": {
+        "name": "The Grand Feast",
+        "neighborhood": "upper_west_side"
+      },
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.9678638,
+          40.7977973
+        ]
+      }
+    }
+  ]
+}
