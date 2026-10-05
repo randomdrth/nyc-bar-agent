@@ -7,9 +7,16 @@ message written for the model: what went wrong and what to try instead.
 import itertools
 import json
 import re
+import time as _time
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor
+from concurrent.futures import TimeoutError as FuturesTimeout
 
 import bar_data as bd
+import places
 from bar_data import ToolError
+from hh_deals import extract_deals
+from hh_extract import crawl_site, find_hh_snippets, is_not_own_site
 
 STARTING_SOON_MINUTES = 90
 MAX_RESULTS = 10
@@ -37,6 +44,18 @@ def _matches_style(bar: dict, style: str) -> bool:
     if set(bar.get("types", [])) & STYLE_TYPES[style]:
         return True
     return any(STYLE_WORDS[style].search(sp["item"]) for d in bar.get("deals", []) for sp in d.get("specials", []))
+
+
+def _check_price(max_price) -> int | None:
+    if max_price is None:
+        return None
+    try:
+        max_price = int(max_price)
+    except (TypeError, ValueError):
+        raise ToolError("max_price must be a number from 1 ($) to 4 ($$$$).")
+    if not 1 <= max_price <= 4:
+        raise ToolError("max_price must be from 1 ($) to 4 ($$$$).")
+    return max_price
 
 
 def _resolve_when(day: str | None, time: str | None) -> tuple[int, int, list[str]]:
@@ -86,19 +105,13 @@ def get_happy_hours(neighborhood: str, day: str | None = None, time: str | None 
         if style not in ("any", *STYLE_TYPES):
             raise ToolError(f"Unknown style '{style}'. Use one of: any, cocktail, wine, beer. "
                             f"Dive bars are not a filter; use find_bars and judge from the results.")
-        if max_price is not None:
-            try:
-                max_price = int(max_price)
-            except (TypeError, ValueError):
-                raise ToolError("max_price must be a number from 1 ($) to 4 ($$$$).")
-            if not 1 <= max_price <= 4:
-                raise ToolError("max_price must be from 1 ($) to 4 ($$$$).")
+        max_price = _check_price(max_price)
         day_idx, t, notes = _resolve_when(day, time)
     except ToolError as e:
         return json.dumps({"error": str(e)})
 
     now_list, soon_list = [], []
-    candidates = [b for b in bd.load()["bars"]
+    candidates = [b for b in bd.all_bars()  # saved data plus bars verified live this session
                   if b.get("neighborhood") == hood and b.get("deals") and _matches_style(b, style)]
     price_unknown = 0
     if max_price is not None:
@@ -394,6 +407,251 @@ def _explain(best: dict, plans: list[dict]) -> str:
     return "Shortest walking route. None of these bars has a verified happy hour during this time."
 
 
+# --- Tool: find_bars ---
+
+MAX_FIND_RESULTS = 8
+SERVES_FIELD = {"cocktail": "serves_cocktails", "wine": "serves_wine", "beer": "serves_beer"}
+FEATURES = {"outdoor_seating": "outdoor seating", "live_music": "live music", "good_for_groups": "good for groups"}
+
+
+def _style_ok(bar: dict, style: str, live: bool) -> bool:
+    if style == "any":
+        return True
+    serves = bar.get(SERVES_FIELD[style])
+    if serves is True or set(bar.get("types", [])) & STYLE_TYPES[style]:
+        return True
+    if serves is False:
+        return False
+    # Google gave no answer: live results were already searched for this style; saved data uses deal specials
+    return True if live else _matches_style(bar, style)
+
+
+def _features(bar: dict) -> list[str]:
+    out = [label for field, label in (("serves_cocktails", "cocktails"), ("serves_wine", "wine"),
+                                      ("serves_beer", "beer")) if bar.get(field)]
+    out += [label for field, label in FEATURES.items() if bar.get(field)]
+    return out
+
+
+def _happy_hour_status(place_id: str, day_idx: int) -> str:
+    bar = bd.get_bar(place_id)
+    saved = bd.load()["by_id"].get(place_id)
+    if bar and bar.get("deals"):
+        live = any(d.get("live") for d in bar["deals"])
+        today = [d for d in bar["deals"] if bd.DAY_CODES[day_idx] in d.get("days", [])]
+        tag = " (verified live this session)" if live else ""
+        if today:
+            return "; ".join(f"{d['label']}: {bd.deal_hours_label(d)}" for d in today[:3]) + tag
+        all_days = sorted({c for d in bar["deals"] for c in d.get("days", [])}, key=bd.DAY_CODES.index)
+        return f"verified happy hour on other days ({bd.days_label(all_days)}){tag}"
+    if saved is not None:
+        return "checked its website, no verified happy hour"
+    if bar and bar.get("website"):
+        return "not in our happy hour data; check_happy_hour_online can check its website"
+    return "not in our happy hour data"
+
+
+def find_bars(neighborhood: str, style: str = "any", query: str | None = None, day: str | None = None,
+              time: str | None = None, max_price: int | None = None, outdoor_seating: bool = False,
+              live_music: bool = False, good_for_groups: bool = False) -> str:
+    try:
+        hood = bd.resolve_neighborhood(neighborhood)
+        style = (style or "any").strip().lower()
+        if style not in ("any", *STYLE_TYPES):
+            raise ToolError(f"Unknown style '{style}'. Use any, cocktail, wine, or beer. For dive bars, "
+                            f"rooftops, speakeasies and similar, put the word in 'query'.")
+        max_price = _check_price(max_price)
+        query = (query or "").strip()
+        if len(query) > 60:
+            raise ToolError("Keep 'query' short, a few words like 'dive', 'rooftop', or 'jazz'.")
+        open_filter = bool(day or time)
+        day_idx, t, notes = _resolve_when(day, time)
+    except ToolError as e:
+        return json.dumps({"error": str(e)})
+
+    wanted = [f for f, on in (("outdoor_seating", outdoor_seating), ("live_music", live_music),
+                              ("good_for_groups", good_for_groups)) if on]
+    hood_name = bd.neighborhood_name(hood)
+    style_word = "" if style == "any" else style
+    text_query = " ".join(x for x in (query, style_word, f"bar in {hood_name}, Manhattan, New York") if x)
+
+    source, fallback_reason = "google_places_live", None
+    try:
+        bars = places.search(hood, text_query)
+        for b in bars:
+            bd.register_live_place(b)
+    except places.PlacesError as e:
+        source, fallback_reason = "local_fallback", str(e)
+        bars = [b for b in bd.load()["bars"] if b.get("neighborhood") == hood]
+    live = source == "google_places_live"
+
+    kept, dropped = [], Counter()
+    for b in bars:
+        if not _style_ok(b, style, live):
+            dropped[f"not a {style} spot"] += 1
+            continue
+        if live and any(b.get(f) is not True for f in wanted):
+            dropped["missing a requested feature"] += 1
+            continue
+        level = bd.price_level(b)
+        if max_price is not None and level is not None and level > max_price:
+            dropped["over the price limit"] += 1
+            continue
+        hours = bd.open_intervals(b)
+        if hours is None:
+            if open_filter:
+                dropped["hours unknown"] += 1
+                continue
+            status = "hours unknown"
+        else:
+            interval = bd.containing_interval(hours, t)
+            when = "then" if open_filter else "now"
+            if interval:
+                status = f"open {when}, until {bd.fmt_time(interval[1], day_idx)}"
+            else:
+                if open_filter:
+                    dropped["closed then"] += 1
+                    continue
+                nxt = bd.next_opening(hours, t)
+                status = f"closed now, opens {bd.fmt_time(nxt, day_idx)}" if nxt is not None else "closed"
+        kept.append((b, status))
+
+    if not live:  # live results keep Google's relevance order ("dive" should rank dive bars first)
+        kept.sort(key=lambda x: (-(x[0].get("rating") or 0), -(x[0].get("rating_count") or 0)))
+    results = []
+    for b, status in kept[:MAX_FIND_RESULTS]:
+        item = {**_bar_basics(b, with_neighborhood=False), "reviews": b.get("rating_count"),
+                "address": b.get("address"), "status": status,
+                "happy_hour": _happy_hour_status(b["place_id"], day_idx)}
+        if b.get("summary"):
+            item["description"] = b["summary"]
+        features = _features(b)
+        if features:
+            item["features"] = features
+        if b.get("website"):
+            item["website"] = b["website"]
+        results.append(item)
+
+    result = {
+        "source": source,
+        "query": {"neighborhood": hood_name, "style": style, "search_words": query or None,
+                  "open_at": f"{bd.DAY_NAMES[day_idx]} {bd.fmt_clock(t)}" if open_filter else None,
+                  "max_price": ("$" * max_price) if max_price else None,
+                  "features": [FEATURES[f] for f in wanted] or None},
+        "results": results,
+        "counts": {"found": len(bars), "matched": len(kept), "shown": len(results)},
+    }
+    if dropped:
+        result["filtered_out"] = dict(dropped)
+    if open_filter and notes:
+        result["assumptions"] = notes
+    if not live:
+        ignored = [x for x, on in (("the search words", bool(query)), ("feature filters", bool(wanted))) if on]
+        result["fallback_reason"] = fallback_reason
+        result["note"] = ("Live Google search unavailable, so these results come from our saved data."
+                          + (f" Could not apply {' and '.join(ignored)} without live data." if ignored else ""))
+    if not results:
+        result["suggestion"] = ("Nothing matched. Remove a filter (style, price, features), try another "
+                                "time, or search a different neighborhood.")
+    return json.dumps(result)
+
+
+# --- Tool: check_happy_hour_online ---
+
+CHECK_BUDGET_SECONDS = 40
+CHECK_CACHE_SECONDS = 24 * 3600
+_check_cache: dict[str, tuple[float, dict]] = {}
+_check_pool = ThreadPoolExecutor(max_workers=2)
+
+
+def _check_pipeline(bar: dict) -> dict:
+    crawl = crawl_site(bar["website"], cache_dir=None, max_pages=3)
+    pages = [p["final_url"] for p in crawl["pages"]]
+    if crawl["status"] == "fetch_failed":
+        return {"status": "site_unreachable", "detail": crawl.get("error"),
+                "message": f"Could not load {bar['name']}'s website ({crawl.get('error')}). "
+                           f"It may block automated visits or be down. Say you could not check it."}
+    if crawl["status"] != "ok":
+        return {"status": "site_unreadable", "pages_checked": pages,
+                "message": f"{bar['name']}'s website shows almost no readable text (it is likely built with "
+                           f"JavaScript or images). Say deals could not be read from it."}
+    snippets = find_hh_snippets(crawl["pages"])
+    if not snippets:
+        return {"status": "no_deal_text", "pages_checked": pages,
+                "message": f"No happy hour or deal text on the {len(pages)} pages checked. That does not "
+                           f"prove there is none; it may be on Instagram or a menu image."}
+    found = extract_deals(bar["name"], bar.get("address", ""), snippets, cache_dir=None)
+    if not found["llm_ok"]:
+        return {"status": "analysis_failed", "pages_checked": pages,
+                "message": "Found deal text but could not analyze it right now. Try again later."}
+    verified = [d for d in found["deals"] if d["status"] == "verified"]
+    unconfirmed = sum(1 for d in found["deals"] if d["status"] == "needs_review")
+    return {"status": "verified" if verified else "no_deal", "pages_checked": pages,
+            "verified": verified, "unconfirmed": unconfirmed}
+
+
+def check_happy_hour_online(bar: str) -> str:
+    try:
+        record = bd.find_bar(bar)
+    except ToolError as e:
+        return json.dumps({"error": f"{e} If the bar came from find_bars, pass its place_id."})
+    pid, name = record["place_id"], record["name"]
+
+    hit = _check_cache.get(pid)
+    if hit and _time.time() - hit[0] < CHECK_CACHE_SECONDS:
+        return json.dumps({**hit[1], "cached": True})
+
+    website = record.get("website")
+    if not website:
+        return json.dumps({"error": f"Google lists no website for {name}, so there is nothing to check. "
+                                    f"Tell the user to check the bar's Instagram or call ahead."})
+    if is_not_own_site(website):
+        return json.dumps({"error": f"{name}'s listed website is {website}, a social or booking page "
+                                    f"that cannot be read. Tell the user to check it directly."})
+
+    saved = bd.load()["by_id"].get(pid)
+    on_file = ("verified happy hour on file" if saved and saved.get("deals") and
+               not any(d.get("live") for d in saved["deals"])
+               else "checked before, none verified" if saved else "not in saved data")
+
+    future = _check_pool.submit(_check_pipeline, record)
+    try:
+        outcome = future.result(timeout=CHECK_BUDGET_SECONDS)
+    except FuturesTimeout:
+        return json.dumps({"bar": name, "status": "timed_out",
+                           "message": f"{name}'s website took over {CHECK_BUDGET_SECONDS} seconds. "
+                                      f"Say it could not be checked right now."})
+    except Exception as e:
+        return json.dumps({"bar": name, "status": "error",
+                           "message": f"Checking failed ({type(e).__name__}). Say it could not be checked."})
+
+    result = {"bar": name, "place_id": pid, "website": website, "saved_data": on_file, **outcome}
+    if outcome["status"] == "verified":
+        deals = outcome.pop("verified")
+        result.pop("verified", None)
+        result["deals"] = [{"deal": d["label"], "days": bd.days_label(d["days"]),
+                            "hours": bd.deal_hours_label(d), **{k: v for k, v in _deal_info(d).items()
+                                                                if k != "deal"},
+                            "evidence": d["evidence"]} for d in deals]
+        attached = bd.add_live_deals(pid, deals)
+        result["message"] = (
+            f"Found {len(deals)} verified deal(s) on the website. "
+            + ("They are now used by get_happy_hours and plan_bar_crawl for this session."
+               if attached else "Our saved verified deals for this bar are kept for planning.")
+        )
+    elif outcome["status"] == "no_deal":
+        result.pop("verified", None)
+        result["message"] = "The website mentions deals or hours, but no happy hour with clear days and times."
+    if outcome.get("unconfirmed"):
+        result["unconfirmed_deals"] = (f"{outcome['unconfirmed']} more deal(s) found but not confirmed by "
+                                       f"our checks; do not present them as fact.")
+    result.pop("unconfirmed", None)
+
+    if outcome["status"] in ("verified", "no_deal", "no_deal_text", "site_unreadable"):
+        _check_cache[pid] = (_time.time(), result)
+    return json.dumps(result)
+
+
 # --- Schemas: what the model sees ---
 
 TOOLS = [
@@ -463,9 +721,70 @@ TOOLS = [
     },
 ]
 
+TOOLS += [
+    {
+        "type": "function",
+        "function": {
+            "name": "find_bars",
+            "description": (
+                "Search bars in one neighborhood with live Google data: rating, price, whether it is open at a "
+                "given time, a short description, features (cocktails, wine, beer, outdoor seating, live music, "
+                "good for groups), and our happy hour status for that day. Use this for any request about kinds of "
+                "bars, vibes, or what is open, and to find candidates that have no happy hour. Covers the West "
+                "Village, East Village, and Upper West Side. The 'source' field says whether results are live "
+                "or from saved data."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "neighborhood": {"type": "string",
+                                     "description": "'West Village', 'East Village', or 'Upper West Side' "
+                                                    "(aliases WV, EV, UWS work)."},
+                    "style": {"type": "string", "enum": ["any", "cocktail", "wine", "beer"],
+                              "description": "Kind of drinks. Default 'any'."},
+                    "query": {"type": "string",
+                              "description": "A few extra search words, e.g. 'dive', 'rooftop', 'speakeasy', "
+                                             "'jazz', 'quiet'. Optional."},
+                    "day": {"type": "string",
+                            "description": "Only bars open on this day, e.g. 'Friday'. Use with time. Optional."},
+                    "time": {"type": "string",
+                             "description": "Only bars open at this time, e.g. '11pm'. Optional."},
+                    "max_price": {"type": "integer", "description": "Price cap, 1 ($) to 4 ($$$$). Optional."},
+                    "outdoor_seating": {"type": "boolean", "description": "Only bars with outdoor seating."},
+                    "live_music": {"type": "boolean", "description": "Only bars with live music."},
+                    "good_for_groups": {"type": "boolean", "description": "Only bars good for groups."},
+                },
+                "required": ["neighborhood"],
+            },
+        },
+    },
+    {
+        "type": "function",
+        "function": {
+            "name": "check_happy_hour_online",
+            "description": (
+                "Read one bar's own website right now and extract its happy hours, checking every deal against "
+                "the page text. Slow (up to 40 seconds), so use it only when the user asks about a specific bar "
+                "that has no happy hour data (find_bars says 'not in our happy hour data') or asks to recheck "
+                "one. Verified deals found here become available to get_happy_hours and plan_bar_crawl."
+            ),
+            "parameters": {
+                "type": "object",
+                "properties": {
+                    "bar": {"type": "string",
+                            "description": "The bar's place_id from find_bars or get_happy_hours, or its exact name."},
+                },
+                "required": ["bar"],
+            },
+        },
+    },
+]
+
 TOOL_MAP = {
     "get_happy_hours": get_happy_hours,
     "plan_bar_crawl": plan_bar_crawl,
+    "find_bars": find_bars,
+    "check_happy_hour_online": check_happy_hour_online,
 }
 
 

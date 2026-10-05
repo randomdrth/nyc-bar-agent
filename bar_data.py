@@ -66,8 +66,26 @@ _live_places: dict[str, dict] = {}
 
 
 def register_live_place(place: dict) -> None:
-    if place.get("place_id") and place["place_id"] not in load()["by_id"]:
-        _live_places[place["place_id"]] = {"deals": [], "pending_deals": [], **place}
+    """Remember a bar from a live search so the other tools can use it. Keeps deals found earlier."""
+    pid = place.get("place_id")
+    if not pid or pid in load()["by_id"]:
+        return
+    existing = _live_places.get(pid, {})
+    _live_places[pid] = {**place, "deals": existing.get("deals", []), "pending_deals": []}
+
+
+def add_live_deals(place_id: str, deals: list[dict]) -> bool:
+    """Attach deals verified live by check_happy_hour_online. Curated deals are never replaced.
+
+    Returns True if the deals were attached.
+    """
+    bar = get_bar(place_id)
+    if bar is None or not deals:
+        return False
+    if bar.get("deals") and not any(d.get("live") for d in bar["deals"]):
+        return False  # curated, already verified
+    bar["deals"] = [{**d, "live": True} for d in deals]
+    return True
 
 
 def all_bars() -> list[dict]:
@@ -355,6 +373,38 @@ def walk_minutes(a: dict, b: dict) -> int:
     """Estimated walking minutes between two bars."""
     meters = walk_meters(a, b)
     return 0 if meters < 1 else max(1, math.ceil(meters / WALK_METERS_PER_MIN))
+
+
+# --- Formatting for the model ---
+
+def days_label(codes: list[str]) -> str:
+    """['mon','tue','wed','thu','fri'] -> 'Mon-Fri'; all seven -> 'Daily'; gaps -> 'Mon, Wed, Fri'."""
+    idx = sorted(DAY_CODES.index(c) for c in codes if c in DAY_CODES)
+    if len(idx) == 7:
+        return "Daily"
+    runs, start = [], None
+    for i, d in enumerate(idx):
+        if start is None:
+            start = d
+        if i + 1 == len(idx) or idx[i + 1] != d + 1:
+            runs.append((start, d))
+            start = None
+    parts = []
+    for a, b in runs:
+        name_a, name_b = DAY_NAMES[a][:3], DAY_NAMES[b][:3]
+        parts.append(name_a if a == b else (f"{name_a}, {name_b}" if b == a + 1 else f"{name_a}-{name_b}"))
+    return ", ".join(parts)
+
+
+def deal_hours_label(deal: dict) -> str:
+    """'4:00 PM to 7:00 PM', 'opening to 7:00 PM', '9:00 PM to close'."""
+    def one(value: str) -> str:
+        if value == "open":
+            return "opening"
+        if value == "close":
+            return "close"
+        return fmt_clock(_hhmm(value))
+    return f"{one(deal['start'])} to {one(deal['end'])}"
 
 
 # --- Formatting specials for the model ---
