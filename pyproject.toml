@@ -11,6 +11,7 @@ dependencies = [
     "requests>=2.31",
     "beautifulsoup4>=4.15.0",
     "pypdf>=6.19.0",
+    "tzdata>=2026.5",
 ]
 
 [dependency-groups]
