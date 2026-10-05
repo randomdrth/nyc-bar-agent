@@ -3,10 +3,16 @@
 Stage 1, discover: find bars in each neighborhood with Places API Text Search,
 keep only those inside the neighborhood polygon, save to data/stage_discover.json.
 
+Stage 2, crawl: fetch each bar's own website and keep the text that looks like
+deals (happy hours, half price nights, timed specials). Saves to
+data/stage_crawl.json. Raw pages are cached in data/cache/, so reruns are fast.
+
 Usage:
     uv run scripts/build_hh_dataset.py discover
     uv run scripts/build_hh_dataset.py discover --neighborhood west_village
     uv run scripts/build_hh_dataset.py preview
+    uv run scripts/build_hh_dataset.py crawl --top 5      # pilot: 5 per neighborhood
+    uv run scripts/build_hh_dataset.py crawl              # every discovered bar
 """
 
 import argparse
@@ -14,6 +20,8 @@ import json
 import os
 import sys
 import time
+from collections import Counter
+from concurrent.futures import ThreadPoolExecutor, as_completed
 from datetime import datetime, timezone
 from pathlib import Path
 
@@ -21,9 +29,15 @@ import requests
 from dotenv import load_dotenv
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))  # so we can import hh_extract from the project root
+
+from hh_extract import crawl_site, find_hh_snippets  # noqa: E402
+
 DATA = ROOT / "data"
+CACHE_DIR = DATA / "cache.nosync"
 NEIGHBORHOODS_FILE = DATA / "neighborhoods.json"
 DISCOVER_FILE = DATA / "stage_discover.json"
+CRAWL_FILE = DATA / "stage_crawl.json"
 PREVIEW_FILE = DATA / "preview.geojson"
 
 PLACES_URL = "https://places.googleapis.com/v1/places:searchText"
@@ -48,6 +62,9 @@ QUERIES = ["bar", "cocktail bar", "wine bar", "pub", "dive bar", "beer bar", "ha
 MAX_PAGES_PER_QUERY = 3          # 20 results per page, 60 max per query
 MAX_REQUESTS_PER_RUN = 120       # hard stop on top of the GCP daily quota
 PAUSE_SECONDS = 0.5
+
+TOP_N_DEFAULT = 1000             # effectively no cap: crawl every discovered bar
+CRAWL_WORKERS_DEFAULT = 6        # different bars in parallel, one site at a time each
 
 BAR_TYPES = {
     "bar", "pub", "wine_bar", "cocktail_bar", "night_club", "brewery", "brewpub",
@@ -175,12 +192,14 @@ def discover_neighborhood(hood_key: str, hood: dict, api_key: str) -> list[dict]
 
 
 def run_discover(only: str | None) -> None:
+    neighborhoods = json.loads(NEIGHBORHOODS_FILE.read_text())
+    if only and only not in neighborhoods:
+        sys.exit(f"Unknown neighborhood '{only}'. Options: {', '.join(neighborhoods)}")
+
     load_dotenv(ROOT / ".env")
     api_key = os.environ.get("PLACES_API_KEY")
     if not api_key:
         sys.exit("PLACES_API_KEY is missing. Add it to .env in the project root.")
-
-    neighborhoods = json.loads(NEIGHBORHOODS_FILE.read_text())
     targets = {only: neighborhoods[only]} if only else neighborhoods
 
     # Keep results for neighborhoods we are not rerunning
@@ -198,6 +217,90 @@ def run_discover(only: str | None) -> None:
     }, indent=2))
     print(f"\nSaved {len(places)} bars to {DISCOVER_FILE.relative_to(ROOT)}")
     print(f"Places API requests this run: {request_count}")
+
+
+# --- Stage 2: crawl ---
+
+def select_top(places: list[dict], top_n: int) -> list[dict]:
+    """Top N bars per neighborhood by review count."""
+    by_hood: dict[str, list[dict]] = {}
+    for p in places:
+        by_hood.setdefault(p["neighborhood"], []).append(p)
+    chosen = []
+    for items in by_hood.values():
+        items.sort(key=lambda p: p.get("rating_count") or 0, reverse=True)
+        chosen += items[:top_n]
+    return chosen
+
+
+def crawl_one(place: dict) -> dict:
+    result = crawl_site(place.get("website"), cache_dir=CACHE_DIR)
+    snippets = find_hh_snippets(result["pages"]) if result["status"] == "ok" else []
+    return {
+        "place_id": place["place_id"],
+        "name": place["name"],
+        "neighborhood": place["neighborhood"],
+        "website": place.get("website"),
+        "crawl_status": result["status"],
+        "error": result.get("error"),
+        "pages_fetched": [p["final_url"] for p in result["pages"]],
+        "deal_text_found": bool(snippets),
+        "says_happy_hour": any(s["strong_hh"] for s in snippets),
+        "snippets": snippets,
+    }
+
+
+def crawl_label(r: dict) -> str:
+    if r["deal_text_found"]:
+        return "DEAL TEXT (says happy hour)" if r["says_happy_hour"] else "DEAL TEXT"
+    return "no deal text" if r["crawl_status"] == "ok" else r["crawl_status"]
+
+
+def run_crawl(top_n: int, workers: int) -> None:
+    if not DISCOVER_FILE.exists():
+        sys.exit("Run the discover stage first.")
+    places = json.loads(DISCOVER_FILE.read_text())["places"]
+    chosen = select_top(places, top_n)
+    CACHE_DIR.mkdir(parents=True, exist_ok=True)
+
+    cap_note = "all bars" if top_n >= 1000 else f"top {top_n} per neighborhood"
+    print(f"Crawling {len(chosen)} bars ({cap_note}), {workers} at a time...\n")
+    results = []
+    with ThreadPoolExecutor(max_workers=workers) as pool:
+        futures = {pool.submit(crawl_one, p): p for p in chosen}
+        for i, future in enumerate(as_completed(futures), 1):
+            place = futures[future]
+            try:
+                r = future.result()
+            except Exception as e:  # one bad site should never stop the run
+                r = {
+                    "place_id": place["place_id"], "name": place["name"],
+                    "neighborhood": place["neighborhood"], "website": place.get("website"),
+                    "crawl_status": "error", "error": f"{type(e).__name__}: {e}",
+                    "pages_fetched": [], "deal_text_found": False,
+                    "says_happy_hour": False, "snippets": [],
+                }
+            results.append(r)
+            print(f"[{i}/{len(chosen)}] {r['name']}: {crawl_label(r)}")
+
+    results.sort(key=lambda r: (r["neighborhood"], r["name"]))
+    CRAWL_FILE.write_text(json.dumps({
+        "generated_at": datetime.now(timezone.utc).isoformat(timespec="seconds"),
+        "top_n": top_n,
+        "bars": results,
+    }, indent=2))
+
+    print("\nSummary")
+    statuses = Counter(r["crawl_status"] for r in results)
+    for status, count in statuses.most_common():
+        print(f"  {status}: {count}")
+    for hood in sorted({r["neighborhood"] for r in results}):
+        hood_rows = [r for r in results if r["neighborhood"] == hood]
+        with_deals = sum(r["deal_text_found"] for r in hood_rows)
+        with_hh = sum(r["says_happy_hour"] for r in hood_rows)
+        print(f"  {hood}: {with_deals}/{len(hood_rows)} have deal text "
+              f"({with_hh} say 'happy hour')")
+    print(f"\nSaved to {CRAWL_FILE.relative_to(ROOT)}")
 
 
 # --- Preview: polygons + bars as GeoJSON for geojson.io ---
@@ -237,11 +340,18 @@ def main() -> None:
 
     sub.add_parser("preview", help="Write polygons and bars to GeoJSON for checking")
 
+    c = sub.add_parser("crawl", help="Fetch bar websites and find deal text")
+    c.add_argument("--top", type=int, default=TOP_N_DEFAULT,
+                   help="Bars per neighborhood, by review count (default: all)")
+    c.add_argument("--workers", type=int, default=CRAWL_WORKERS_DEFAULT)
+
     args = parser.parse_args()
     if args.stage == "discover":
         run_discover(args.neighborhood)
     elif args.stage == "preview":
         run_preview()
+    elif args.stage == "crawl":
+        run_crawl(args.top, args.workers)
 
 
 if __name__ == "__main__":

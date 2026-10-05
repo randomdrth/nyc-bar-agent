@@ -9,11 +9,11 @@ dependencies = [
     "litellm>=1.50",
     "google-cloud-aiplatform>=1.40.0",
     "requests>=2.31",
+    "beautifulsoup4>=4.15.0",
+    "pypdf>=6.19.0",
 ]
 
 [dependency-groups]
 dev = [
-    "beautifulsoup4>=4.15.0",
-    "pypdf>=6.19.0",
     "python-dotenv>=1.2.3",
 ]
