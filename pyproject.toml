@@ -1,0 +1,19 @@
+[project]
+name = "nyc-bar-agent"
+version = "0.1.0"
+description = "A tool-calling agent that plans bar nights in Manhattan: finds bars, checks happy hours, and builds a walkable route."
+requires-python = ">=3.10"
+dependencies = [
+    "fastapi>=0.109.0",
+    "uvicorn>=0.27.0",
+    "litellm>=1.50",
+    "google-cloud-aiplatform>=1.40.0",
+    "requests>=2.31",
+]
+
+[dependency-groups]
+dev = [
+    "beautifulsoup4>=4.15.0",
+    "pypdf>=6.19.0",
+    "python-dotenv>=1.2.3",
+]
