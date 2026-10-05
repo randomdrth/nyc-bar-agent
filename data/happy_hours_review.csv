@@ -1,0 +1,651 @@
+﻿place_id,bar,neighborhood,bar_status,deal_index,deal_status,failed_checks,label,days,start,end,specials,conditions,evidence,source_url,website
+ChIJdZwTq3JZwokR4Q4p_NhBL5o,A10,east_village,verified,4,needs_review,times_not_in_quote; time_unreadable,Daily wine discount,"mon,tue,wed,thu,fri,sat,sun",,,drink: bottles of wine 20% off,,20% off on bottles of wine from 10 PM onwards every day,https://a10kitchen.com/-food-menu?source=pop_up&spot_id=101313&destination=food_menu&promotion=custom_promotion,https://a10kitchen.com/
+ChIJXxVeoOxZwokRQmeffWUTe3c,Bobby's Night Out,east_village,verified,1,needs_review,days_mismatch,Daily Happy Hour,wed,open,20:00,drink: Cocktails $10; drink: Sangrita $13; drink: Michelada or Bloody Mary $12; drink: Well Liquor $7; drink: Wine $7; drink: House Wine $7; drink: House Prosecco $7; drink: Mimosa $10; drink: Draft Beer $7; drink: Estrella Lager $7; drink: Montauk IPA $7; drink: Guinness $8; drink: Shots $7; drink: Pitchers $55; drink: Margarita Rocks $65; drink: Coors Light $24; drink: Estrella Galicia $30; drink: Montauk $32; drink: Coors Light Pitcher & 4 Draft Shots $36; drink: Buckets $70,,Daily Happy Hour ... Wed-Frid until 8pm,https://www.bobbysnightout.com/menu-1,http://www.bobbysnightout.com/
+ChIJGSGOWZtZwokRlIEcbFo4FjE,Cooper's Craft & Cocktails,east_village,verified,0,needs_review,quote_crosses_days,Early week happy hour,"mon,tue,wed",12:00,21:00,drink: draft cocktails $10; drink: beer and shot special $12; drink: draft selections $7; drink: non-alcoholic ipa can $5,,Happy Hour!!! Monday - Wednesday 12-9pm DRAFT COCKTAILS $10 ... $12 Beer and Shot Special: Narragansett and Paddys Whiskey | Modelo and Blanco Tequila $7 Draft Selections: Sixpoint Crisp Pilsner | Allagash White | Singlecut 18 Watt $5 Good Time Brewing Non-Alcoholic IPA Can — 12oz,https://www.coopersnyc.com/menus,http://coopersnyc.com/
+ChIJ3QOehXlZwokRG1DFARVnUAw,DiVin Wine Bar,east_village,needs_review,0,needs_review,time_unreadable; days_text_not_found,Wine O'Clock Early Happy Hour,"mon,tue,wed,thu,fri,sat,sun",,,drink: glass of wine $10; drink: bottle of wine $40,from our selection,"4-6PM | $10 GLASS — $40  
+BOTTLE   
+from our selection",https://www.divinwinebar.com/_files/ugd/6287a6_838c416bebda4560a2391831e88acad6.pdf,https://divinwinebar.com/
+ChIJ3QOehXlZwokRG1DFARVnUAw,DiVin Wine Bar,east_village,needs_review,1,needs_review,days_text_not_found,Wine O'Clock Late Night Special,"mon,tue,wed,thu,fri,sat,sun",22:00,close,drink: any bottle of wine 25% off,,"10PM-CLOSE | 25% OFF   
+any bottle of wine",https://www.divinwinebar.com/_files/ugd/6287a6_838c416bebda4560a2391831e88acad6.pdf,https://divinwinebar.com/
+ChIJ3cQg-F9ZwokRB0Ac0zeG-3g,Limo Bar,east_village,needs_review,0,needs_review,times_not_in_quote; time_unreadable,Sunday happy hour,sun,,,,,Happy Hour All Day Sunday,https://www.limobarnyc.com/,https://limobarnyc.com/
+ChIJqTZuJztZwokREqOEPG7VOSM,Motel No Tell,east_village,verified,0,needs_review,days_mismatch,Happy hour,"mon,fri",16:00,19:00,drink: poolside frozen cocktails $10; drink: select wines $9; drink: select cold beers $6; drink: select cocktails & margs $10; food: margarita pizzas $10,,"HAPPY HOUR
+MON. - FRI 4-7 PM
+sunday
+4pm-close
+HAPPY HOUR DEALS:
+$10 POOLSIDE FROZEN COCKTAILS
+$9 SELECT WINES
+$6 SELECT COLD BEERS
+$10 SELECT COCKTAILS & MARGS
+$10 MARGARITA PIZZAS",https://www.motelnotellnyc.com/,https://www.motelnotellnyc.com/
+ChIJYTk0bpxZwokRHBO9UXg4SVA,Solas,east_village,needs_review,0,needs_review,days_text_not_found,Happy Hour,"tue,wed,thu,fri,sat,sun",16:00,21:00,,,"Happy Hour
+4 pm - 9 pm",https://www.solasbar.com/location/solas-bar/,http://solasbar.com/
+ChIJbXN71WhZwokRNTk55-ScVWY,Superbueno,east_village,needs_review,0,needs_review,no_specials_listed,La Buena Hora Monday-Thursday,"mon,tue,wed,thu",16:00,19:00,,,"LA BUENA HORA: MONDAY-THURSDAY, 4-7pm",https://www.superbuenonyc.com/menu,http://www.superbuenonyc.com/
+ChIJbXN71WhZwokRNTk55-ScVWY,Superbueno,east_village,needs_review,1,needs_review,no_specials_listed,La Buena Hora Friday,fri,14:00,19:00,,,"LA BUENA HORA: ... FRIDAY, 2pm-7pm",https://www.superbuenonyc.com/menu,http://www.superbuenonyc.com/
+ChIJHxWhQZxZwokR-RvDGYYuey4,The Copper Still East Village,east_village,needs_review,0,needs_review,multi_location,Weekday happy hour,"mon,tue,wed,thu,fri",open,19:00,,,Happy Hour Open-7pm Mon-Fri,https://www.thecopperstillnyc.com/east-village-menus,http://www.thecopperstillnyc.com/
+ChIJexlyuIRZwokRMjxZG0P5x28,Whiskey Town,east_village,verified,0,needs_review,quote_crosses_days; times_not_in_quote; time_unreadable,Monday all day happy hour,mon,,,drink: labatt & WELL SHOT $10; drink: WELL DRINK $8; drink: WINE $8; drink: PICKLE BACK $8,,monday ALL DAY ... $10 labatt & WELL SHOT ... $8 WELL DRINK ... $8 WINE ... $8 PICKLE BACK,https://whiskeytownbar.com/menu/,http://whiskeytownbar.com/
+ChIJ9Yjyxk5ZwokRhq1BaK2T0eA,11 Tigers,east_village,verified,0,verified,,Monday - Thursday happy hour,"mon,tue,wed,thu",17:00,19:00,,,"Monday - Thursday:
+5 PM - 12 AM
+Happy Hour 5 PM - 7PM",https://www.11tigersnyc.com/,https://www.11tigersnyc.com/
+ChIJ9Yjyxk5ZwokRhq1BaK2T0eA,11 Tigers,east_village,verified,1,verified,,Friday happy hour,fri,17:00,19:00,,,"Friday:
+5 PM - 2 AM
+Happy Hour 5 PM - 7 PM",https://www.11tigersnyc.com/,https://www.11tigersnyc.com/
+ChIJ9Yjyxk5ZwokRhq1BaK2T0eA,11 Tigers,east_village,verified,2,verified,,Saturday happy hour,sat,16:00,19:00,,,"Saturday:
+4 PM - 2 AM
+Happy Hour 4 PM - 7 PM",https://www.11tigersnyc.com/,https://www.11tigersnyc.com/
+ChIJ9Yjyxk5ZwokRhq1BaK2T0eA,11 Tigers,east_village,verified,3,verified,,Sunday happy hour,sun,16:00,19:00,,,"Sunday:
+4 PM - 12 AM
+Happy Hour 4 PM - 7 PM",https://www.11tigersnyc.com/,https://www.11tigersnyc.com/
+ChIJ_xErSXZZwokRwbc-783K-RQ,11th St. Bar,east_village,verified,0,verified,,The Jack Smead Happy Hour,mon,14:00,19:00,"drink: all Beer, Draft Wine, and House Liquor $2 off",,"Monday October 5th ... The ""Jack Smead"" Happy Hour - $2 off all Beer, Draft Wine, and House Liquor ... 02:00 PM - 07:00 PM",https://11thstbar.com/new-york-east-village-11th-st-bar-happy-hours-specials,http://11thstbar.com/
+ChIJ_xErSXZZwokRwbc-783K-RQ,11th St. Bar,east_village,verified,1,verified,,The Jack Smead Happy Hour,tue,14:00,19:00,"drink: all Beer, Draft Wine, and House Liquor $2 off",,"Tuesday October 6th ... The ""Jack Smead"" Happy Hour - $2 off all Beer, Draft Wine, and House Liquor ... 02:00 PM - 07:00 PM",https://11thstbar.com/new-york-east-village-11th-st-bar-happy-hours-specials,http://11thstbar.com/
+ChIJ_xErSXZZwokRwbc-783K-RQ,11th St. Bar,east_village,verified,2,verified,,The Jack Smead Happy Hour,wed,14:00,19:00,"drink: all Beer, Draft Wine, and House Liquor $2 off",,"Wednesday October 7th ... The ""Jack Smead"" Happy Hour - $2 off all Beer, Draft Wine, and House Liquor ... 02:00 PM - 07:00 PM",https://11thstbar.com/new-york-east-village-11th-st-bar-happy-hours-specials,http://11thstbar.com/
+ChIJ_xErSXZZwokRwbc-783K-RQ,11th St. Bar,east_village,verified,3,verified,,The Jack Smead Happy Hour,thu,14:00,19:00,"drink: all Beer, Draft Wine, and House Liquor $2 off",,"Thursday October 8th ... The ""Jack Smead"" Happy Hour - $2 off all Beer, Draft Wine, and House Liquor ... 02:00 PM - 07:00 PM",https://11thstbar.com/new-york-east-village-11th-st-bar-happy-hours-specials,http://11thstbar.com/
+ChIJdZwTq3JZwokR4Q4p_NhBL5o,A10,east_village,verified,0,verified,,Monday - Thursday happy hour,"mon,tue,wed,thu",16:00,19:00,,,Monday - Thursday: 4 PM - 7PM,https://a10kitchen.com/,https://a10kitchen.com/
+ChIJdZwTq3JZwokR4Q4p_NhBL5o,A10,east_village,verified,1,verified,,Friday happy hour,fri,16:00,19:00,,,Friday: 4 PM-7PM,https://a10kitchen.com/,https://a10kitchen.com/
+ChIJdZwTq3JZwokR4Q4p_NhBL5o,A10,east_village,verified,2,verified,,Saturday happy hour,sat,15:00,19:00,,,Saturday: 3PM - 7 PM,https://a10kitchen.com/,https://a10kitchen.com/
+ChIJdZwTq3JZwokR4Q4p_NhBL5o,A10,east_village,verified,3,verified,,Sunday happy hour,sun,15:00,19:00,,,Sunday: 3PM - 7 PM,https://a10kitchen.com/,https://a10kitchen.com/
+ChIJ5QOQdQtZwokRSy16jOl97Uc,AURA Tapas & Cocktail Bar,east_village,verified,0,verified,,Happy Hour,"tue,wed,thu,fri,sat,sun",16:00,18:00,drink: Draft Beer $7; drink: Wine $10; drink: Craft & Classic Cocktails $14; food: BBQ Pulled Pork Slider $12.95; food: Truffle Mac & Cheese $12.95; food: Crispy Calamari $12.95; food: Turkish Meatballs $12.95; food: Truffle Fries $10,,"Happy Hour
+TUESDAY - SUNDAYS
+4 PM - 6 PM
+- Draft Beer 7
+- Wine 10
+- Craft & Classic Cocktails 14
+Appetizers
+- BBQ Pulled Pork Slider 12.95
+- Truffle Mac & Cheese 12.95
+- Crispy Calamari 12.95
+- Turkish Meatballs 12.95
+- Truffle Fries 10",https://www.aurabarandkitchen.com/,http://www.aurabarandkitchen.com/
+ChIJHy_IZZ1ZwokRXhUrTBKa-Qg,Augurs Well Bar,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",open,19:00,food: Burger + Fries + Beer $15; drink: Draft Beer $2 off; drink: Well Drinks $2 off; drink: Wine $2 off,,"Monday - Friday | Open - 7pm
+Burger + Fries + Beer
+Cheeseburger topped with grilled onions, pickles. Served with curly fries & a pint of house lager
+$15
+Draft Beer
+$2 OFF
+Well Drinks
+$2 OFF
+Wine
+$2 OFF",https://www.augurswellbar.com/happy-hour,http://www.augurswellbar.com/
+ChIJW5JA_yVZwokRrVVE7_Vb7CA,Bar Snack,east_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,sun",14:00,18:00,,,"HAPPY HOUR
+Sunday - Thursday
+, 2 p.m. – 6 p.m.",https://www.barsnacknyc.com/,https://www.barsnacknyc.com/
+ChIJuYFSmoJZwokRP8xONEPWgEA,Bibi Wine Bar,east_village,verified,0,verified,,Everyday Happy Hour,"mon,tue,wed,thu,fri,sat,sun",open,20:00,drink: Glass $11; drink: Bottle $32; drink: Beer $6; food: Bites $8,,Everyday until 8pm ... Glass Bottle Beer Bites 11 32 6 8,https://www.bibiwinebar.com/,http://www.bibiwinebar.com/
+ChIJXxVeoOxZwokRQmeffWUTe3c,Bobby's Night Out,east_village,verified,0,verified,,Daily Happy Hour,"mon,tue",open,close,drink: Cocktails $10; drink: Sangrita $13; drink: Michelada or Bloody Mary $12; drink: Well Liquor $7; drink: Wine $7; drink: House Wine $7; drink: House Prosecco $7; drink: Mimosa $10; drink: Draft Beer $7; drink: Estrella Lager $7; drink: Montauk IPA $7; drink: Guinness $8; drink: Shots $7; drink: Pitchers $55; drink: Margarita Rocks $65; drink: Coors Light $24; drink: Estrella Galicia $30; drink: Montauk $32; drink: Coors Light Pitcher & 4 Draft Shots $36; drink: Buckets $70,,Daily Happy Hour ... Mon-Tues until Close,https://www.bobbysnightout.com/menu-1,http://www.bobbysnightout.com/
+ChIJXxVeoOxZwokRQmeffWUTe3c,Bobby's Night Out,east_village,verified,2,verified,,Daily Happy Hour,sun,12:00,15:00,drink: Cocktails $10; drink: Sangrita $13; drink: Michelada or Bloody Mary $12; drink: Well Liquor $7; drink: Wine $7; drink: House Wine $7; drink: House Prosecco $7; drink: Mimosa $10; drink: Draft Beer $7; drink: Estrella Lager $7; drink: Montauk IPA $7; drink: Guinness $8; drink: Shots $7; drink: Pitchers $55; drink: Margarita Rocks $65; drink: Coors Light $24; drink: Estrella Galicia $30; drink: Montauk $32; drink: Coors Light Pitcher & 4 Draft Shots $36; drink: Buckets $70,,Daily Happy Hour ... Sun 12pm- 3pm,https://www.bobbysnightout.com/menu-1,http://www.bobbysnightout.com/
+ChIJ3XASaJ1ZwokR4zn6EyjizVM,Bua,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",open,19:00,drink: Listed Cocktails $12; drink: Draft Beer $2 off; drink: Carafes House Wines $20; drink: Well $10,,"HAPPY HOUR
+MON - FRI until 7pm ... $12 (HH) Listed Cocktails
+$2 Off Draft Beer
+$20 Carafes House Wines
+$10 Well",https://www.buabar.com/,http://www.buabar.com/
+ChIJBT-bg5xZwokRKJJbJvvRz-w,Burp Castle,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",17:00,19:00,drink: tap beers $1 off,,Happy Hours are Monday thru Friday from 5pm-7pm. $1 off tap beers.,https://burpcastlenyc.wordpress.com/,http://burpcastlenyc.wordpress.com/
+ChIJr13vPC9ZwokRBbeMPKOThNM,Conor's Goat,east_village,verified,0,verified,,Weekday happy hour,mon,16:00,19:00,drink: food & drink specials,,"Monday ... Happy Hour:
+Food & drink specials.
+HAPPY HOUR 4-7pm",http://conorsgoat.com/,http://conorsgoat.com/
+ChIJr13vPC9ZwokRBbeMPKOThNM,Conor's Goat,east_village,verified,1,verified,,Weekday happy hour,tue,16:00,19:00,drink: food & drink specials,,"Tuesday
+Happy Hour:
+Food & drink specials.
+HAPPY HOUR 4-7pm",http://conorsgoat.com/,http://conorsgoat.com/
+ChIJr13vPC9ZwokRBbeMPKOThNM,Conor's Goat,east_village,verified,2,verified,,Weekday happy hour,wed,16:00,19:00,drink: food & drink specials,,"Wednesday
+Happy Hour:
+Food & drink specials.
+HAPPY HOUR 4-7pm",http://conorsgoat.com/,http://conorsgoat.com/
+ChIJr13vPC9ZwokRBbeMPKOThNM,Conor's Goat,east_village,verified,3,verified,,Weekday happy hour,thu,16:00,19:00,drink: food & drink specials,,"Thursday
+Happy Hour:
+Food & drink specials.
+HAPPY HOUR 4-7pm",http://conorsgoat.com/,http://conorsgoat.com/
+ChIJr13vPC9ZwokRBbeMPKOThNM,Conor's Goat,east_village,verified,4,verified,,Weekday happy hour,fri,16:00,19:00,drink: food & drink specials,,"Friday
+Happy Hour:
+Food & drink specials.
+HAPPY HOUR 4-7pm",http://conorsgoat.com/,http://conorsgoat.com/
+ChIJGSGOWZtZwokRlIEcbFo4FjE,Cooper's Craft & Cocktails,east_village,verified,1,verified,,Late week happy hour,"thu,fri",12:00,19:00,drink: draft cocktails $10; drink: beer and shot special $12; drink: draft selections $7; drink: non-alcoholic ipa can $5,,Happy Hour!!! ... Thursday & Friday 12-7pm DRAFT COCKTAILS $10 ... $12 Beer and Shot Special: Narragansett and Paddys Whiskey | Modelo and Blanco Tequila $7 Draft Selections: Sixpoint Crisp Pilsner | Allagash White | Singlecut 18 Watt $5 Good Time Brewing Non-Alcoholic IPA Can — 12oz,https://www.coopersnyc.com/menus,http://coopersnyc.com/
+ChIJGSGOWZtZwokRlIEcbFo4FjE,Cooper's Craft & Cocktails,east_village,verified,2,verified,,Espresso Mondays,mon,12:00,19:00,drink: espresso martinis $10; food: sandwiches $10; drink: select happy hour cocktails $10,all day & night,Daily Specials ***** 12PM-7PM ***** ESPRESSO MONDAYS— $10 Espresso Martinis all day & night. $10 Sandwiches. $10 Select Happy Hour Cocktails.,https://www.coopersnyc.com/menus,http://coopersnyc.com/
+ChIJGSGOWZtZwokRlIEcbFo4FjE,Cooper's Craft & Cocktails,east_village,verified,3,verified,,Taco & Tequila Tuesday,tue,12:00,19:00,drink: select happy hour cocktails $10; drink: house margaritas $10; food: fish tacos $3,"fish tacos are max 5 per order, with purchase of a drink",Daily Specials ***** 12PM-7PM ***** TACO & TEQUILA TUESDAY— $10 Select Happy Hour Cocktails. $10 House Margaritas. $3 Fish Tacos*,https://www.coopersnyc.com/menus,http://coopersnyc.com/
+ChIJGSGOWZtZwokRlIEcbFo4FjE,Cooper's Craft & Cocktails,east_village,verified,4,verified,,Wednesday daily special,wed,12:00,19:00,drink: select happy hour cocktails $10; food: sandwiches $10,,Daily Specials ***** 12PM-7PM ***** WEDNESDAY— $10 Select Happy Hour Cocktails. $10 Sandwiches.,https://www.coopersnyc.com/menus,http://coopersnyc.com/
+ChIJGSGOWZtZwokRlIEcbFo4FjE,Cooper's Craft & Cocktails,east_village,verified,5,verified,,Thursday daily special,thu,12:00,19:00,drink: select happy hour cocktails $10; drink: narragansett cans $5; food: sandwiches $10,,Daily Specials ***** 12PM-7PM ***** THURSDAY— $10 Select Happy Hour Cocktails. $5 Narragansett Cans. $10 Sandwiches.,https://www.coopersnyc.com/menus,http://coopersnyc.com/
+ChIJGSGOWZtZwokRlIEcbFo4FjE,Cooper's Craft & Cocktails,east_village,verified,6,verified,,Friday daily special,fri,12:00,19:00,drink: select happy hour cocktails $10; food: sandwiches $10,,Daily Specials ***** 12PM-7PM ***** FRIDAY— $10 Select Happy Hour Cocktails. $10 Sandwiches.,https://www.coopersnyc.com/menus,http://coopersnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",open,19:00,drink: the entire bar 1/2 off; food: slider $3,,HAPPY HOUR MONDAY-FRIDAY 1/2 OFF THE ENTIRE BAR $3 Slider (Open - 7pm),https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,1,verified,,Monday night specials,mon,19:00,close,drink: bottles and cans $4; food: wing $1,in-house only | 5-wing minimum | 1 flavor per 5 wings,MONDAY $4 BOTTLES AND CANS (7pm - close) $1 WING NIGHT *in-house only | 5-wing minimum | 1 flavor per 5 wings*,https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,2,verified,,Tuesday night specials,tue,19:00,close,drink: hard seltzers & teas 1/2 price; drink: jameson shots $6; food: taco $2,in house food only,TUESDAY 1/2 PRICE HARD SELTZERS & TEAS $6 JAMESON SHOTS $2 TACO NIGHT (7pm-close) (in house food only),https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,3,verified,,Wednesday night specials,wed,19:00,close,drink: drafts 1/2 price; drink: barker espresso martinis $7; drink: green tea shots $5,,WEDNESDAY 1/2 PRICE DRAFTS $7 BARKER ESPRESSO MARTINIS $5 GREEN TEA SHOTS (7pm - close),https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,4,verified,,Thursday draft night,thu,19:00,close,drink: draft $2,"Bud Light, Mich Ultra, Coors Light, Truly Wild Berry Spiked Seltzer","Thursday $2 DRAFT NIGHT!! (Bud Light, Mich Ultra, Coors Light, Truly Wild Berry Spiked Seltzer) (7pm - close)",https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,5,verified,,Friday night specials,fri,19:00,close,drink: michelob ultra & nutrl vodka seltzer cans $5,,Friday $5 MICHELOB ULTRA & NUTRL VODKA SELTZER CANS (7pm - close),https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,6,verified,,Saturday early specials,sat,open,19:00,"drink: orange crushes, aperol spritz & red bull white peach spritz $7; drink: bottles and cans $5",,"SATURDAY $7 ORANGE CRUSHES, APEROL SPRITZ & RED BULL WHITE PEACH SPRITZ $5 BOTTLES AND CANS (Open - 7pm)",https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,7,verified,,Saturday late specials,sat,19:00,close,drink: michelob ultra & nutrl vodka seltzer cans $5,,SATURDAY ... $5 MICHELOB ULTRA & NUTRL VODKA SELTZER CANS (7pm - close),https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJf0AsgTxZwokRiE7wZTUENp0,Downtown Social,east_village,verified,8,verified,,Sunday early specials,sun,open,close,drink: bottles and cans $5; drink: tullamore dew shots $6,,Sunday $5 BOTTLES AND CANS $6 TULLAMORE DEW SHOTS (Open - Close),https://www.downtownsocialnyc.com/specials/,https://www.downtownsocialnyc.com/
+ChIJOZG9QXZZwokRR2wgat94HWE,Gomi Korean wine Bar,east_village,verified,0,verified,,Happy Hour,"tue,wed,thu,fri,sun",16:30,19:00,,,"HAPPY HOUR
+Sun & Tues- Fri
+4:30-7",https://www.gomikoreanwinebar.com/main-menu,http://gomikoreanwinebar.com/
+ChIJm8vZD51ZwokR-5pyz5U7Omg,Goodnight Sonny,east_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri",16:00,18:00,,,HAPPY HOUR is MONDAY-FRIDAY from 4pm to 6pm,https://www.goodnightsonnynyc.com/,http://goodnightsonnynyc.com/
+ChIJZyhu1alZwokRDu4FC-wriY4,Hard to Explain,east_village,verified,0,verified,,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",17:00,19:00,,,Happy Hour Daily 5 - 7,https://www.hardtoexplain.co/,http://hardtoexplain.co/
+ChIJD7hZXdpZwokRKvpxeBGGqlQ,Hidden Tiger,east_village,verified,0,verified,,Sunday happy hour,sun,18:00,20:00,drink: cocktails $13; drink: espresso martini $13; drink: lychee martini & more! $13; food: wings & bao buns $8; food: shisito peppers & edamame! $5,,Sunday October 4th ... COCKTAILS $13! ... BAR BITES ... $8 WINGS & BAO BUNS ... $5 SHISITO PEPPERS ... 06:00 PM - 08:00 PM,https://hiddentigernyc.com/new-york-east-village-hidden-tiger-happy-hours-specials,http://hiddentigernyc.com/
+ChIJD7hZXdpZwokRKvpxeBGGqlQ,Hidden Tiger,east_village,verified,1,verified,,Monday happy hour,mon,16:00,18:00,,,Monday October 5th ... Happy Hour ... 04:00 PM - 06:00 PM,https://hiddentigernyc.com/new-york-east-village-hidden-tiger-happy-hours-specials,http://hiddentigernyc.com/
+ChIJD7hZXdpZwokRKvpxeBGGqlQ,Hidden Tiger,east_village,verified,2,verified,,Wednesday happy hour,wed,18:00,20:00,drink: cocktails $13; drink: espresso martini $13; drink: lychee martini & more! $13; food: wings & bao buns $8; food: shisito peppers & edamame! $5,,Wednesday October 7th ... COCKTAILS $13! ... BAR BITES ... $8 WINGS & BAO BUNS ... $5 SHISITO PEPPERS ... 06:00 PM - 08:00 PM,https://hiddentigernyc.com/new-york-east-village-hidden-tiger-happy-hours-specials,http://hiddentigernyc.com/
+ChIJD7hZXdpZwokRKvpxeBGGqlQ,Hidden Tiger,east_village,verified,3,verified,,Thursday happy hour,thu,18:00,20:00,drink: cocktails $13; drink: espresso martini $13; drink: lychee martini & more! $13; food: wings & bao buns $8; food: shisito peppers & edamame! $5,,Thursday October 8th ... COCKTAILS $13! ... BAR BITES ... $8 WINGS & BAO BUNS ... $5 SHISITO PEPPERS ... 06:00 PM - 08:00 PM,https://hiddentigernyc.com/new-york-east-village-hidden-tiger-happy-hours-specials,http://hiddentigernyc.com/
+ChIJD28DfJ5ZwokRpyv9AXrO6no,Juke Bar,east_village,verified,0,verified,,Happy hour,"mon,tue,wed,thu,fri,sun",17:00,19:00,drink: Select Cocktails $10; drink: House Spirits $7; drink: Wine $7; drink: Beer $7,,"HAPPY HOUR
+SUNDAY - FRIDAY | 5-7PM
+Select Cocktails
+$10.00
+House Spirits
+$7.00
+Wine
+$7.00
+Beer
+$7.00",https://eastvillage.jukebarnyc.com/drinks/,http://eastvillage.jukebarnyc.com/
+ChIJN1zwQJxZwokRNFh2jY9GrVM,Kingston Hall,east_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri,sat",16:00,20:00,"drink: BEER, PROSECCO & WELL DRINKS BUY 1 GET 1",,"✧HAPPY HOUR✧ ... BEER, PROSECCO & WELL DRINKS BUY 1 GET 1 MON-SAT 4-8PM",https://www.kingstonhall.com/,http://www.kingstonhall.com/
+ChIJN1zwQJxZwokRNFh2jY9GrVM,Kingston Hall,east_village,verified,1,verified,,Happy Hour,sun,15:00,20:00,"drink: BEER, PROSECCO & WELL DRINKS BUY 1 GET 1",,"✧HAPPY HOUR✧ ... BEER, PROSECCO & WELL DRINKS BUY 1 GET 1 ... SUN 3-8PM",https://www.kingstonhall.com/,http://www.kingstonhall.com/
+ChIJ4erQS9dZwokRRAK6XSV74sg,Little Rebel,east_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri",15:00,19:00,"drink: Rebel Margarita $9; drink: James Dean $9; drink: The Escobar $9; drink: Cruel Summer $9; food: Blue Point Oysters $1; drink: Seltzers, Ciders, & Rebel Lager $6",,"Monday – Friday
+3pm – 7pm
+Rebel Margarita – $9
+Altos Tequila, Agave, Lime
+James Dean – $9
+Makers Mark, Mr Black, Sweet Vermouth, Tobacco Tincture
+The Escobar – $9
+Absolute Vanilla Vodka, Mr Black, Cold Brew
+Cruel Summer- $9
+Absolute Vodka, Strawberry, Cucumber, Mint
+Blue Point Oysters – $1
+Seltzers, Ciders, & Rebel Lager – $6",https://littlerebelnyc.com/happy-hour-menu/,http://www.littlerebelnyc.com/
+ChIJ4erQS9dZwokRRAK6XSV74sg,Little Rebel,east_village,verified,1,verified,,Late Happy Hour,"mon,tue,wed,thu",22:00,02:00,drink: Espresso Martinis $10; drink: Old Fashioned $10; drink: Wines $10; drink: Rebel Lager $6,,"Monday – Thursday
+10pm – 2am
+Espresso Martinis – $$10
+Old Fashioned – $$10
+Wines – $$10
+Rebel Lager – $$6",https://littlerebelnyc.com/happy-hour-menu/,http://www.littlerebelnyc.com/
+ChIJ4erQS9dZwokRRAK6XSV74sg,Little Rebel,east_village,verified,2,verified,,Half Price Bottles of Rose,"mon,tue,wed,thu",15:00,19:00,drink: Bottles of Rose half price,,"Half Price Bottles of Rose
+Monday – Thursday
+3pm – 7pm",https://littlerebelnyc.com/happy-hour-menu/,http://www.littlerebelnyc.com/
+ChIJe74ZAXdZwokR3qXA9irhjio,Lucky,east_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri",12:00,20:00,"drink: Drinks, Shots, Wine & White Claw $5; drink: All Draft Beers $2 Off; drink: Aperol Spritz & Prosecco $6",,"OUR HAPPY HOUR IS MONDAY - FRIDAY NOON TILL 8 $5 Drinks, Shots, Wine & White Claw $2 Off All Draft Beers $6 Aperol Spritz & Prosecco",https://www.luckyonb.com/menu,http://www.luckyonb.com/
+ChIJ_4w-t45ZwokRBrwDO9Ei2bQ,Lydia’s,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",14:00,19:00,drink: Miller Lite Draft $5; drink: House spirits + mixer $8; drink: House Wines $8; drink: Margarita $8; drink: Aperol Spritz $10; drink: Espresso Martini $10; drink: Michelob ultra $5; drink: Narragansett lager $5; drink: Stella artois $7; drink: Kona big wave $7; drink: Sierra Navada Ipa $7; drink: Hugo spritz $10; drink: Stevie spritz $10; drink: tropical espresso martini $10,,"Mon - Fri 2 pm - 7 pm
+Happy Hour
+Miller Lite Draft
+$5.00
+House spirits + mixer
+$8.00
+House Wines
+$8.00
+Margarita
+$8.00
+Aperol Spritz
+$10.00
+Espresso Martini
+$10.00
+Michelob ultra
+$5.00
+Narragansett lager
+$5.00
+Stella artois
+$7.00
+Kona big wave
+$7.00
+Sierra Navada Ipa
+$7.00
+Hugo spritz
+$10.00
+Stevie spritz
+$10.00
+tropical espresso martini
+$10.00",https://lydiasnyc.com/new-york-city-lydia-s-nyc-drink-menu,http://lydiasnyc.com/
+ChIJJzCpvJxZwokRId5k9hJn_lY,Mayamezcal,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",17:00,19:00,drink: drink specials; drink: cocktails weekday prices; food: tacos weekday prices; drink: mexican beer weekday prices,,"Happy Hour 5 – 7 PM Weekdays N°05 La Hora — Every Weekday Drink specials & good vibes. Cocktails, tacos, and cold Mexican beer at weekday prices, 5 to 7 PM.",https://mayamezcal.com/,http://mayamezcal.com/
+ChIJqTZuJztZwokREqOEPG7VOSM,Motel No Tell,east_village,verified,1,verified,,Sunday happy hour,sun,16:00,close,drink: poolside frozen cocktails $10; drink: select wines $9; drink: select cold beers $6; drink: select cocktails & margs $10; food: margarita pizzas $10,,"HAPPY HOUR
+MON. - FRI 4-7 PM
+sunday
+4pm-close
+HAPPY HOUR DEALS:
+$10 POOLSIDE FROZEN COCKTAILS
+$9 SELECT WINES
+$6 SELECT COLD BEERS
+$10 SELECT COCKTAILS & MARGS
+$10 MARGARITA PIZZAS",https://www.motelnotellnyc.com/,https://www.motelnotellnyc.com/
+ChIJq-A7UZ1ZwokRC9nHZurb4iQ,Niagara,east_village,verified,0,verified,,Everyday early happy hour,"mon,tue,wed,thu,fri,sat,sun",open,19:00,drink: draft beer $5; drink: wine $5; drink: well drinks $8; drink: pbr & shot $10,,EVERYDAY UNTIL 7PM ... $5 DRAFT BEER $5 WINE $8 WELL DRINKS PLUS: PBR & SHOT DAILY $10,https://www.niagaranyc.com/,http://niagaranyc.com/
+ChIJq-A7UZ1ZwokRC9nHZurb4iQ,Niagara,east_village,verified,1,verified,,Late night happy hour,"mon,tue,wed,sun",02:00,04:00,drink: draft beer $5; drink: wine $5; drink: well drinks $8; drink: pbr & shot $10,,Sun-Wed 2AM-4AM $5 DRAFT BEER $5 WINE $8 WELL DRINKS PLUS: PBR & SHOT DAILY $10,https://www.niagaranyc.com/,http://niagaranyc.com/
+ChIJ5dKgkl1ZwokRVaLe0VlqPXg,Romeos,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,19:00,drink: happy hour menu,,"Happy Hour:
+Only available Monday-Friday, from 4-7pm",https://romeosnyc.com/menu,https://romeosnyc.com/
+ChIJ5dKgkl1ZwokRVaLe0VlqPXg,Romeos,east_village,verified,1,verified,,Weekend happy hour,"sat,sun",14:00,19:00,drink: happy hour menu,,"Happy Hour:
+Only available ... Saturday-Sunday from 2-7pm",https://romeosnyc.com/menu,https://romeosnyc.com/
+ChIJ8UwiNndZwokRdRVevqF6DWw,Royale,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",12:00,19:00,drink: Select Draft $6; drink: House Mixed Drinks $7; drink: House Wine $9; drink: Margarita $8; drink: Old Fashioned $8; drink: Boilermaker: Pacifico 12oz Can + Shot of the Day $12,,"Happy hours
+(monday - friday 12pm - 7pm)
+Select Draft
+$6
+House Mixed Drinks
+$7
+House Wine
+$9
+Margarita
+$8
+Old Fashioned
+$8
+Boilermaker: Pacifico 12oz Can + Shot of the Day (ask your server)
+$12",https://www.royalebarnyc.com/beers-cocktails,http://royalebarnyc.com/
+ChIJHfvtRp1ZwokREpFE8Z1BEKs,Ruffian,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,18:00,drink: wines by the glass $5 off; drink: bottles 10% off; food: food items $5 off,,"Happy Hour: ... $5 off ALL wines by the glass, 10% off all bottles ... $5 off ALL food items ... Mon – Fri, ... 4 pm – 6 pm",https://ruffiannyc.com/,http://www.ruffiannyc.com/
+ChIJHfvtRp1ZwokREpFE8Z1BEKs,Ruffian,east_village,verified,1,verified,,Weekend happy hour,"sat,sun",15:00,17:00,drink: wines by the glass $5 off; drink: bottles 10% off; food: food items $5 off,,"Happy Hour: ... $5 off ALL wines by the glass, 10% off all bottles ... $5 off ALL food items ... Sat & Sun, ... 3 pm – 5 pm",https://ruffiannyc.com/,http://www.ruffiannyc.com/
+ChIJA9irJVtZwokRxk_y6uNanoI,The Headless Widow,east_village,verified,0,verified,,Happy hour,"tue,wed,thu,fri,sat,sun",open,19:00,,,"Happy hour until 7pm, Tuesday through Sunday.",https://headlesswidow.com/cocktails,https://www.headlesswidow.com/
+ChIJU7-V0m9ZwokR2kQzhmToXiM,The Last Resort,east_village,verified,0,verified,,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",open,19:00,drink: draft beer $2 off; drink: well pours $2 off; drink: signature cocktails $2 off,,"HAPPY HOUR EVERYDAY UNTIL 7PM $2 off draft beer, well pours, and signature cocktails",https://www.lastresortnyc.com/,http://lastresortnyc.com/
+ChIJ7283wZ5ZwokRkogBZ_-wRuE,The Penny Farthing,east_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri",16:00,19:00,drink: Mixed Well Drinks $8; drink: Draft Beers $7; drink: Bottles $5; drink: Wines $8,,"Monday - Friday
+4PM - 7PM
+Mixed Well Drinks
+$
+8
+Draft Beers
+$
+7
+Bottles
+$
+5
+Wines
+$
+8",https://www.thepennyfarthingnyc.com/menus/,http://www.thepennyfarthingnyc.com/
+ChIJ7283wZ5ZwokRkogBZ_-wRuE,The Penny Farthing,east_village,verified,1,verified,,Tuesday Wine Special,tue,19:00,close,drink: wine bottles half price,,"TUESDAY
+Half price wine bottles after 7PM",https://www.thepennyfarthingnyc.com/menus/,http://www.thepennyfarthingnyc.com/
+ChIJ7283wZ5ZwokRkogBZ_-wRuE,The Penny Farthing,east_village,verified,2,verified,,Wednesday Espresso Martini Special,wed,11:00,21:00,drink: Espresso Martinis $5,,"WEDNESDAY
+$5 Espresso Martinis 11AM-9PM",https://www.thepennyfarthingnyc.com/menus/,http://www.thepennyfarthingnyc.com/
+ChIJ7283wZ5ZwokRkogBZ_-wRuE,The Penny Farthing,east_village,verified,3,verified,,Thursday Spritz Special,thu,16:00,21:00,drink: Aperol Spritz $5,,"THURSDAY
+$5 Aperol Spritz 4PM - 9PM",https://www.thepennyfarthingnyc.com/menus/,http://www.thepennyfarthingnyc.com/
+ChIJG4L6XndZwokR7CIyJVdM4CI,The Summit Bar & Cafe,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,19:00,,,Mon - Fri 4pm - 7pm,https://www.thesummitbarandcafe.com/menu,http://thesummitbarandcafe.com/
+ChIJx1AoOXVZwokRe1q0RHf5t6U,The York,east_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",14:00,19:00,food: burger + fries + beer $14,,"WEEKDAY
+HAPPY HOUR
+$14
+Burger + fries + beer · 2–7pm",https://theyork.nyc/,http://theyork.nyc/
+ChIJexlyuIRZwokRMjxZG0P5x28,Whiskey Town,east_village,verified,1,verified,,Tuesday to Friday happy hour,"tue,wed,thu,fri",open,20:00,drink: labatt & WELL SHOT $10; drink: WELL DRINK $8; drink: WINE $8; drink: PICKLE BACK $8,,tuesday- FRIDAY TIL 8PM ... $10 labatt & WELL SHOT ... $8 WELL DRINK ... $8 WINE ... $8 PICKLE BACK,https://whiskeytownbar.com/menu/,http://whiskeytownbar.com/
+ChIJXxVeoOxZwokRQmeffWUTe3c,Bobby's Night Out,east_village,verified,3,rejected,quote_not_found,Daily Happy Hour,sun,22:00,close,drink: Cocktails $10; drink: Sangrita $13; drink: Michelada or Bloody Mary $12; drink: Well Liquor $7; drink: Wine $7; drink: House Wine $7; drink: House Prosecco $7; drink: Mimosa $10; drink: Draft Beer $7; drink: Estrella Lager $7; drink: Montauk IPA $7; drink: Guinness $8; drink: Shots $7; drink: Pitchers $55; drink: Margarita Rocks $65; drink: Coors Light $24; drink: Estrella Galicia $30; drink: Montauk $32; drink: Coors Light Pitcher & 4 Draft Shots $36; drink: Buckets $70,,Daily Happy Hour ... Sun ... 10pm-Close,,http://www.bobbysnightout.com/
+ChIJ-3ZSb5xZwokRDb2PQKNwwbU,Sake Bar Decibel,east_village,rejected,0,rejected,quote_not_found; days_mismatch; possibly_outdated,Daily happy hour,mon,18:00,19:00,drink: Sapporo $6; drink: Cocktail Glass $8; drink: Lychee Martini; drink: Sake Tini; drink: Yuzu Sake $9; drink: Choya Umeshu Soda $9; drink: Tan Taka Tan Umeshu Shochu Soda $9; drink: Cocktail Pitcher $38,,"Hours ... Mon 6pm - 2:50am ... Happy hour (6pm-7pm)
+Sapporo $6
+Cocktail Glass $8
+Lychee Martini
+Sake Tini
+$9
+Yuzu Sake
+*Choya* Umeshu Soda
+*Tan Taka Tan* Umeshu Shochu Soda
+Cocktail Pitcher $38",,http://www.sakebardecibel.com/
+ChIJz-geeoJZwokR7IawjoknIfs,The Hairy Lemon,east_village,rejected,0,rejected,quote_not_found,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,20:00,drink: all cocktails $2 Off; drink: Coors Lite/Bud Light $5; drink: Beer/Shot Combo $9; drink: Tecaté $4; drink: Well Drinks $7; drink: All Wine $7; drink: all drafts $1 Off; drink: Green Tea Shots $7,,"HAPPY HOUR ... MON-FRI 'TIL 8PM ... Mon-Wed: 4pm -1am ... HAPPY HOUR
+MON-FRI 'TIL 8PM
+$2 Off All Cocktails
+$5 Coors Lite/Bud Light
+$9 Beer/Shot Combo
+$4 Tecaté
+$7 Well Drinks
+$7 All Wine
+$1 Off All Drafts
+$7 Green Tea Shots",,http://www.hairylemonnyc.com/
+ChIJBxc8r51ZwokRWBJUEbG_SoE,The Immigrant,east_village,rejected,0,rejected,quote_not_found,Happy Hour,"mon,tue,wed,thu,fri,sat,sun",16:00,18:00,drink: Trebbiano $10; drink: Vinho Verde $10; drink: Montepulciano $10; drink: Tempranillo $10; drink: Rose $10; drink: Ambera (Orange) $11; drink: Coors Light Lager $5; drink: Pumpkin Picker $5; drink: HB Oktoberfest $6; drink: Martinis $10; drink: Espresso Martini $12; drink: Mixed Drinks $10; drink: Manhattan $10,,Happy Hour 4PM - 6PM ... Wines - Happy Hour ... Trebbiano ... Glass $ 10.00,,http://www.theimmigrantnyc.com/
+ChIJ8U_VmoZYwokR4g5HIK6dYso,5 Napkin Burger,upper_west_side,verified,5,needs_review,time_unreadable,Wine Down Tuesday,tue,,,drink: select bottles of wine $25,,"Wine Down Tuesday 
+Relax with select bottles of wine for just $25, all day long.",https://www.5napkinburger.com/,http://www.5napkinburger.com/
+ChIJoXG3Jy1ZwokRundrMVRxueM,Allure Cocktail Lounge,upper_west_side,needs_review,0,needs_review,no_specials_listed,Triumph Wine Hour,"wed,thu,fri",17:00,18:00,,Hotel Belleclaire guests can attend,"Triumph Wine Hour
+Wednesday through Friday from 5:00pm to 6:00pm",https://www.hotelbelleclaire.com/eat-drink,https://www.hotelbelleclaire.com/eat-drink/allure
+ChIJyxs07mFYwokRGlBd5nyxHLc,Ashford & Simpson's Sugar Bar,upper_west_side,needs_review,0,needs_review,days_mismatch,Happy Hour,"mon,tue,wed,thu,fri,sat",15:00,19:00,,except Sunday,Happy Hour 3 PM -7 PM *except Sunday,https://www.sugarbarnyc.com/menus/,http://www.sugarbarnyc.com/
+ChIJFYHYHIZYwokRD0Afxa_fAeY,Caledonia Bar,upper_west_side,needs_review,0,needs_review,multi_location,Monday - Friday happy hour,"mon,tue,wed,thu,fri",open,19:00,drink: draft beer $2 off; drink: all wines $3 off,,"Happy Hour 
+ Monday - Friday until 7 pm 
+ $2 off draft beer 
+ $3 off all wines",https://caledoniabar.com/uws,http://www.caledoniabar.com/
+ChIJ8brCiz_3wokRSuPBs1-8AuY,City Coffee & Bar,upper_west_side,verified,0,needs_review,time_unreadable,Monday Happy Hour,mon,,,food: eats $7; drink: drinks $7; drink: beers $5,,Monday October 5th ... HAPPY HOUR! EATS $7 DRINKS $7 BEERS $ 5 ... 11:00 AM - 12:00 AM,https://citycoffeebar.com/happy-hours-specials,https://www.citycoffeebar.com/
+ChIJUXw24mFYwokRJOLOwPHe0fg,Gebhard's Beer Culture,upper_west_side,needs_review,0,needs_review,times_not_in_quote,Weekday happy hour,"mon,tue,wed,thu,fri",15:00,18:00,drink: select 10 oz. draft beers $3; drink: Guinness pints $7; drink: glasses of house wine $13; drink: house cocktails $12; drink: well drinks $10; drink: house shots $8,,"Monday through Friday until 6 pm ... $3 select 10 oz. draft beers, $7 Guinness pints, $13 glasses of house wine, $12 house cocktails, $10 well drinks, and $8 house shots.",https://www.beerculture.nyc/gebhards-events-specials/summer-happy-hour-nyc,http://www.beerculture.nyc/upper-west-side
+ChIJyTJKxYVYwokR6Xgqq38yAi4,Hi Life Bar & Grill,upper_west_side,verified,3,needs_review,time_unreadable,Weekend afternoon happy hour cocktails,"sat,sun",,,drink: Happy Hour Cocktails,At Bar & Tables,"12am-4pm on Weekends, Happy Hour Cocktails @ Bar & Tables",https://www.hi-life.com/happy-hour.php,http://www.hi-life.com/
+ChIJ43E6GQD3wokR4ZEVh1g7wbo,Sipsteria UWS,upper_west_side,needs_review,0,needs_review,multi_location,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",16:00,18:00,drink: select wines special prices; food: small bites special prices,UWS location,Happy Hour ... Served Daily ... UWS 4:00pm-6:00pm,https://www.sipsteria.com/,http://www.sipsteria.com/
+ChIJzz0OMeL3wokRAlgHd26kHdM,The Calaveras NYC,upper_west_side,needs_review,0,needs_review,times_not_in_quote; time_unreadable,Taco Tuesday and Wednesday special,"tue,wed",,,food: three tacos and a margarita $20,,Join us for taco tuesday and wednesdays - three tacos and a margarita for only $20,https://thecalaverasnyc.com/,http://thecalaverasnyc.com/
+ChIJYRdWlotYwokRat39bGC-kAQ,The Dakota Bar,upper_west_side,needs_review,0,needs_review,specials_not_in_text,Weekday happy hour,"mon,tue,wed,thu,fri",15:00,18:00,drink: select items,select items,JOIN US FOR HAPPY HOUR: WEEKDAYS 3PM-6PM,https://www.thedakotabar.nyc/,http://thedakotabar.nyc/
+ChIJCwnQmCT2wokRT1vH5l91_ck,The Ellington | NYC,upper_west_side,verified,1,needs_review,times_not_in_quote; time_unreadable,Thursday Happy Hour,thu,,,,at the Bar,Thursday Happy Hour All Night at the Bar!,https://www.theellingtonny.com/,https://www.theellingtonny.com/
+ChIJZX7S-gBZwokRkB7hCr19Elk,Vin Sur Vingt Wine Bar - Riverside Blvd,upper_west_side,needs_review,0,needs_review,days_mismatch,Evening Happy Hour,mon,open,18:00,drink: glass from our selection $10,,"HAPPY HOUR
+$10 glass from our selection
+- Open to 6pm",https://www.vsvwinebars.com/location/vin-sur-vingt-wine-bar-riverside/,https://www.vsvwinebars.com/location/vin-sur-vingt-wine-bar-riverside/
+ChIJ8U_VmoZYwokR4g5HIK6dYso,5 Napkin Burger,upper_west_side,verified,0,verified,,Happy Hour (Mon-Thu early),"mon,tue,wed,thu",15:00,18:00,drink: Draft Beer & Wine $2 Off; drink: Brooklyn & Hi Life Bottles $4; drink: Frozen Margaritas $8; drink: Tito's & Premium Well Liquors $10; food: Apps 1/2 Off; food: Happy Hour Burger $7; food: Hell's Kitchen Wings $8; food: Red Chili Pork Tacos $6; food: Crispy Cheese Curds $5,,"Happy Hour 
+Monday - Thursday 3-6pm & 9pm-close 
+Friday – 3-6pm 
+Sunday – 9pm-close 
+Drinks 
+$2 Off Draft Beer & Wine 
+Brooklyn & Hi Life Bottles 
+$
+4 
+Frozen Margaritas 
+$
+8 
+Tito's & Premium Well Liquors 
+$
+10 
+1/2 Off Apps",https://www.5napkinburger.com/menus/,http://www.5napkinburger.com/
+ChIJ8U_VmoZYwokR4g5HIK6dYso,5 Napkin Burger,upper_west_side,verified,1,verified,,Happy Hour (Mon-Thu late),"mon,tue,wed,thu",21:00,close,drink: Draft Beer & Wine $2 Off; drink: Brooklyn & Hi Life Bottles $4; drink: Frozen Margaritas $8; drink: Tito's & Premium Well Liquors $10; food: Apps 1/2 Off; food: Happy Hour Burger $7; food: Hell's Kitchen Wings $8; food: Red Chili Pork Tacos $6; food: Crispy Cheese Curds $5,,"Happy Hour 
+Monday - Thursday 3-6pm & 9pm-close 
+Friday – 3-6pm 
+Sunday – 9pm-close",https://www.5napkinburger.com/menus/,http://www.5napkinburger.com/
+ChIJ8U_VmoZYwokR4g5HIK6dYso,5 Napkin Burger,upper_west_side,verified,2,verified,,Happy Hour (Friday),fri,15:00,18:00,drink: Draft Beer & Wine $2 Off; drink: Brooklyn & Hi Life Bottles $4; drink: Frozen Margaritas $8; drink: Tito's & Premium Well Liquors $10; food: Apps 1/2 Off; food: Happy Hour Burger $7; food: Hell's Kitchen Wings $8; food: Red Chili Pork Tacos $6; food: Crispy Cheese Curds $5,,"Happy Hour 
+Monday - Thursday 3-6pm & 9pm-close 
+Friday – 3-6pm 
+Sunday – 9pm-close",https://www.5napkinburger.com/menus/,http://www.5napkinburger.com/
+ChIJ8U_VmoZYwokR4g5HIK6dYso,5 Napkin Burger,upper_west_side,verified,3,verified,,Happy Hour (Sunday),sun,21:00,close,drink: Draft Beer & Wine $2 Off; drink: Brooklyn & Hi Life Bottles $4; drink: Frozen Margaritas $8; drink: Tito's & Premium Well Liquors $10; food: Apps 1/2 Off; food: Happy Hour Burger $7; food: Hell's Kitchen Wings $8; food: Red Chili Pork Tacos $6; food: Crispy Cheese Curds $5,,"Happy Hour 
+Monday - Thursday 3-6pm & 9pm-close 
+Friday – 3-6pm 
+Sunday – 9pm-close",https://www.5napkinburger.com/menus/,http://www.5napkinburger.com/
+ChIJ8U_VmoZYwokR4g5HIK6dYso,5 Napkin Burger,upper_west_side,verified,4,verified,,BoGo Beer Monday,mon,17:00,close,drink: draft beer Get your next draft on us,when you order a full-price draft beer with any entrée,"UPPER WEST SIDE DEALS 
+BoGo Beer Monday - After 5pm 
+Get your next draft on us when you order a full-price draft beer with any entrée.",https://www.5napkinburger.com/,http://www.5napkinburger.com/
+ChIJHb3iwItYwokRqWQr8-yMXzg,Arte Cafe,upper_west_side,verified,0,verified,,Happy hour,"mon,tue,wed,thu,fri,sat,sun",16:00,19:00,drink: Spritzes $12; drink: Very Berry $14; drink: Basil Arte $14; drink: Margarita $14; drink: Watermelon Crush $14; drink: The Illy Espresso Martini $16; drink: Red Wine $10; drink: Rose $10; drink: White Wine $10; drink: Presecco $10; drink: Beer $6; food: Arancino $10; food: Meatballs $10; food: Fried Calamari $11; food: Tuna Tartare $13; food: Burger Sliders $12; food: Pizza Margherita $12; food: Pizza Funghi $12; food: Pizza Salsiccia $12; food: Oysters $2.5,Available At The Bar Area,"Available At The Bar Area Everyday 4pm-7pm
+Happy Hour Drinks",https://www.artecafenyc.com/menus/,http://www.artecafenyc.com/
+ChIJHb3iwItYwokRqWQr8-yMXzg,Arte Cafe,upper_west_side,verified,1,verified,,Lunch special,"mon,tue,wed,thu,fri",12:00,16:00,drink: Wines $8; drink: Cocktails $10; drink: Beer $8,Only,"Available Monday - Friday 12-4pm Only
+Drinks
+Wines
+$8 Glass",https://www.artecafenyc.com/menus/,http://www.artecafenyc.com/
+ChIJC5SjYFRZwokRTyVvEAxRcfI,Arthouse Bar,upper_west_side,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri",17:00,19:00,drink: Signature Cocktails $15; drink: House Wine $12; drink: Draft Beer $10; drink: Bottled Beer $8,,Happy Hour Monday - Friday: 5:00 PM - 7:00 PM Signature Cocktails $15 | House Wine $12 | Draft Beer $10 | Bottled Beer $8,https://www.arthousehotelnyc.com/arthouse-bar,https://www.arthousehotelnyc.com/arthouse-bar
+ChIJt26mriP2wokRWk359RJeC1k,Bob's Your Uncle,upper_west_side,verified,0,verified,,Happy Hour,"mon,tue,wed,thu",15:00,18:00,drink: Well Drinks $2 Off; drink: Draft Beer $2 Off,,Happy Hour! $2 Off Well Drinks & Draft Beer M-Th 3PM - 6PM,http://www.bobsyouruncle.nyc/,http://www.bobsyouruncle.nyc/
+ChIJt26mriP2wokRWk359RJeC1k,Bob's Your Uncle,upper_west_side,verified,1,verified,,Weekend Happy Hour,"sat,sun",14:00,18:00,drink: Well Drinks $1 Off; drink: Draft Beer $1 Off; drink: Select Cocktails $8; drink: Select Cocktails $10,,WEEKEND HAPPY HOUR -$1 Off Well Drinks & Draft Beer +Select Cocktails $8/$10 SAT-SUN 2PM-6PM,http://www.bobsyouruncle.nyc/,http://www.bobsyouruncle.nyc/
+ChIJ8brCiz_3wokRSuPBs1-8AuY,City Coffee & Bar,upper_west_side,verified,1,verified,,Weekday Happy Hour,tue,11:00,19:00,food: eats $7; drink: drinks $7; drink: beers $5,,Tuesday October 6th ... HAPPY HOUR! EATS $7 DRINKS $7 BEERS $ 5 ... 11:00 AM - 07:00 PM,https://citycoffeebar.com/happy-hours-specials,https://www.citycoffeebar.com/
+ChIJ8brCiz_3wokRSuPBs1-8AuY,City Coffee & Bar,upper_west_side,verified,2,verified,,Taco Tuesday,tue,16:00,00:00,food: tacos $3; drink: margaritas $7,ALL NIGHT,TACO TUESDAYS $3 TACOS $7 MARGARITAS (ALL NIGHT) ... 04:00 PM - 12:00 AM,https://citycoffeebar.com/happy-hours-specials,https://www.citycoffeebar.com/
+ChIJ8brCiz_3wokRSuPBs1-8AuY,City Coffee & Bar,upper_west_side,verified,3,verified,,Weekday Happy Hour,wed,11:00,19:00,food: eats $7; drink: drinks $7; drink: beers $5,,Wednesday October 7th ... HAPPY HOUR! EATS $7 DRINKS $7 BEERS $ 5 ... 11:00 AM - 07:00 PM,https://citycoffeebar.com/happy-hours-specials,https://www.citycoffeebar.com/
+ChIJ8brCiz_3wokRSuPBs1-8AuY,City Coffee & Bar,upper_west_side,verified,4,verified,,2X1 Wednesdays,wed,16:00,00:00,drink: eats & drinks 2x1; food: eats & drinks 2x1,,"2X1 WEDNESDAYS, EATS & DRINKS ... 04:00 PM - 12:00 AM",https://citycoffeebar.com/happy-hours-specials,https://www.citycoffeebar.com/
+ChIJ8brCiz_3wokRSuPBs1-8AuY,City Coffee & Bar,upper_west_side,verified,5,verified,,Weekday Happy Hour,thu,11:00,19:00,food: eats $7; drink: drinks $7; drink: beers $5,,Thursday October 8th ... HAPPY HOUR! EATS $7 DRINKS $7 BEERS $ 5 ... 11:00 AM - 07:00 PM,https://citycoffeebar.com/happy-hours-specials,https://www.citycoffeebar.com/
+ChIJ8brCiz_3wokRSuPBs1-8AuY,City Coffee & Bar,upper_west_side,verified,6,verified,,Happy Hour,fri,11:00,19:00,,,Friday October 9th ... HAPPY HOUR! ... 11:00 AM - 07:00 PM,https://citycoffeebar.com/happy-hours-specials,https://www.citycoffeebar.com/
+ChIJ8brCiz_3wokRSuPBs1-8AuY,City Coffee & Bar,upper_west_side,verified,7,verified,,Happy Hour,"mon,tue,wed,thu,fri",11:00,19:00,drink: Heineken $5; drink: Corona $5; drink: Modelo $5; drink: Pinot Grigio $9; drink: Cabernet $9; drink: Prosecco $9; drink: Rose $9; drink: Sauvignon Blanc $9; drink: Pinot Noir $9; drink: Malbec $9; drink: Espreso martini $7; drink: Cocktails $7; drink: Lychee Martini $10; drink: Wells Drinks $10; drink: City lager $5; drink: Stella $6; drink: Goose IPA $6; drink: Brooklyn Brewery $6; drink: Blue Moon $6; drink: Kona Big Wave $6; food: Fried Pickles $7; food: Onions Rings $7; food: Beef Sliders $10; food: French Fries $6; food: Mozzarella Sticks $10; food: Truffle Mac & cheese Croquettes $10,,"Happy Hour Menu
+Monday to Friday 11:00 am - 7:00 pm.",https://citycoffeebar.com/food-650880,https://www.citycoffeebar.com/
+ChIJFfd0TolYwokRNGGQO3ualC4,Da Capo,upper_west_side,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",17:00,19:00,drink: bartender special - venetian peach $15; drink: taylor who $12; drink: old fashioned $12; drink: limoncello spritz $12; drink: venetian spritz $12; drink: negroni $12; drink: red and white wine $10; drink: sixpoint brewery's hazy ipa and crisp pilsner $10,AT THE BAR ONLY,"HAPPY HOUR
+MONDAY–FRIDAY 5
+PM
+- 7PM
+AT THE BAR ONLY",https://www.dacapony.com/menus/,http://www.dacapony.com/
+ChIJ5S3vc2tZwokRcvo8uioqE0U,Felice Columbus,upper_west_side,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri,sat,sun",16:00,19:00,,,"Happy Hour:
+Monday to Sunday: 4:00 pm to 7:00 pm",https://www.felicerestaurants.com/felice-columbus/,https://www.felicerestaurants.com/felice-columbus/
+ChIJyTJKxYVYwokR6Xgqq38yAi4,Hi Life Bar & Grill,upper_west_side,verified,0,verified,,Weekend happy hour,"sat,sun",12:00,19:00,drink: Well-Drinks $8; drink: Margaritas and Daiquiris $8; drink: Cosmopolitan $9; drink: Champagne Cocktails $9; drink: House Vino $9; drink: Select Draft Pints $7; food: Blue Point Oysters on the Half Shell $2; food: Little Neck clams on the Half Shell $2,At Bar & Tables,Happy Hour (Daily from noon-7pm on weekends ... Cocktails and Raw Bar (4pm-7pm Daily. At Bar & Tables) ... Well-Drinks ($8),https://www.hi-life.com/happy-hour.php,http://www.hi-life.com/
+ChIJyTJKxYVYwokR6Xgqq38yAi4,Hi Life Bar & Grill,upper_west_side,verified,1,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,19:00,drink: Well-Drinks $8; drink: Margaritas and Daiquiris $8; drink: Cosmopolitan $9; drink: Champagne Cocktails $9; drink: House Vino $9; drink: Select Draft Pints $7; food: Blue Point Oysters on the Half Shell $2; food: Little Neck clams on the Half Shell $2,At Bar & Tables,Happy Hour (... 4-7pm on weekdays.) ... Cocktails and Raw Bar (4pm-7pm Daily. At Bar & Tables) ... Well-Drinks ($8),https://www.hi-life.com/happy-hour.php,http://www.hi-life.com/
+ChIJyTJKxYVYwokR6Xgqq38yAi4,Hi Life Bar & Grill,upper_west_side,verified,2,verified,,Daily cocktails and raw bar,"mon,tue,wed,thu,fri,sat,sun",16:00,19:00,drink: Well-Drinks $8; drink: Margaritas and Daiquiris $8; drink: Cosmopolitan $9; drink: Champagne Cocktails $9; drink: House Vino $9; drink: Select Draft Pints $7; food: Blue Point Oysters on the Half Shell $2; food: Little Neck clams on the Half Shell $2,At Bar & Tables,Cocktails and Raw Bar (4pm-7pm Daily. At Bar & Tables) ... Well-Drinks ($8),https://www.hi-life.com/happy-hour.php,http://www.hi-life.com/
+ChIJCehOSIRYwokRs4ijKsy1oiI,Jacob's Pickles,upper_west_side,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",15:00,18:30,,at the bar,Available Monday-Friday at the bar from 3pm-6:30pm,https://www.jacobspickles.com/upper-west-side-menus/,https://www.jacobspickles.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,0,verified,,Monday early happy hour,mon,15:00,20:00,drink: whole bar 1/2 Price,*some exclusions*,Monday 3pm-8pm 1/2 Price whole bar *some exclusions*,https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,1,verified,,Monday late happy hour,mon,20:00,close,drink: whole bar 1/2 Price; drink: Screwball whiskey shots $6; food: Wings $1,Must order 8 or 16,"Monday 
+3pm-8pm 
+1/2 Price whole bar 
+*some exclusions* 
+8pm-close 
+1/2 Price whole bar 
+*some exclusions* 
+$6 Screwball whiskey shots 
+$1 Wings 
+Must order 8 or 16",https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,2,verified,,Tuesday early happy hour,tue,15:00,20:00,drink: whole bar 1/2 Price,*some exclusions*,Tuesday 3pm-8pm 1/2 Price whole bar *some exclusions*,https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,3,verified,,Tuesday late happy hour,tue,20:00,close,drink: Beer n Shot $10; drink: Jameson Shots $6; drink: Sun Cruiser $6; food: Hot Dogs $1,,"Tuesday 
+3pm-8pm 
+1/2 Price whole bar 
+*some exclusions* 
+8pm- CL 
+$10 Beer n Shot 
+$6 Jameson Shots 
+$6 Sun Cruiser 
+$1 Hot Dogs",https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,4,verified,,Wednesday early happy hour,wed,15:00,20:00,drink: whole bar 1/2 Price,*some exclusions*,Wednesday 3pm-8pm 1/2 Price whole bar *some exclusions*,https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,5,verified,,Wednesday late happy hour,wed,20:00,close,drink: Drafts $5; drink: Well drinks n Shots $5; food: Nachos 1/2 Price,,"Wednesday 
+3pm-8pm 
+1/2 Price whole bar 
+*some exclusions* 
+8pm-close 
+$5 Drafts 
+$5 Well drinks n Shots 
+1/2 Price Nachos",https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,6,verified,,Thursday early happy hour,thu,15:00,20:00,drink: whole bar 1/2 Price,*some exclusions*,Thursday 3pm-8pm 1/2 Price whole bar *some exclusions*,https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,7,verified,,Thursday late happy hour,thu,20:00,close,drink: Espolon drinks n Shots $6; drink: Domestic Pitchers $15; food: Sliders $3,Must order at least two,"Thursday 
+3pm-8pm 
+1/2 Price whole bar 
+*some exclusions* 
+8pm-close 
+$6 Espolon drinks n Shots 
+$15 Domestic Pitchers 
+$3 Sliders 
+Must order at least two",https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,8,verified,,Friday early happy hour,fri,15:00,20:00,drink: whole bar 1/2 Price,*some exclusions*,Friday 3pm-8pm 1/2 Price whole bar *some exclusions*,https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,9,verified,,Friday late happy hour,fri,20:00,close,drink: Bud light n Miller lite cans $5; drink: Nutrl $7,,"Friday 
+3pm-8pm 
+1/2 Price whole bar 
+*some exclusions* 
+8pm-CL 
+$5 Bud light n Miller lite cans 
+$7 Nutrl",https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,10,verified,,Saturday happy hour,sat,12:00,20:00,"drink: Drafts, Well drinks n Shots $5; drink: Domestic buckets (5) $20; drink: Premium beer n Nutrl buckets (5) $25; drink: All Seltzers and Teas (5) $30",,"Saturday
+12pm-8pm
+$5 Drafts, Well drinks n Shots
+$20 Domestic buckets (5)
+$25 Premium beer n Nutrl buckets (5)
+$30 All Seltzers and Teas (5)",https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJc6GIBIZYwokRd_xjvFrHhbU,Jake's Dilemma,upper_west_side,verified,11,verified,,Sunday happy hour,sun,12:00,close,drink: All Drafts $5; drink: Guinness $5; drink: Well Drinks n Shots $5; drink: Titos Vodka and redbull $7,,"Sunday
+12pm-Close
+$5 All Drafts
+$5 Guinness
+$5 Well Drinks n Shots
+$7 Titos Vodka and redbull",https://www.jakesdilemmanyc.com/,https://www.jakesdilemmanyc.com/
+ChIJVUy4WwBZwokR9nHye_VblD8,Le Vin Coeur,upper_west_side,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,18:00,,,Happy Hours From 4pm to 6pm on weekdays,https://www.le-vin-coeur.com/,https://www.le-vin-coeur.com/
+ChIJjRAQmYtYwokR5LxsS-kzyS4,Lilly's Cocktail and Wine,upper_west_side,verified,0,verified,,Monday-Thursday happy hour,"mon,tue,wed,thu",16:00,19:00,drink: Cocktails $10; drink: glass of house wine $9; drink: select house draught beer $5; drink: select can beer $5; drink: select can NA beer $5; food: Loaded Hummus $10; food: Pretzel $10; food: Margherita Flatbread $10; food: Castelvetrano Marinated Olives $10; food: Artisanal cheese and Meat $10; food: Thai chili baked wings $10; food: White Mussels $10; food: Lilly’s Nachos $10; food: Apple Crisp Cheesecake $8; food: Creme Brûlée $8; food: Chocolate Lava Cake $8,,Monday-Thursday: 4pm-7pm,https://lillyscocktailandwine.com/menus/happy-hour/,https://lillyscocktailandwine.com/
+ChIJjRAQmYtYwokR5LxsS-kzyS4,Lilly's Cocktail and Wine,upper_west_side,verified,1,verified,,Friday happy hour,fri,14:00,17:00,drink: Cocktails $10; drink: glass of house wine $9; drink: select house draught beer $5; drink: select can beer $5; drink: select can NA beer $5; food: Loaded Hummus $10; food: Pretzel $10; food: Margherita Flatbread $10; food: Castelvetrano Marinated Olives $10; food: Artisanal cheese and Meat $10; food: Thai chili baked wings $10; food: White Mussels $10; food: Lilly’s Nachos $10; food: Apple Crisp Cheesecake $8; food: Creme Brûlée $8; food: Chocolate Lava Cake $8,,Friday: 2pm-5pm,https://lillyscocktailandwine.com/menus/happy-hour/,https://lillyscocktailandwine.com/
+ChIJQ2ar5EBZwokROyxuXSieQrU,Morty's Wine & Beer Bar,upper_west_side,verified,0,verified,,Late night happy hour,sat,20:00,23:00,drink: elixirs $3 off; drink: basic cocktails $12; drink: shots $3; drink: drafts $6,HOUSE LIQUOR ONLY,Saturday October 10th ... SATURDAY NIGHT SIPS ... LATE NIGHT HAPPY HOUR ... 8PM-11PM ... $3 OFF OF ELIXIRS ... $12 BASIC COCKTAILS ... $3 SHOTS (HOUSE LIQUOR ONLY) ... $6 DRAFTS,https://mortysbarnyc.com/new-york-waterline-square-morty-s-wine-and-beer-bar-happy-hours-specials,https://mortysbarnyc.com/
+ChIJOb-eH4VYwokRkyzosmvD_sk,Osteria Cotta,upper_west_side,verified,0,verified,,Weekday Happy Hour,"mon,tue,wed,thu",16:00,18:00,,available at Bar or Outdoor Seating only. Not available for take-out or delivery orders,"Weekday Happy Hour Mon-Thurs 4-6pm, Fri 3-5pm (available at Bar or Outdoor Seating only. Not available for take-out or delivery orders).",https://cottanyc.com/,https://www.cottanyc.com/
+ChIJOb-eH4VYwokRkyzosmvD_sk,Osteria Cotta,upper_west_side,verified,1,verified,,Weekday Happy Hour,fri,15:00,17:00,,available at Bar or Outdoor Seating only. Not available for take-out or delivery orders,Weekday Happy Hour ... Fri 3-5pm (available at Bar or Outdoor Seating only. Not available for take-out or delivery orders).,https://cottanyc.com/,https://www.cottanyc.com/
+ChIJS_7f3yT2wokR4dsAb0bTwDo,Smoke Jazz & Supper Club,upper_west_side,verified,0,verified,,Happy Hour,"wed,thu,fri,sat,sun",16:00,18:30,"drink: spritzes (Aperol, Hugo & Amaro) $8; drink: sparkling Rosé $8; drink: sangria $8; drink: carafes of wine $14",carafes of wine are available with the purchase of a happy hour entrée,"Happy Hour at The Cafe & Lounge at SMOKE | 4–6:30 PM ... The Lounge and Sidewalk Café at SMOKE offers a popular Happy Hour from 4:00–6:30PM Wednesday through Sunday. Enjoy
+$8 spritzes (Aperol, Hugo & Amaro), sparkling Rosé, or sangria
+from our Happy Hour Spritz menu. Pair our new Happy Hour entrée options ... $14 carafes of wine (2 glasses of Cabernet, Pinot Grigio, Sauvignon Blanc, or Rosé) are also available with the purchase of a happy hour entrée.",https://smokejazz.com/happy-hour/,http://www.smokejazz.com/
+ChIJRX17_ST2wokReG4f7Y_fzpc,Tap a Keg,upper_west_side,verified,0,verified,,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",12:00,19:00,drink: drinks $1 off,,Open daily noon–4:00 AM Happy hour noon–7:00 PM · $1 off drinks,https://www.tapakeg.nyc/,http://www.tapakeg.nyc/
+ChIJ8bFWn8FZwokRoUsyyYc0TNg,The Consulate - UWS,upper_west_side,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",15:30,18:30,,,"Happy Hour
+Monday – Friday: 3:30 – 6:30 PM",https://theconsulate.nyc/upper-west-side-ny?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=main_button,https://theconsulate.nyc/upper-west-side-ny?utm_source=google&utm_medium=organic&utm_campaign=gbp&utm_content=main_button
+ChIJCwnQmCT2wokRT1vH5l91_ck,The Ellington | NYC,upper_west_side,verified,0,verified,,Weekday Happy Hour,"mon,tue,wed,thu,fri",16:00,19:00,,at the BAR,Happy Hour Monday - Friday 4:00 PM - 7:00 PM at the BAR,https://www.theellingtonny.com/,https://www.theellingtonny.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,0,verified,,Weekday Happy Hour,"mon,tue,wed,thu,fri",open,20:00,"drink: ALL Beer, Well Drinks & Shots $5; drink: Top Shelf Drinks & Shots $7; drink: Teas & Seltzers $8",,"MONDAY-FRIDAY UNTIL 8 PM
+$5 ALL Beer, Well Drinks & Shots
+$7 Top Shelf Drinks & Shots
+$8 Teas & Seltzers",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,1,verified,,Monday Night Special,mon,20:00,close,"drink: Well Drinks, Drafts, and Shots $5; food: Sliders $3",,"Monday
+8 PM - CLOSE
+$5 Well Drinks, Drafts, and Shots
+$3 Sliders",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,2,verified,,Tequila Tuesday,tue,20:00,close,"drink: Corona, Modelo, Pacifico $5; drink: Tequila Drinks & Shots $6; food: Nachos 1/2 Price",,"Tequila Tuesday
+8 PM - CLOSE
+$5 Corona, Modelo, Pacifico
+$6 Tequila Drinks & Shots
+Includes Espolón
+1/2 Price Nachos",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,3,verified,,Wednesday Night Special,wed,20:00,close,"drink: Vodka Drinks & Bombs $6; drink: Jameson Drinks & Shots $6; drink: Bud Light, Coors Light Pitchers $14; food: Dogs $1",,"Wednesday
+8 PM - CLOSE
+$6 Vodka Drinks & Bombs
+(Includes Tito's Vodka & Red Bull Energy Drink)
+$6 Jameson Drinks & Shots
+$14 Bud Light, Coors Light Pitchers
+$1 Dogs",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,4,verified,,Thirsty Thursday,thu,20:00,close,drink: Espolòn Drinks & Shots $6; drink: Teas & Seltzers 1/2 Price; food: Wings $1,,"Thristy Thursday
+8 PM - CLOSE
+$6 Espolòn Drinks & Shots
+1/2 Price Teas & Seltzers
+$1 Wings",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,5,verified,,Friday Night Special,fri,20:00,close,drink: Shot & Beer $10; food: Fries $5,,"Friday
+8 PM - Close
+$10 Shot & Beer
+(Domestic Draft, Bud Light Cans, NÜTRL + Screwball)
+$5 Fries",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,6,verified,,Saturday Fry Day,sat,open,20:00,"food: Brats $1; food: Brat + Cheese Curds $5; drink: All Beer, Well, and Shots $5; drink: Buckets — Standard Beers $20; drink: Buckets — Premium Beers $25; drink: Buckets — Canned Cocktails $30",,"Saturday
+OPEN - 8 PM
+🌭 $1 Brats
+🔥 $5 Brat + Cheese Curds
+🍺 $5 All Beer, Well, and Shots
+🪣 $20 Buckets — Standard Beers
+🪣 $25 Buckets — Premium Beers
+🪣 $30 Buckets — Canned Cocktails",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,7,verified,,Sunday Fry Day,sun,open,20:00,"food: Brats $1; food: Brat + Cheese Curds $5; drink: All Beer, Well, and Shots $5; drink: Buckets — Standard Beers $20; drink: Buckets — Premium Beers $25; drink: Buckets — Canned Cocktails $30",,"Sunday
+OPEN - 8 PM
+🌭 $1 Brats
+🔥 $5 Brat + Cheese Curds
+🍺 $5 All Beer, Well, and Shots
+🪣 $20 Buckets — Standard Beers
+🪣 $25 Buckets — Premium Beers
+🪣 $30 Buckets — Canned Cocktails",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJRyfaCIZYwokRd1gVsI1fa0Q,The Gin Mill,upper_west_side,verified,8,verified,,Sunday Night Special,sun,20:00,close,"drink: You Call It — All Beer, Top Shelf Drinks & Shots $6",,"Sunday
+... 
+8 PM – CLOSE
+🍻 $6 You Call It — All Beer, Top Shelf Drinks & Shots",https://www.theginmillnyc.com/menus/,https://www.theginmillnyc.com/
+ChIJ62nz2LBZwokRHRCqKlMvFCI,The Hoptimist,upper_west_side,verified,0,verified,,Happy Hour Special,"mon,tue,wed,thu,fri,sat",open,19:00,drink: draft pilsner plus a smash burger with fries $15,,Happy Hour Special Monday - Saturday (Until 7pm) Draft Pilsner plus a smash burger with fries 15,https://www.hoptimistbar.com/menus/,http://www.hoptimistbar.com/
+ChIJrVzFnBxZwokRu7PRnpjlQro,The Wallace Lounge,upper_west_side,verified,0,verified,,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",17:00,18:00,,,Join us for Happy Hour everyday from 5pm to 6.30pm!,https://thewallace.com/lounge,https://thewallace.com/lounge
+ChIJV7j0FoVYwokRXvF0oyrlZoU,Vin Sur Vingt Wine Bar - Upper West Side,upper_west_side,verified,0,verified,,Happy Hour glass,"mon,tue,wed,thu,fri,sat,sun",open,18:00,drink: glass from our selection $10,,HAPPY HOUR ... $10 glass from our selection ... - Open to 6pm,https://www.vsvwinebars.com/location/vin-sur-vingt-wine-bar-upper-west-side/,https://www.vsvwinebars.com/location/vin-sur-vingt-wine-bar-upper-west-side/
+ChIJV7j0FoVYwokRXvF0oyrlZoU,Vin Sur Vingt Wine Bar - Upper West Side,upper_west_side,verified,1,verified,,Bottle of wine special,"mon,tue,wed,thu,fri,sat,sun",22:00,close,drink: bottle of wine 25% off,,HAPPY HOUR ... 25% off on any bottle of wine ... - 10pm to close,https://www.vsvwinebars.com/location/vin-sur-vingt-wine-bar-upper-west-side/,https://www.vsvwinebars.com/location/vin-sur-vingt-wine-bar-upper-west-side/
+ChIJLcGfaSlZwokR6Y8xOBRPOvI,Zizi Wine Bar,upper_west_side,verified,0,verified,,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",open,18:00,drink: all bottles 20% off; drink: reserve bottles 10% off; food: food menu 15% off,,Happy Hour Every day until 6 pm | 20% off of all bottles | 10% off of reserve bottles | 15% off of the food menu,https://www.ziziwinebarnyc.com/menus/,http://ziziwinebarnyc.com/
+ChIJObyMbYVYwokRalcz9VGxvZI,Tarallucci e Vino Upper West Side,upper_west_side,rejected,0,rejected,quote_not_found,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,18:00,drink: prosecco $11; drink: vino $10; drink: birra $6; drink: italian spritz $11; food: caprese $16; food: prosciutto $19; food: arrosticini $5; food: tagliere dello chef $18; food: focaccia barese $20; food: bruschetta al pomodoro $6; food: bruschetta con funghi $6; food: olive $5; food: bruschetta di melanzane $6,at the bar,"Happy Hour is available at the bar from 4pm to 6 pm! ... 4 - 6PM, MONDAY - FRIDAY",,https://www.taralluccievino.net/upper-west-side-location?utm_source=GoogleBusinessProfile&utm_medium=Website&utm_campaign=MapLabs
+ChIJZX7S-gBZwokRkB7hCr19Elk,Vin Sur Vingt Wine Bar - Riverside Blvd,upper_west_side,needs_review,1,rejected,quote_not_found; days_mismatch,Evening Happy Hour,mon,22:00,close,drink: bottle of wine 25% off,,"HAPPY HOUR
+25% off on any bottle of wine
+- 10pm to close",,https://www.vsvwinebars.com/location/vin-sur-vingt-wine-bar-riverside/
+ChIJg-74fmVZwokRNvZhWUtbc7M,APERITIVO by CARTA,west_village,needs_review,0,needs_review,specials_not_in_text,Golden Hour,"mon,tue,wed,thu,fri",16:00,18:00,"drink: Spritz Bar, Vermouth Bar, Seasonal Bar, and Beer Garden drinks",,"Golden Hour
+Mon–Fri
+4:00–6:00 PM",https://aperitivobycarta.com/menu-aperitivo-by-carta-nyc/,http://aperitivobycarta.com/
+ChIJn6dnQpRZwokRqXNiYx0ZzLw,Bobo,west_village,needs_review,0,needs_review,specials_not_in_text,L'Apéro Happy Hour,"mon,tue,wed,thu,fri,sat,sun",17:00,19:00,food: oysters $2; drink: sparkling wine $8; drink: blanc wine $8; drink: rosé wine $8; drink: rouge wine $8; drink: Classic Martini $12; drink: épice margarita $12; drink: Kronenbourg Blanc $5,available only in the den,"L'Apéro:
+Please join us for happy hour in our Den.
+Daily, 5:00 PM - 7:00 PM",https://www.bobonyc.com/,http://www.bobonyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,8,needs_review,time_unreadable,Sunday specials,sun,,,drink: All Cans & Bottles $5; drink: Tullamore Dew Green Tea Shots $6,Exclusions Apply,12PM - 4AM $5 All Cans & Bottles (Exclusions Apply) $6 Tullamore Dew Green Tea Shots,https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJEyUgYZRZwokRETFRosKubF8,Due West,west_village,needs_review,0,needs_review,specials_not_in_text,Monday-Thursday Happy Hour,"mon,tue,wed,thu",17:00,19:00,drink: draft cocktails; drink: wine; drink: beer; food: oysters $1.5; food: crispy chicken slider $6; food: lobster slider $8,Minimum of 6,HAPPY HOUR ... Monday-Thursday 5:00pm-7:00pm,https://www.duewestnyc.com/,http://www.duewestnyc.com/
+ChIJEyUgYZRZwokRETFRosKubF8,Due West,west_village,needs_review,1,needs_review,specials_not_in_text,Friday Happy Hour,fri,16:00,18:00,drink: draft cocktails; drink: wine; drink: beer; food: oysters $1.5; food: crispy chicken slider $6; food: lobster slider $8,Minimum of 6,HAPPY HOUR ... Friday 4:00pm-6:00pm,https://www.duewestnyc.com/,http://www.duewestnyc.com/
+ChIJJ0KwSzBZwokRZBEwqbaFtjU,Julius',west_village,needs_review,0,needs_review,days_mismatch,Happy Hour,"mon,fri",16:00,19:00,,,"Happy Hour Mon. - Fri.
+4pm to 7pm",https://www.juliusbarny.com/julius-bar-menu/,http://juliusbarny.com/
+ChIJ1VhVNalZwokRaEDR4BORVlE,L'Accolade,west_village,verified,0,needs_review,quote_crosses_days,Weekday Happy Hour,"tue,wed,thu,fri",17:00,19:00,food: Oyster $1.5; drink: Wines by the Glass & Cocktails $14; drink: Selected Martinis $10,until we run out,"Tuesday-Friday 5pm-7pm ... $1.50 Oyster, M-F until we run out",https://www.accolade-ny.com/btg,http://www.accolade-ny.com/
+ChIJCW5gj5ZZwokRtfK4UZxkcr4,Rosemary's West Village,west_village,needs_review,0,needs_review,multi_location; specials_not_in_text,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,18:00,drink: frizzante $7; drink: soave $7; drink: rosemary's rosato $7; drink: montepulciano d'abruzzo $7; drink: rosemary's martini $12; drink: americano $12; drink: negroni tradizionale $12; drink: rosemary's spritz $12; drink: forst lager draft $6; food: olives $11; food: cacio e pepe chips $9; food: antipasto board $15; food: arancini $16; food: black truffle focaccia $18; food: calamari fritti $21,available indoors only,"Happy Hour ... Weekdays, 4 PM – 6 PM ... — available indoors only",https://rosemarysnyc.com/west-village/,https://www.rosemarysnyc.com/location/rosemarys-west-village/
+ChIJHyOj9stZwokR6ZD9u3R7jDE,Stafili Wine Cafe,west_village,needs_review,0,needs_review,multi_location,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",15:00,19:00,,,"HAPPY HOUR
+3PM - 7PM
+7 Days a Week",https://www.stafiliwinecafe.com/,http://www.stafiliwinecafe.com/
+ChIJTQoVbZRZwokRx0ocj9EU2sA,The Stonewall Inn,west_village,needs_review,0,needs_review,times_not_in_quote; time_unreadable,Happy hour,"mon,tue,wed,thu,fri",,,,You must be 21 and a proper - physical ID is required.,HAPPY HOUR: MON - FRI,https://thestonewallinnnyc.com/,http://www.thestonewallinnnyc.com/
+ChIJcUtKK75ZwokR4n1SDLiQPoc,Art Bar,west_village,verified,0,verified,,Daily Happy Hour,"mon,tue,wed,thu,fri,sat,sun",16:00,19:00,drink: draft beer $5; drink: well drinks $5; drink: house wine $5; drink: sparkling wine $5,,"Daily Happy Hour: 4pm–7pm
+$5 draft beer, well drinks, house wine, and sparkling wine.",https://www.artbar.com/,https://www.artbar.com/
+ChIJm3QDH-tZwokRPSaMw09Zxv4,Automatic Slim’s,west_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",16:30,19:30,drink: Cocktails $12; drink: Call Drinks $12; drink: Well Drinks $10; drink: Hard Seltzer $8; drink: Wine $8; drink: Draft $8; drink: Bottles $7; drink: Well Shots $5,excludes Private Parties. *Bar Only.,"– Happy Hour – 4:30 - 7:30 Weekdays — Good Music, Drink & Food Specials",https://www.automaticslimsnyc.com/menu,https://www.automaticslimsnyc.com/
+ChIJ8dyRUwBZwokR0CDrii_W3Rw,BAR V,west_village,verified,0,verified,,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",16:00,18:00,,,MON TO SUN 4PM - 6PM,https://0642aec6-e9e8-4b3f-8c89-f91bfaaa00b0.filesusr.com/ugd/642c50_6d9ff5bc508f49d8afe6badff242856f.pdf,http://www.barvnyc.com/
+ChIJD2udspRZwokR_SuMjXL_Nt0,Bayard's Ale House,west_village,verified,0,verified,,Happy Hour,mon,16:00,18:00,,,Monday October 5th ... Happy Hour | ... 04:00 PM - 06:00 PM,https://bayardsalehouse.com/new-york-west-village-bayard-s-ale-house-happy-hours-specials,https://bayardsalehouse.com/
+ChIJD12dAtlbwokR246T0HsWnzY,Donna,west_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri",17:00,19:00,,,"Happy Hour
+Monday - Friday
+5pm - 7pm",https://www.donnanyc.com/,https://donnanyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",14:00,19:00,drink: all drinks 1/2 off,,"Monday - Friday, 2PM-7PM 1/2 Off All Drinks",https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,1,verified,,Everyday special,"mon,tue,wed,thu,fri,sat,sun",open,04:00,drink: Jell-O Shots $5; drink: Michelob Ultra and Tecate $5,,"Everyday, Open-4AM $5 Jell-O Shots $5 Michelob Ultra and Tecate",https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,2,verified,,Monday specials,mon,19:00,04:00,food: Wings $1; drink: All Drafts $5; drink: Jameson Shots $6; drink: Pitchers of Bud Light & Coors Light $14,"5 Wing Minimum, Dine-In Only",Monday 7PM - 4AM $1 Wings* $5 All Drafts $6 Jameson Shots $14 Pitchers of Bud Light & Coors Light,https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,3,verified,,Tuesday specials,tue,19:00,04:00,"drink: Ghost Spicy Margaritas $7; drink: Espolon Drinks $7; drink: Corona Bottles, Pacifico Bottles & Modelo Drafts $6; drink: Well Tequila Shots $5",,"Tuesday 7PM - 4AM $7 Ghost Spicy Margaritas $7 Espolon Drinks $6 Corona Bottles, Pacifico Bottles & Modelo Drafts $5 Well Tequila Shots",https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,4,verified,,Wednesday specials,wed,19:00,04:00,drink: Well Shots and Drinks $5; drink: Pitchers of Bud Light and Coors Light $14,,Wednesday 7PM - 4AM $5 Well Shots and Drinks $14 Pitchers of Bud Light and Coors Light,https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,5,verified,,Thursday specials,thu,19:00,04:00,"drink: Tito's Drinks $7; drink: Red Bull Bombs $8; drink: Buckets (5) Choice of Bud Light, Miller Lite, Tecate or Nutrl Vodka Seltzer $25",,"Thursday 7PM - 4AM $7 Tito's Drinks $8 Red Bull Bombs $25 Buckets (5) Choice of Bud Light, Miller Lite, Tecate or Nutrl Vodka Seltzer",https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,6,verified,,Friday specials,fri,19:00,04:00,drink: Beer and a Shot $10,,Friday 7PM - 4AM $10 Beer and a Shot,https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJ9y3B8ZNZwokR3WxwIDDjtk0,Down the Hatch,west_village,verified,7,verified,,Saturday cans and bottles special,sat,12:00,19:00,drink: All Cans & Bottles $5,Exclusions Apply,12-7PM $5 All Cans & Bottles (Exclusions Apply),https://www.downthehatchnyc.com/,https://www.downthehatchnyc.com/
+ChIJy3lriTJZwokRc9EcnjAU3hg,Felice on Hudson,west_village,verified,0,verified,,Monday happy hour,mon,17:00,20:00,drink: happy hour,,Monday: 5:00pm - 8:00pm,https://www.felicerestaurants.com/felice-hudson/,https://www.felicerestaurants.com/felice-hudson/
+ChIJy3lriTJZwokRc9EcnjAU3hg,Felice on Hudson,west_village,verified,1,verified,,Tuesday to Sunday happy hour,"tue,wed,thu,fri,sat,sun",14:00,20:00,drink: happy hour,,Tuesday - Sunday: 2:00pm - 8:00pm,https://www.felicerestaurants.com/felice-hudson/,https://www.felicerestaurants.com/felice-hudson/
+ChIJwf-3fpZZwokR2jdv5p1PM8Q,Greenwich Treehouse,west_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",17:00,20:00,drink: jell-o shot $5; drink: beer & shot $8; drink: all beer $1 off; drink: all WINE $1 off; drink: all Well $1 off,,"Happy 
+hour 
+mo
+n-
+fri 5 to 8 
+su
+n 
+3 to 8 
+$5 jell-o 
+shot 
+$8 
+beer & shot 
+$1 
+off 
+all beer 
+$1 
+off 
+all WINE 
+$1 
+off 
+all Well",https://www.greenwichtreehouse.com/,http://www.greenwichtreehouse.com/
+ChIJwf-3fpZZwokR2jdv5p1PM8Q,Greenwich Treehouse,west_village,verified,1,verified,,Sunday happy hour,sun,15:00,20:00,drink: jell-o shot $5; drink: beer & shot $8; drink: all beer $1 off; drink: all WINE $1 off; drink: all Well $1 off,,"Happy 
+hour 
+mo
+n-
+fri 5 to 8 
+su
+n 
+3 to 8 
+$5 jell-o 
+shot 
+$8 
+beer & shot 
+$1 
+off 
+all beer 
+$1 
+off 
+all WINE 
+$1 
+off 
+all Well",https://www.greenwichtreehouse.com/,http://www.greenwichtreehouse.com/
+ChIJs_OVa_1ZwokRUrAs7Kk0pkw,Grove Street Social,west_village,verified,0,verified,,Monday Happy Hour,mon,16:00,19:00,drink: Food & Drink,,"Monday October 5th
+Happy Hour! Food & Drink!
+04:00 PM - 07:00 PM",https://61grovestreet.com/new-york-west-village-grove-street-social-happy-hours-specials,https://www.61grovestreet.com/
+ChIJs_OVa_1ZwokRUrAs7Kk0pkw,Grove Street Social,west_village,verified,1,verified,,Tuesday Happy Hour,tue,16:00,19:00,drink: Food & Drink,,"Tuesday October 6th
+Happy Hour! Food & Drink!
+04:00 PM - 07:00 PM",https://61grovestreet.com/new-york-west-village-grove-street-social-happy-hours-specials,https://www.61grovestreet.com/
+ChIJs_OVa_1ZwokRUrAs7Kk0pkw,Grove Street Social,west_village,verified,2,verified,,Wednesday Happy Hour,wed,16:00,19:00,drink: Food & Drink,,"Wednesday October 7th
+Happy Hour! Food & Drink!
+04:00 PM - 07:00 PM",https://61grovestreet.com/new-york-west-village-grove-street-social-happy-hours-specials,https://www.61grovestreet.com/
+ChIJs_OVa_1ZwokRUrAs7Kk0pkw,Grove Street Social,west_village,verified,3,verified,,Thursday Happy Hour,thu,12:00,19:00,drink: Food & Drink,,"Thursday October 8th
+Happy Hour! Food & Drink!
+12:00 PM - 07:00 PM",https://61grovestreet.com/new-york-west-village-grove-street-social-happy-hours-specials,https://www.61grovestreet.com/
+ChIJs_OVa_1ZwokRUrAs7Kk0pkw,Grove Street Social,west_village,verified,4,verified,,Friday Happy Hour,fri,12:00,19:00,drink: Food & Drink,,"Friday October 9th
+Happy Hour! Food & Drink!
+12:00 PM - 07:00 PM",https://61grovestreet.com/new-york-west-village-grove-street-social-happy-hours-specials,https://www.61grovestreet.com/
+ChIJYQgB1pRZwokRhUb5IBPEl6A,Hudson Hound,west_village,verified,0,verified,,Happy Hour,"tue,wed,thu,fri",16:00,18:00,"drink: All Draught Beer $7.22; drink: Malfy Rosa Lemonade, Aperol Spritz, Dangerous Blanco Margarita, or Sangria $10.31; drink: WINE 25% Off by the Glass or Bottle; drink: Bucket of 4 Beer $20.62; drink: Bucket of 4 NUTRL $24.74; drink: Bucket of 4 Sun Cruiser $24.74",,"Tuesday - Friday from 4pm to 6pm
+All Draught Beer
+$7.22
+Malfy Rosa Lemonade, Aperol Spritz, Dangerous Blanco Margarita, or Sangria
+$10.31
+WINE - 25% Off by the Glass or Bottle
+Bucket of 4 Beer
+$20.62
+Estrella Galicia Lager, Bud Light, or Coney Island Merman IPA
+Bucket of 4 NUTRL
+$24.74
+Assorted Vodka Seltzer Cans
+Bucket of 4 Sun Cruiser
+$24.74",https://hudsonhoundnyc.com/new-york-west-village-hudson-hound-happy-hour-menu,http://hudsonhoundnyc.com/
+ChIJqYfcXz5ZwokRBU0xHJdmJBk,Judy Z’s Sports Tavern & Kitchen,west_village,verified,0,verified,,Happy Hour,"wed,thu,fri",17:00,19:00,drink: Beers $6; drink: Mixed Drinks $9,,"Happy Hour
+Wednesday – Friday
+5PM to 7PM
+$6 Beers $9 Mixed Drinks",https://www.judyznyc.com/menus/,https://www.judyznyc.com/
+ChIJp7-d8P9ZwokRtQtbCsCOCBA,Katana Kitten,west_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,18:00,drink: japerol spritz $12; drink: lychee 3-2-1 $12; drink: bamboo soda $12; drink: peach julep $15; food: edamame $8; food: mini teriyaki blt $8; food: takoyaki $8,,"Happy Hour
+4-6pm Mon - Fri",https://www.katanakitten.com/menu,http://www.katanakitten.com/
+ChIJ1VhVNalZwokRaEDR4BORVlE,L'Accolade,west_village,verified,1,verified,,Saturday Happy Hour,sat,15:00,18:00,drink: Wines by the Glass & Cocktails $14; drink: Selected Martinis $10,,Saturday 3pm-6pm,https://www.accolade-ny.com/btg,http://www.accolade-ny.com/
+ChIJ5X5PM-1ZwokRqc7NcYmU65M,LELABAR,west_village,verified,0,verified,,Daily happy hour,"mon,tue,wed,thu,fri,sat,sun",16:00,18:00,drink: Wine $14; drink: Beer $7; food: Cheese and Charcuterie $5; food: Oysters $3; food: Marcona Almonds $5; food: Olives $5,,Happy Hour is every day 4 til 6,http://www.lelabar.com/,http://www.lelabar.com/
+ChIJlwfqXuxZwokRTlizRW_4cwc,Rockbar NYC,west_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri",17:00,19:00,"drink: Beer, Well & Call Liquor 2-4-1",,"MONDAY - FRIDAY 5PM - 7pm
+Rockbar has a rocking' Happy Hour
+2-4-1 on Beer, Well & Call Liquor",https://www.rockbarnyc.com/,http://www.rockbarnyc.com/
+ChIJQT7u80BZwokR5MLuGvTsBiY,St Jardim,west_village,verified,0,verified,,Weekday apéro,"mon,tue,wed,thu,fri",14:30,17:00,drink: bottle and some snacks,"No reservations, just walk in","We have apéro at St J Mon-Fri 2:30-5, and weekends 3-4:45.",https://www.stjardimnyc.com/,http://www.stjardimnyc.com/
+ChIJQT7u80BZwokR5MLuGvTsBiY,St Jardim,west_village,verified,1,verified,,Weekend apéro,"sat,sun",15:00,16:45,drink: bottle and some snacks,"No reservations, just walk in","We have apéro at St J Mon-Fri 2:30-5, and weekends 3-4:45.",https://www.stjardimnyc.com/,http://www.stjardimnyc.com/
+ChIJaRpLHABZwokRsp_koypS7DA,The C Cafe & Wine,west_village,verified,0,verified,,Weekday Happy Hour,"mon,tue,wed,thu,fri",16:00,19:00,drink: Kronenbourg 1664 $7; drink: Lagunitas IPA $7; drink: Freixenet Pinot Grigio $11; drink: Giesen Sauvignon Blanc $11; drink: Abbotts & Delaunay Chardonnay $11; drink: Famille Perrin Côtes du Rhône $11; drink: Abbots & Delau Pinot Noir $11; drink: Arbo Malbec $11; drink: Fratelli Cozza $11; drink: Aperol Spritz $13; drink: Hugo Spritz $13; food: Mixed Salted Nuts $4; food: Oysters $2,minimum,"Monday to Friday 4:00PM to 7:00PM
+Beer
+Kronenbourg 1664
+$7.00",https://thec.cafe/happy-hour,http://thec.cafe/
+ChIJw-gIcpRZwokRz2K4g1SPOS4,The Duplex,west_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu",16:00,19:00,drink: WELL COCKTAILS $8; drink: BEER $8; drink: WINE $8,,"$8 WELL COCKTAILS / $8 BEER / $8 WINE
+EVERY MONDAY THRU THURSDAY - 4PM UNTIL 7PM",https://www.theduplex.com/menu,https://www.theduplex.com/
+ChIJZY-q_uFZwokRSJ8hpK_vV_A,The Lavaux,west_village,verified,0,verified,,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,18:00,drink: any glass of wine $5 off; drink: bottle of the month $25 off; food: Cheese & Charcuterie boards half price,,Our Happy hours are from Monday to Friday 4pm to 6pm ... Enjoy $5 off any glass of wine ! ... Enjoy 25$ off the bottle of the month ! ... Half price on all of our Cheese & Charcuterie boards !,https://thelavauxwinebar.com/drink-2,http://www.thelavauxwinebar.com/?y_source=1_MTAwMTM3MTUyOC03MTUtbG9jYXRpb24ud2Vic2l0ZQ%3D%3D
+ChIJp7R4-5JZwokRS3nnFAgJwJg,The Village Tavern,west_village,verified,0,verified,,Weekday Happy Hour,"mon,tue,wed,thu,fri",16:00,19:00,"drink: House Drinks $7; drink: Wine $8; drink: Michelob Ultra Draft $5; drink: Yuengling Draft $5; drink: Bud Light Draft $5; drink: Pitchers Bud Lt, Michelob Ultra & Yuengling $15",,"4:00 pm - 7:00 pm, Monday - Friday
+Happy Hour
+House Drinks
+$7.00
+Vodka, Gin, Rum,Tequila, Whisky, Bourbon & Scotch
+Wine
+$8.00/glass
+Chardonnay, and Cabernet
+Michelob Ultra Draft
+$5.00
+Yuengling Draft
+$5.00
+Bud Light Draft
+$5.00
+Pitchers Bud Lt, Michelob Ultra & Yuengling
+$15.00",https://thevillagetavern.nyc/drink-menu,http://www.thevillagetavern.nyc/
+ChIJrU6OrexZwokR8uGLGe4Be0Q,The Warren,west_village,verified,0,verified,,Weekday Happy Hour,mon,17:00,19:00,drink: Martinis $10; drink: Wine $10; drink: Bubbles $10; food: Snacks $10,,"Monday October 5th ... $10 Happy Hour! Martinis, Wine, Bubbles and Snacks! ... 05:00 PM - 07:00 PM",https://thewarrennyc.com/new-york-the-warren-happy-hours-specials,http://thewarrennyc.com/
+ChIJrU6OrexZwokR8uGLGe4Be0Q,The Warren,west_village,verified,1,verified,,Weekday Happy Hour,tue,17:00,19:00,drink: Martinis $10; drink: Wine $10; drink: Bubbles $10; food: Snacks $10,,"Tuesday October 6th ... $10 Happy Hour! Martinis, Wine, Bubbles and Snacks! ... 05:00 PM - 07:00 PM",https://thewarrennyc.com/new-york-the-warren-happy-hours-specials,http://thewarrennyc.com/
+ChIJrU6OrexZwokR8uGLGe4Be0Q,The Warren,west_village,verified,2,verified,,Wednesday Wine Special,wed,17:00,23:00,drink: Bottles of Wine 1/2 Off,,Wednesday October 7th ... 1/2 Off All Bottles of Wine Wednesday ... 05:00 PM - 11:00 PM,https://thewarrennyc.com/new-york-the-warren-happy-hours-specials,http://thewarrennyc.com/
+ChIJrU6OrexZwokR8uGLGe4Be0Q,The Warren,west_village,verified,3,verified,,Weekday Happy Hour,wed,17:00,19:00,drink: Martinis $10; drink: Wine $10; drink: Bubbles $10; food: Snacks $10,,"Wednesday October 7th ... $10 Happy Hour! Martinis, Wine, Bubbles and Snacks! ... 05:00 PM - 07:00 PM",https://thewarrennyc.com/new-york-the-warren-happy-hours-specials,http://thewarrennyc.com/
+ChIJrU6OrexZwokR8uGLGe4Be0Q,The Warren,west_village,verified,4,verified,,Weekday Happy Hour,thu,17:00,19:00,drink: Martinis $10; drink: Wine $10; drink: Bubbles $10; food: Snacks $10,,"Thursday October 8th ... $10 Happy Hour! Martinis, Wine, Bubbles and Snacks! ... 05:00 PM - 07:00 PM",https://thewarrennyc.com/new-york-the-warren-happy-hours-specials,http://thewarrennyc.com/
+ChIJrU6OrexZwokR8uGLGe4Be0Q,The Warren,west_village,verified,5,verified,,Weekday Happy Hour,fri,17:00,19:00,drink: Martinis $10; drink: Wine $10; drink: Bubbles $10; food: Snacks $10,,"Friday October 9th ... $10 Happy Hour! Martinis, Wine, Bubbles and Snacks! ... 05:00 PM - 07:00 PM",https://thewarrennyc.com/new-york-the-warren-happy-hours-specials,http://thewarrennyc.com/
+ChIJcySsKpRZwokR91uvLuvvV04,"Wogies Bar & Grill , West Village",west_village,verified,0,verified,,Happy Hour,"mon,tue,wed,thu,fri",15:00,19:00,drink: all drafts $8; drink: all wines $10; drink: select cocktails $12,,"HAPPY HOUR
+Monday - Friday 3 - 7 PM
+$
+8
+ALL DRAFTS
+$
+8
+$
+10
+ALL WINES
+$
+10
+$
+12
+SELECT COCKTAILS
+Wogies Spritz, Espresso Martini, Krazy Margarita",https://www.wogies.com/west-village-menu,https://wogies.com/
+ChIJn6dnQpRZwokRqXNiYx0ZzLw,Bobo,west_village,needs_review,1,rejected,quote_not_found,Up Late Happy Hour,"fri,sat",22:00,00:00,drink: classic martini $14; drink: espresso martini $14; drink: french martini $14,available only in the den,"Friday & Saturday, 10:00 PM - 12:00 AM ... Up Late Happy Hour
+Friday & Saturday, 10pm - 12am;
+available only in the den
+Martinis
+14",,http://www.bobonyc.com/
+ChIJL0D4jJNZwokRWQTfTBLjlvw,The Spaniard,west_village,rejected,0,rejected,quote_not_found,Weekday happy hour,"mon,tue,wed,thu,fri",16:00,19:00,food: Single Smash Burger & Fries $12; food: Happy Dawg $10; drink: all drafts $2 off; drink: FEATURED POUR (1oz) at cost pour,,Happy Hour 4pm - 7pm Monday thru Friday ... Happy Hour ... LITTLE SPANIARD ... Single Smash Burger & Fries ... $ 12 ... Happy Dawg ... $ 10 ... $2 OFF ALL DRAFTS ... FEATURED POUR (1oz) - Each week we feature a different spirit with an at cost pour,,https://www.thespaniardnyc.com/
