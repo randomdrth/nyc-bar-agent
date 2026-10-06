@@ -1,194 +1,980 @@
 <!doctype html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <title>Gemini Web Tool Calling</title>
-        <style>
-            * {
-                box-sizing: border-box;
-                margin: 0;
-                padding: 0;
-            }
-            body {
-                font-family: system-ui, sans-serif;
-                height: 100vh;
-                display: flex;
-                justify-content: center;
-                align-items: center;
-                padding: 3rem 1rem;
-            }
-            #container {
-                width: 100%;
-                max-width: 900px;
-                display: flex;
-                flex-direction: column;
-                border: 1px solid #e0e0e0;
-            }
-            #messages {
-                overflow-y: auto;
-                padding: 2rem;
-                display: flex;
-                flex-direction: column;
-                gap: 1.5rem;
-                min-height: 450px;
-                max-height: 70vh;
-            }
-            .msg {
-                line-height: 1.5;
-                max-width: 80%;
-            }
-            .msg.user {
-                align-self: flex-end;
-                text-align: right;
-            }
-            .msg .role {
-                font-size: 0.75rem;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                color: #999;
-                margin-bottom: 0.25rem;
-            }
-            .msg.loading .content {
-                color: #999;
-            }
-            #input-area {
-                display: flex;
-                gap: 1rem;
-                padding: 1.5rem;
-                border-top: 1px solid #e0e0e0;
-            }
-            #user-input {
-                flex: 1;
-                padding: 0.75rem 0;
-                border: none;
-                border-bottom: 1px solid #e0e0e0;
-                font-size: 1rem;
-                outline: none;
-            }
-            #user-input:focus {
-                border-bottom-color: #000;
-            }
-            button {
-                padding: 0.75rem 1.5rem;
-                background: #000;
-                color: #fff;
-                border: none;
-                font-size: 0.75rem;
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                cursor: pointer;
-            }
-            .tool {
-                font-family: ui-monospace, monospace;
-                font-size: 0.75rem;
-                color: #555;
-                background: #f5f5f5;
-                border-left: 3px solid #f59e0b;
-                padding: 0.5rem 0.75rem;
-                margin: 0.25rem 0 0.75rem;
-                white-space: pre-wrap;
-                word-break: break-word;
-            }
-            .tool .label {
-                text-transform: uppercase;
-                letter-spacing: 0.05em;
-                color: #b45309;
-            }
-            button:disabled {
-                opacity: 0.3;
-            }
-        </style>
-    </head>
-    <body>
-        <div id="container">
-            <div id="messages"></div>
-            <div id="input-area">
-                <input
-                    type="text"
-                    id="user-input"
-                    placeholder="Type a message..."
-                    autocomplete="off"
-                />
-                <button id="send-btn">Send</button>
-            </div>
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Next Round: happy hours and bar crawls in Manhattan</title>
+<meta name="description" content="Find verified happy hours and plan a walkable bar crawl in the West Village, East Village, and Upper West Side." />
+<meta name="theme-color" content="#5A1A21" />
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%235A1A21'/%3E%3Crect x='29' y='24' width='6' height='31' rx='2' fill='%23CFAA62'/%3E%3Cellipse cx='32' cy='19' rx='7.5' ry='9.5' fill='%23B8392B' stroke='%23F2EBE3' stroke-width='2'/%3E%3C/svg%3E" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700;800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.css" />
+<style>
+  :root {
+    --cover: #5A1A21;        /* matchbook cover: the page */
+    --cover-deep: #46131A;
+    --paper: #F2EBE3;        /* inside the cover: where you read */
+    --ink: #2B2124;          /* body text, 13.2:1 on paper */
+    --muted: #6F625F;        /* secondary text, 5.0:1 on paper */
+    --foil: #CFAA62;         /* brass foil: logo, primary button */
+    --foil-light: #F1DCA6;
+    --striker: #7B5A44;      /* the strip you strike a match on */
+    --head: #B8392B;         /* match head: stop numbers, checks, links */
+    --rule: rgba(43, 33, 36, 0.14);
+    --display: "Big Shoulders Display", "Oswald", "Arial Narrow", sans-serif;
+    --body: "Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+    --mono: ui-monospace, "SF Mono", Menlo, Consolas, monospace;
+  }
+
+  * { box-sizing: border-box; }
+  html, body { height: 100%; }
+
+  body {
+    margin: 0;
+    color: var(--paper);
+    font-family: var(--body);
+    font-size: 16px;
+    line-height: 1.55;
+    background-color: var(--cover);
+    /* Uncoated cover stock: a fine grain and a soft vignette */
+    background-image:
+      url("data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' width='180' height='180'><filter id='n'><feTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='2' stitchTiles='stitch'/><feColorMatrix values='0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.14 0'/></filter><rect width='100%' height='100%' filter='url(%23n)'/></svg>"),
+      radial-gradient(ellipse 90% 70% at 50% 30%, transparent 55%, rgba(0, 0, 0, 0.22));
+    display: flex;
+    flex-direction: column;
+  }
+
+  :focus-visible { outline: 2px solid var(--foil); outline-offset: 2px; }
+  button { font: inherit; color: inherit; cursor: pointer; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  /* ---------- Cover ---------- */
+  .cover {
+    width: min(1280px, calc(100% - 40px));
+    margin: 18px auto 0;
+    display: flex;
+    align-items: flex-end;
+    gap: 24px;
+  }
+  .brand { flex: 1; min-width: 0; }
+  .logo {
+    margin: 0;
+    font-family: var(--display);
+    font-weight: 800;
+    font-size: clamp(2.4rem, 4.6vw, 3.5rem);
+    line-height: 0.86;
+    letter-spacing: 0.015em;
+    text-transform: uppercase;
+    color: var(--foil);
+    /* Foil catches the light once as the page loads */
+    background: linear-gradient(100deg, var(--foil) 0 42%, var(--foil-light) 50%, var(--foil) 58% 100%);
+    background-size: 260% 100%;
+    background-position: 100% 0;
+    -webkit-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    animation: sheen 1.8s ease-in-out 0.35s both;
+  }
+  @keyframes sheen { from { background-position: 100% 0; } to { background-position: 0 0; } }
+  .foil-rule { width: 150px; height: 2px; margin: 10px 0 8px; background: var(--foil); opacity: 0.75; }
+  .tagline { margin: 0; max-width: 60ch; color: rgba(242, 235, 227, 0.86); font-size: 1rem; }
+  .tagline strong { color: var(--paper); font-weight: 600; white-space: nowrap; }
+
+  .btn-cover {
+    background: transparent;
+    border: 1px solid rgba(207, 170, 98, 0.55);
+    border-radius: 999px;
+    padding: 9px 18px;
+    color: var(--foil);
+    font-weight: 600;
+    font-size: 0.92rem;
+    white-space: nowrap;
+  }
+  .btn-cover:hover { border-color: var(--foil); background: rgba(207, 170, 98, 0.08); }
+
+  .striker {
+    width: min(1280px, calc(100% - 40px));
+    margin: 14px auto 0;
+    height: 14px;
+    border-radius: 3px;
+    background-color: var(--striker);
+    background-image:
+      radial-gradient(rgba(0, 0, 0, 0.38) 0.9px, transparent 1.2px),
+      radial-gradient(rgba(255, 238, 210, 0.16) 0.9px, transparent 1.2px);
+    background-size: 5px 5px, 7px 7px;
+    background-position: 0 0, 2px 3px;
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.35);
+  }
+
+  /* ---------- Inside the cover ---------- */
+  main {
+    flex: 1;
+    min-height: 0;
+    width: min(1280px, calc(100% - 40px));
+    margin: 14px auto 0;
+    display: grid;
+    grid-template-columns: minmax(0, 3fr) minmax(0, 2fr);
+    gap: 16px;
+  }
+  .panel {
+    min-height: 0;
+    background: var(--paper);
+    color: var(--ink);
+    border-radius: 6px;
+    box-shadow: 0 1px 0 rgba(255, 255, 255, 0.06), 0 14px 32px rgba(0, 0, 0, 0.28),
+      inset 0 10px 14px -12px rgba(43, 33, 36, 0.35); /* the fold where the cover bends */
+  }
+  .chat { display: flex; flex-direction: column; }
+  .map-panel { position: relative; overflow: hidden; }
+
+  .chat-top { display: none; justify-content: flex-end; padding: 12px 16px 0; }
+  .btn-line {
+    background: transparent;
+    border: 1px solid var(--rule);
+    border-radius: 999px;
+    padding: 7px 14px;
+    color: var(--ink);
+    font-size: 0.88rem;
+    font-weight: 600;
+  }
+  .btn-line:hover { border-color: rgba(43, 33, 36, 0.35); }
+
+  /* ---------- Messages ---------- */
+  .messages { flex: 1; min-height: 0; overflow-y: auto; padding: 24px 24px 8px; scroll-behavior: smooth; }
+  .msg { margin: 0 0 20px; max-width: 70ch; }
+  .msg.user {
+    margin-left: auto;
+    width: fit-content;
+    max-width: min(80%, 58ch);
+    padding: 10px 14px;
+    border-radius: 14px 14px 3px 14px;
+    background: rgba(90, 26, 33, 0.06);
+    border: 1px solid rgba(90, 26, 33, 0.16);
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
+  }
+  .msg.agent { padding-left: 16px; border-left: 2px solid rgba(123, 90, 68, 0.55); }
+  .msg.agent p { margin: 0 0 10px; }
+  .msg.agent p:last-child, .msg.agent ol:last-child, .msg.agent ul:last-child { margin-bottom: 0; }
+  .msg.agent ol, .msg.agent ul { margin: 0 0 12px; padding-left: 1.5em; }
+  .msg.agent li { margin: 0 0 8px; padding-left: 3px; }
+  .msg.agent ol > li::marker { color: var(--head); font-weight: 700; }
+  .msg.agent ul > li::marker { color: var(--head); }
+  .msg.agent strong { font-weight: 700; }
+  .msg.agent em { color: var(--muted); }
+  .msg.agent a:not(.btn-foil) { color: var(--head); }
+  .msg.agent.error { border-left-color: var(--head); color: var(--muted); }
+
+  .bar-link {
+    background: none; border: 0; padding: 0; margin: 0;
+    font: inherit; font-weight: 700; color: inherit;
+    text-decoration: underline dotted var(--head);
+    text-decoration-thickness: 1.5px;
+    text-underline-offset: 3px;
+  }
+  .bar-link:hover { color: var(--head); }
+
+  /* What the agent did, one line per tool call */
+  .steps { margin: 0 0 12px; padding: 0; list-style: none; }
+  .step { margin: 0 0 4px; font-size: 0.87rem; color: var(--muted); }
+  .step summary { display: inline; list-style: none; cursor: pointer; }
+  .step summary::-webkit-details-marker { display: none; }
+  .step .mark { color: var(--head); font-weight: 700; margin-right: 7px; }
+  .step.failed .mark { color: var(--muted); }
+  .step .toggle { margin-left: 8px; font-size: 0.8rem; text-decoration: underline; text-underline-offset: 2px; }
+  .step .toggle::before { content: "details"; }
+  .step details[open] .toggle::before { content: "hide details"; }
+  .step pre {
+    margin: 6px 0 10px; padding: 10px 12px; max-height: 260px; overflow: auto;
+    background: rgba(43, 33, 36, 0.05); border: 1px solid var(--rule); border-radius: 6px;
+    font-family: var(--mono); font-size: 0.75rem; line-height: 1.45; color: var(--ink);
+    white-space: pre-wrap; overflow-wrap: anywhere;
+  }
+
+  .actions { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+  .btn-foil {
+    display: inline-flex; align-items: center; gap: 8px;
+    padding: 9px 16px; border-radius: 8px; border: 0;
+    background: var(--foil); color: var(--ink);
+    font-weight: 700; font-size: 0.92rem; text-decoration: none;
+  }
+  .btn-foil:hover { background: #D8B771; }
+  .btn-foil svg, .btn-line svg { width: 16px; height: 16px; flex: none; }
+  .actions .btn-line { display: inline-flex; align-items: center; gap: 8px; border-radius: 8px; padding: 8px 14px; }
+
+  .thinking { color: var(--muted); }
+  .thinking .dots span {
+    display: inline-block; width: 6px; height: 6px; margin-right: 4px; border-radius: 50%;
+    background: var(--head); animation: blink 1.2s infinite ease-in-out;
+  }
+  .thinking .dots span:nth-child(2) { animation-delay: 0.2s; }
+  .thinking .dots span:nth-child(3) { animation-delay: 0.4s; }
+  @keyframes blink { 0%, 80%, 100% { opacity: 0.25; } 40% { opacity: 1; } }
+
+  /* ---------- Empty state ---------- */
+  .welcome { max-width: 60ch; }
+  .welcome[hidden] { display: none; }
+  .welcome h2 {
+    margin: 0 0 4px; font-family: var(--display); font-weight: 700; font-size: 2rem; line-height: 1.05;
+    letter-spacing: 0.01em; color: var(--cover);
+  }
+  .welcome p { margin: 0 0 18px; color: var(--muted); }
+  .samples { display: grid; gap: 10px; margin: 0; padding: 0; list-style: none; }
+  .sample {
+    width: 100%; text-align: left; position: relative;
+    padding: 12px 14px 12px 40px;
+    background: rgba(255, 255, 255, 0.45);
+    border: 1px solid var(--rule); border-radius: 8px;
+    color: var(--ink); font-size: 0.98rem; line-height: 1.4;
+  }
+  /* each suggestion is a match: a red head on a thin stick */
+  .sample::before {
+    content: ""; position: absolute; left: 16px; top: 50%; width: 10px; height: 12px; margin-top: -9px;
+    border-radius: 50% 50% 45% 45%; background: var(--head);
+  }
+  .sample::after {
+    content: ""; position: absolute; left: 20px; top: 50%; width: 2px; height: 9px; margin-top: 2px;
+    border-radius: 1px; background: var(--foil);
+  }
+  .sample:hover { border-color: rgba(90, 26, 33, 0.35); background: rgba(255, 255, 255, 0.75); }
+
+  /* ---------- Composer ---------- */
+  .composer { display: flex; gap: 10px; align-items: flex-end; padding: 12px 16px 16px; border-top: 1px solid var(--rule); }
+  .composer textarea {
+    flex: 1; resize: none; min-height: 46px; max-height: 160px;
+    padding: 12px 14px; border-radius: 8px;
+    border: 1px solid rgba(43, 33, 36, 0.22);
+    background: #FBF8F4; color: var(--ink); font: inherit; line-height: 1.4;
+  }
+  .composer textarea::placeholder { color: var(--muted); }
+  .composer textarea:focus-visible { outline: none; border-color: var(--cover); box-shadow: 0 0 0 1px var(--cover); }
+  .send { height: 46px; padding: 0 20px; border: 0; border-radius: 8px; background: var(--foil); color: var(--ink); font-weight: 700; }
+  .send:hover { background: #D8B771; }
+  .send:disabled { opacity: 0.55; cursor: default; }
+
+  footer {
+    width: min(1280px, calc(100% - 40px));
+    margin: 12px auto 16px;
+    color: rgba(242, 235, 227, 0.72);
+    font-size: 0.82rem;
+  }
+
+  /* ---------- Map ---------- */
+  #map { position: absolute; inset: 0; }
+  .map-note {
+    position: absolute; inset: 0; z-index: 2; display: grid; place-items: center; padding: 24px;
+    color: var(--muted); text-align: center; font-size: 0.95rem; background: var(--paper);
+  }
+  .map-note[hidden] { display: none; }
+  .map-legend {
+    position: absolute; left: 12px; bottom: 12px; z-index: 2; pointer-events: none;
+    background: rgba(242, 235, 227, 0.94); border: 1px solid var(--rule); border-radius: 6px;
+    padding: 5px 10px; font-size: 0.82rem; color: var(--ink);
+  }
+  .map-legend:empty { display: none; }
+
+  .pin {
+    width: 16px; height: 16px; border-radius: 50%; cursor: pointer;
+    background: var(--cover); border: 2.5px solid var(--paper);
+    box-shadow: 0 1px 4px rgba(43, 33, 36, 0.45);
+  }
+  .stop {
+    width: 28px; height: 28px; border-radius: 50%; cursor: pointer;
+    display: grid; place-items: center;
+    background: var(--head); color: var(--paper);
+    font: 700 13px/1 var(--body);
+    border: 2.5px solid var(--paper);
+    box-shadow: 0 2px 6px rgba(43, 33, 36, 0.45);
+  }
+  .pin:focus-visible, .stop:focus-visible { outline: 2px solid var(--cover); outline-offset: 2px; }
+  .hood-label {
+    font: 700 13px/1 var(--display); letter-spacing: 0.04em; text-transform: uppercase;
+    color: var(--cover); opacity: 0.8; pointer-events: none;
+    text-shadow: 0 0 3px var(--paper), 0 0 6px var(--paper);
+  }
+  .maplibregl-popup-content {
+    background: var(--paper); color: var(--ink); border-radius: 6px; padding: 10px 14px;
+    font: 14px/1.4 var(--body); box-shadow: 0 6px 18px rgba(43, 33, 36, 0.28);
+  }
+  .maplibregl-popup-content strong { display: block; margin-bottom: 2px; }
+  .maplibregl-popup-anchor-bottom .maplibregl-popup-tip { border-top-color: var(--paper); }
+  .maplibregl-popup-anchor-top .maplibregl-popup-tip { border-bottom-color: var(--paper); }
+  .maplibregl-popup-close-button { color: var(--muted); font-size: 18px; padding: 0 6px; }
+  .maplibregl-ctrl-group { background: var(--paper); box-shadow: 0 1px 4px rgba(43, 33, 36, 0.25); }
+
+  /* ---------- Small screens ---------- */
+  @media (max-width: 900px) {
+    body { height: auto; }
+    .cover, .striker, main, footer { width: calc(100% - 24px); }
+    .cover { margin-top: 16px; flex-wrap: wrap; align-items: flex-start; gap: 12px; }
+    main { flex: none; grid-template-columns: 1fr; gap: 12px; margin-top: 12px; }
+    .map-panel { height: 0; order: -1; transition: height 0.25s ease; }
+    body.map-open .map-panel { height: 44vh; }
+    .chat-top { display: flex; }
+    .chat { height: 78vh; height: 78dvh; }
+    .messages { padding: 16px 16px 6px; }
+  }
+  @media (min-width: 901px) { body { height: 100vh; overflow: hidden; } }
+  @media (prefers-reduced-motion: reduce) {
+    *, *::before, *::after { animation: none !important; transition: none !important; scroll-behavior: auto !important; }
+    .logo { background-position: 0 0; }
+  }
+</style>
+</head>
+<body>
+  <header class="cover">
+    <div class="brand">
+      <h1 class="logo">Next<br />Round</h1>
+      <div class="foil-rule" aria-hidden="true"></div>
+      <p class="tagline">Verified happy hours and walkable bar crawls in the
+        <strong>West Village</strong>, <strong>East Village</strong>, and <strong>Upper West Side</strong>.</p>
+    </div>
+    <button class="btn-cover" id="new-chat" type="button">New chat</button>
+  </header>
+  <div class="striker" aria-hidden="true"></div>
+
+  <main>
+    <section class="panel chat" aria-label="Chat">
+      <div class="chat-top">
+        <button class="btn-line" id="map-toggle" type="button" aria-expanded="false" aria-controls="map-panel">Show map</button>
+      </div>
+      <div class="messages" id="messages" aria-live="polite">
+        <div class="welcome" id="welcome">
+          <h2>Where's the next round?</h2>
+          <p>Ask about happy hours at a day and time, describe the kind of bar you want, or have me plan the whole route. Tap one to try it.</p>
+          <ul class="samples">
+            <li><button class="sample" type="button">What happy hours are on in the East Village Thursday at 6pm?</button></li>
+            <li><button class="sample" type="button">Plan 3 stops in the West Village Friday starting at 5pm, cocktails please</button></li>
+            <li><button class="sample" type="button">Find me a dive bar on the Upper West Side open late Friday</button></li>
+            <li><button class="sample" type="button">Wine bars rated 4 stars and up with happy hour food on the Upper West Side, Saturday 4pm</button></li>
+          </ul>
         </div>
-        <script>
-            const messages = document.getElementById("messages");
-            const userInput = document.getElementById("user-input");
-            const sendBtn = document.getElementById("send-btn");
-            let sessionId = null;
+      </div>
+      <form class="composer" id="composer">
+        <label for="input" class="visually-hidden">Your message</label>
+        <textarea id="input" rows="1" placeholder="Happy hours, bars, or a crawl?" autocomplete="off"></textarea>
+        <button class="send" id="send" type="submit">Send</button>
+      </form>
+    </section>
 
-            function addMessage(role, text, isLoading = false) {
-                const div = document.createElement("div");
-                div.className =
-                    "msg " +
-                    (role === "you" ? "user" : "assistant") +
-                    (isLoading ? " loading" : "");
-                div.innerHTML =
-                    '<div class="role">' +
-                    role +
-                    '</div><div class="content">' +
-                    text +
-                    "</div>";
-                messages.appendChild(div);
-                messages.scrollTop = messages.scrollHeight;
-                return div;
-            }
+    <section class="panel map-panel" id="map-panel" aria-label="Map">
+      <div id="map"></div>
+      <div class="map-note" id="map-note" hidden>The map could not load. Everything else still works.</div>
+      <div class="map-legend" id="map-legend"></div>
+    </section>
+  </main>
 
-            async function send() {
-                const text = userInput.value.trim();
-                if (!text) return;
+  <footer>Happy hours are checked against each bar's own website (October 2026). Deals change, so confirm anything you're counting on.</footer>
 
-                userInput.value = "";
-                sendBtn.disabled = true;
-                addMessage("you", text);
-                const loading = addMessage("assistant", "Thinking...", true);
+<script src="https://unpkg.com/maplibre-gl@4.7.1/dist/maplibre-gl.js"></script>
+<script>
+/* ===== Pure helpers (no DOM): markdown, tool descriptions, map data, directions, plan text ===== */
 
-                try {
-                    const res = await fetch("/chat", {
-                        method: "POST",
-                        headers: { "Content-Type": "application/json" },
-                        body: JSON.stringify({
-                            message: text,
-                            session_id: sessionId,
-                        }),
-                    });
-                    const data = await res.json();
-                    sessionId = data.session_id;
+function escapeHtml(s) {
+  return String(s).replace(/[&<>"']/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+}
 
-                    // Show each tool the harness ran, above the assistant's answer
-                    for (const call of data.tool_calls || []) {
-                        const div = document.createElement("div");
-                        div.className = "tool";
-                        const label = document.createElement("span");
-                        label.className = "label";
-                        label.textContent = "tool call  ";
-                        div.appendChild(label);
-                        div.appendChild(
-                            document.createTextNode(
-                                call.name + "(" + JSON.stringify(call.args) + ")\n→ " + call.result,
-                            ),
-                        );
-                        messages.insertBefore(div, loading);
-                    }
-                    loading.querySelector(".content").textContent =
-                        data.response;
-                    loading.classList.remove("loading");
-                } catch (e) {
-                    loading.querySelector(".content").textContent =
-                        "Error: " + e.message;
-                    loading.classList.remove("loading");
-                }
-                sendBtn.disabled = false;
-                userInput.focus();
-            }
+// Inline markdown on text that is ALREADY escaped: bold, italic, http(s) links only.
+function renderInline(s) {
+  s = s.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+  s = s.replace(/(^|[^*\w])\*(?!\s)([^*]+?)(?<!\s)\*(?!\*)/g, "$1<em>$2</em>");
+  s = s.replace(/\[([^\]]+)\]\((https?:\/\/[^\s)]+)\)/g,
+    '<a href="$2" target="_blank" rel="noopener noreferrer">$1</a>');
+  return s;
+}
 
-            sendBtn.addEventListener("click", send);
-            userInput.addEventListener("keydown", function (e) {
-                if (e.key === "Enter") send();
-            });
-            userInput.focus();
-        </script>
-    </body>
+// A small, safe markdown renderer: paragraphs, line breaks, numbered and bullet lists.
+// Everything is escaped first, so no text from the model or a website can become HTML.
+function renderMarkdown(text) {
+  const lines = escapeHtml(text || "").replace(/\r\n?/g, "\n").split("\n");
+  const out = [];
+  let para = [], list = null;
+  const flushPara = () => { if (para.length) { out.push("<p>" + para.map(renderInline).join("<br>") + "</p>"); para = []; } };
+  const flushList = () => {
+    if (!list) return;
+    const start = list.type === "ol" && list.start !== 1 ? ` start="${list.start}"` : "";
+    out.push(`<${list.type}${start}>` + list.items.map(i => "<li>" + renderInline(i) + "</li>").join("") + `</${list.type}>`);
+    list = null;
+  };
+  for (const raw of lines) {
+    const line = raw.trimEnd();
+    const ol = line.match(/^\s*(\d+)[.)]\s+(.*)$/);
+    const ul = line.match(/^\s*[-*•]\s+(.*)$/);
+    if (ol || ul) {
+      flushPara();
+      const type = ol ? "ol" : "ul";
+      if (!list || list.type !== type) { flushList(); list = { type, start: ol ? parseInt(ol[1], 10) : 1, items: [] }; }
+      list.items.push(ol ? ol[2] : ul[1]);
+    } else if (!line.trim()) {
+      flushPara(); flushList();
+    } else if (list && /^\s{2,}\S/.test(raw)) {
+      list.items[list.items.length - 1] += "<br>" + line.trim();
+    } else {
+      flushList(); para.push(line.trim());
+    }
+  }
+  flushPara(); flushList();
+  return out.join("");
+}
+
+function parseResult(result) {
+  if (result && typeof result === "object") return result;
+  try { return JSON.parse(result); } catch { return null; }
+}
+
+function inHood(name) {
+  if (!name) return "";
+  if (name === "Upper West Side") return "on the Upper West Side";
+  if (name === "West Village" || name === "East Village") return "in the " + name;
+  return "in " + name;
+}
+
+function possessive(name) {
+  return /['\u2019]s$/i.test(name) ? name : name + "'s";
+}
+
+function niceHood(args) {
+  const known = { wv: "West Village", ev: "East Village", uws: "Upper West Side" };
+  const raw = String(args.neighborhood || "").trim();
+  return known[raw.toLowerCase()] || raw.replace(/\b\w/g, c => c.toUpperCase());
+}
+
+// Matching key for bar names: "The Penny Farthing" and "penny farthing" match.
+function normName(name) {
+  return String(name || "").normalize("NFKD").replace(/[\u0300-\u036f]/g, "").toLowerCase()
+    .replace(/['\u2019`]/g, "").replace(/&/g, " and ").replace(/\bthe\b/g, " ")
+    .replace(/[^a-z0-9]+/g, " ").trim();
+}
+
+// One plain sentence describing a tool call, for people rather than developers.
+function describeToolCall(call) {
+  const args = call.args || {};
+  const r = parseResult(call.result) || {};
+  const failed = Boolean(r.error && !r.stops);
+  const name = call.name;
+  let text;
+  if (name === "get_happy_hours") {
+    const q = r.query || {};
+    const hood = q.neighborhood || niceHood(args);
+    const style = q.style && q.style !== "any" ? q.style + " " : "";
+    const food = q.with_food ? " with food" : "";
+    const when = q.when ? " for " + q.when : "";
+    const rated = q.min_rating ? `, rated ${q.min_rating}+` : "";
+    text = `Checked ${style}happy hours${food} ${inHood(hood)}${when}${rated}`;
+    if (!failed && r.counts) text += ` (${r.counts.happening_now} running, ${r.counts.starting_soon} starting soon)`;
+  } else if (name === "find_bars") {
+    const q = r.query || {};
+    const hood = q.neighborhood || niceHood(args);
+    const style = q.style || args.style;
+    const words = [q.search_words || args.query, style && style !== "any" ? style : ""].filter(Boolean).join(" ");
+    const open = q.open_at ? `, open ${q.open_at}` : "";
+    const rated = q.min_rating ? `, rated ${q.min_rating}+` : "";
+    text = `Searched ${words ? words + " " : ""}bars ${inHood(hood)}${open}${rated}`;
+    if (!failed) text += r.source === "google_places_live" ? " (live Google data)" : " (saved data, live search was unavailable)";
+  } else if (name === "plan_bar_crawl") {
+    const n = (r.stops || []).length || (args.bars || []).length;
+    const q = r.query || {};
+    text = `Planned a ${n}-stop route` + (q.day ? ` for ${q.day} from ${q.start}` : "");
+    if (r.summary && !failed) text += ` (${r.summary.total_walk_minutes} min of walking)`;
+  } else if (name === "check_happy_hour_online") {
+    const bar = r.bar || args.bar;
+    const outcome = {
+      verified: "found verified deals", no_deal: "no clear happy hour", no_deal_text: "no deals posted",
+      site_unreadable: "site could not be read", site_unreachable: "site could not be reached",
+      timed_out: "site was too slow", analysis_failed: "could not analyze it", error: "check failed",
+    }[r.status];
+    text = `Read ${possessive(String(bar))} website` + (outcome ? ` (${outcome})` : "");
+  } else {
+    text = `Used ${name}`;
+  }
+  if (failed) text = `${text.replace(/ \([^)]*\)$/, "")}, but it didn't work`;
+  return { text, failed };
+}
+
+// Points for the map from one reply's tool calls. A planned route wins over plain pins.
+function mapDataFromCalls(calls) {
+  let route = null, plan = null;
+  const pins = new Map();
+  for (const call of calls || []) {
+    const r = parseResult(call.result);
+    if (!r || (r.error && !r.stops)) continue;
+    if (call.name === "plan_bar_crawl" && Array.isArray(r.stops) && r.stops.length) {
+      plan = r;
+      route = r.stops.map(s => ({
+        name: s.name, lat: s.lat, lng: s.lng, n: s.stop, place_id: s.place_id,
+        line: `Stop ${s.stop}, ${s.arrive} to ${s.leave}` +
+          (s.happy_hour ? `. Happy hour until ${String(s.happy_hour.runs || "").split(" to ")[1] || "?"}` : ""),
+      }));
+    }
+    const add = (b, line) => {
+      if (b && typeof b.lat === "number" && typeof b.lng === "number" && !pins.has(b.name)) {
+        pins.set(b.name, { name: b.name, lat: b.lat, lng: b.lng, place_id: b.place_id, line });
+      }
+    };
+    if (call.name === "get_happy_hours") {
+      for (const b of r.happening_now || []) {
+        const h = (b.happy_hours || [])[0] || {};
+        add(b, `${h.deal || "Happy hour"}, until ${h.ends_at}`);
+      }
+      for (const b of r.starting_soon || []) {
+        const h = (b.happy_hours || [])[0] || {};
+        add(b, `${h.deal || "Happy hour"}, starts ${h.starts_at}`);
+      }
+    }
+    if (call.name === "find_bars") {
+      for (const b of r.results || []) add(b, b.status || "");
+    }
+  }
+  if (route) return { kind: "route", points: route, plan };
+  if (pins.size) return { kind: "pins", points: [...pins.values()] };
+  return null;
+}
+
+// Walking directions through every stop, in order. Names plus Google place IDs, so the
+// stops show up as the actual bars. Falls back to coordinates if a place ID is missing.
+function googleMapsUrl(points) {
+  if (!points || points.length < 2) return null;
+  const enc = encodeURIComponent;
+  const where = p => p.place_id ? `${p.name}, New York, NY` : `${p.lat},${p.lng}`;
+  const first = points[0], last = points[points.length - 1], mid = points.slice(1, -1);
+  let url = "https://www.google.com/maps/dir/?api=1&travelmode=walking";
+  url += `&origin=${enc(where(first))}` + (first.place_id ? `&origin_place_id=${enc(first.place_id)}` : "");
+  url += `&destination=${enc(where(last))}` + (last.place_id ? `&destination_place_id=${enc(last.place_id)}` : "");
+  if (mid.length) {
+    url += `&waypoints=${enc(mid.map(where).join("|"))}`;
+    if (mid.every(p => p.place_id)) url += `&waypoint_place_ids=${enc(mid.map(p => p.place_id).join("|"))}`;
+  }
+  return url;
+}
+
+// The crawl as clean text for a group chat, built from the planner's own numbers.
+function planText(plan, url) {
+  const q = plan.query || {}, s = plan.summary || {};
+  const lines = [`Next Round: ${q.day || ""} bar crawl from ${q.start || ""}`.replace(/\s+/g, " ").trim(), ""];
+  for (const stop of plan.stops || []) {
+    let line = `${stop.stop}. ${stop.name}, ${stop.arrive} to ${stop.leave}.`;
+    const hh = stop.happy_hour;
+    if (hh) {
+      const until = String(hh.runs || "").split(" to ")[1];
+      const specials = (hh.specials || []).filter(x => x !== "specials not listed" && !/^\+\d+ more$/.test(x)).slice(0, 3);
+      line += ` Happy hour${until ? " until " + until : ""}${specials.length ? ": " + specials.join(", ") : ""}.`;
+    } else {
+      line += " No verified happy hour.";
+    }
+    lines.push(line);
+    if (stop.walk_to_next_minutes) lines.push(`   Then a ${stop.walk_to_next_minutes} min walk.`);
+  }
+  lines.push("", `Total walking: ${s.total_walk_minutes} min.`);
+  if (url) lines.push(`Directions: ${url}`);
+  return lines.join("\n");
+}
+
+/* ===== The page ===== */
+
+const NEIGHBORHOODS = [
+  { name: "West Village", polygon: [[40.7380, -73.9963], [40.7425, -74.0105], [40.7290, -74.0112], [40.7285, -74.0030]] },
+  { name: "East Village", polygon: [[40.7330, -73.9875], [40.7270, -73.9720], [40.7190, -73.9770], [40.7246, -73.9925]] },
+  { name: "Upper West Side", polygon: [[40.7681, -73.9819], [40.7738, -73.9952], [40.8055, -73.9700], [40.7999, -73.9581]] },
+];
+
+const ICON_MAP = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 21s-7-6.2-7-11.5A7 7 0 0 1 19 9.5C19 14.8 12 21 12 21z"/><circle cx="12" cy="9.5" r="2.5"/></svg>';
+const ICON_COPY = '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="12" height="12" rx="2"/><path d="M5 15V5a2 2 0 0 1 2-2h10"/></svg>';
+
+const els = {
+  messages: document.getElementById("messages"),
+  welcome: document.getElementById("welcome"),
+  form: document.getElementById("composer"),
+  input: document.getElementById("input"),
+  send: document.getElementById("send"),
+  newChat: document.getElementById("new-chat"),
+  mapToggle: document.getElementById("map-toggle"),
+  legend: document.getElementById("map-legend"),
+  mapNote: document.getElementById("map-note"),
+};
+let sessionId = null;
+let busy = false;
+
+function scrollToBottom() { els.messages.scrollTop = els.messages.scrollHeight; }
+
+function addUserMessage(text) {
+  const div = document.createElement("div");
+  div.className = "msg user";
+  div.textContent = text;
+  els.messages.appendChild(div);
+  scrollToBottom();
+}
+
+function addThinking() {
+  const div = document.createElement("div");
+  div.className = "msg agent thinking";
+  div.innerHTML = '<span class="dots" aria-hidden="true"><span></span><span></span><span></span></span> <span class="label">Checking the bars</span>';
+  els.messages.appendChild(div);
+  scrollToBottom();
+  const timer = setTimeout(() => {
+    div.querySelector(".label").textContent = "Still working. Reading a bar's website can take up to 40 seconds.";
+  }, 12000);
+  return { div, stop: () => clearTimeout(timer) };
+}
+
+function renderSteps(calls) {
+  if (!calls || !calls.length) return null;
+  const ul = document.createElement("ul");
+  ul.className = "steps";
+  for (const call of calls) {
+    const { text, failed } = describeToolCall(call);
+    const li = document.createElement("li");
+    li.className = "step" + (failed ? " failed" : "");
+    const details = document.createElement("details");
+    const summary = document.createElement("summary");
+    summary.innerHTML = `<span class="mark" aria-hidden="true">${failed ? "!" : "✓"}</span>${escapeHtml(text)}<span class="toggle"></span>`;
+    const pre = document.createElement("pre");
+    const parsed = parseResult(call.result);
+    pre.textContent = `${call.name}(${JSON.stringify(call.args || {}, null, 2)})\n\n` +
+      (parsed ? JSON.stringify(parsed, null, 2) : String(call.result));
+    details.append(summary, pre);
+    li.appendChild(details);
+    ul.appendChild(li);
+  }
+  return ul;
+}
+
+// Turn bold bar names in a reply into buttons that show the bar on the map.
+function linkBarNames(body, data) {
+  if (!data) return;
+  const byKey = new Map(data.points.map(p => [normName(p.name), p]));
+  for (const strong of body.querySelectorAll("strong")) {
+    const key = normName(strong.textContent);
+    if (key.length < 3) continue;
+    let point = byKey.get(key);
+    if (!point) {
+      for (const [k, p] of byKey) {
+        if ((k.startsWith(key) || key.startsWith(k)) && Math.min(k.length, key.length) >= 4) { point = p; break; }
+      }
+    }
+    if (!point) continue;
+    const btn = document.createElement("button");
+    btn.type = "button";
+    btn.className = "bar-link";
+    btn.textContent = strong.textContent;
+    btn.title = `Show ${point.name} on the map`;
+    btn.addEventListener("click", () => showOnMap(data, point.name));
+    strong.replaceWith(btn);
+  }
+}
+
+function crawlActions(data) {
+  if (!data || data.kind !== "route") return null;
+  const url = googleMapsUrl(data.points);
+  const row = document.createElement("div");
+  row.className = "actions";
+  if (url) {
+    const a = document.createElement("a");
+    a.className = "btn-foil";
+    a.href = url;
+    a.target = "_blank";
+    a.rel = "noopener noreferrer";
+    a.innerHTML = ICON_MAP + "<span>Open in Google Maps</span>";
+    row.appendChild(a);
+  }
+  const copy = document.createElement("button");
+  copy.type = "button";
+  copy.className = "btn-line";
+  copy.innerHTML = ICON_COPY + '<span class="label">Copy plan</span>';
+  copy.addEventListener("click", async () => {
+    const ok = await copyText(planText(data.plan, url));
+    const label = copy.querySelector(".label");
+    label.textContent = ok ? "Copied" : "Copy failed, select the text instead";
+    setTimeout(() => { label.textContent = "Copy plan"; }, 2200);
+  });
+  row.appendChild(copy);
+  return row;
+}
+
+async function copyText(text) {
+  try {
+    await navigator.clipboard.writeText(text);
+    return true;
+  } catch {
+    const ta = document.createElement("textarea");  // fallback for browsers without the clipboard API
+    ta.value = text;
+    ta.setAttribute("readonly", "");
+    ta.style.position = "fixed";
+    ta.style.opacity = "0";
+    document.body.appendChild(ta);
+    ta.select();
+    let ok = false;
+    try { ok = document.execCommand("copy"); } catch { ok = false; }
+    ta.remove();
+    return ok;
+  }
+}
+
+function showReply(target, data) {
+  target.className = "msg agent";
+  target.innerHTML = "";
+  const steps = renderSteps(data.tool_calls);
+  if (steps) target.appendChild(steps);
+  const body = document.createElement("div");
+  body.innerHTML = renderMarkdown(data.response);
+  const mapData = mapDataFromCalls(data.tool_calls);
+  linkBarNames(body, mapData);
+  target.appendChild(body);
+  const actions = crawlActions(mapData);
+  if (actions) target.appendChild(actions);
+  scrollToBottom();
+  return mapData;
+}
+
+function showError(target, message) {
+  target.className = "msg agent error";
+  target.textContent = message;
+  scrollToBottom();
+}
+
+async function send(text) {
+  text = (text || "").trim();
+  if (!text || busy) return;
+  busy = true;
+  els.send.disabled = true;
+  els.welcome.hidden = true;
+  addUserMessage(text);
+  els.input.value = "";
+  autoGrow();
+  const thinking = addThinking();
+  try {
+    const res = await fetch("/chat", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({ message: text, session_id: sessionId }),
+    });
+    if (!res.ok) throw new Error(`The server answered with status ${res.status}.`);
+    const data = await res.json();
+    sessionId = data.session_id;
+    const mapData = showReply(thinking.div, data);
+    if (mapData) updateMap(mapData);
+  } catch (err) {
+    showError(thinking.div, `Couldn't reach Next Round. ${err.message || ""} Check your connection and send it again.`);
+  } finally {
+    thinking.stop();
+    busy = false;
+    els.send.disabled = false;
+    els.input.focus();
+  }
+}
+
+function autoGrow() {
+  els.input.style.height = "auto";
+  els.input.style.height = Math.min(els.input.scrollHeight, 160) + "px";
+}
+
+els.form.addEventListener("submit", e => { e.preventDefault(); send(els.input.value); });
+els.input.addEventListener("input", autoGrow);
+els.input.addEventListener("keydown", e => {
+  if (e.key === "Enter" && !e.shiftKey && !e.isComposing) { e.preventDefault(); send(els.input.value); }
+});
+document.querySelectorAll(".sample").forEach(btn => btn.addEventListener("click", () => send(btn.textContent)));
+
+els.newChat.addEventListener("click", () => {
+  if (busy) return;
+  if (sessionId) fetch(`/clear?session_id=${encodeURIComponent(sessionId)}`, { method: "POST" }).catch(() => {});
+  sessionId = null;
+  els.messages.querySelectorAll(".msg").forEach(m => m.remove());
+  els.welcome.hidden = false;
+  clearMap();
+  els.input.focus();
+});
+
+function setMapOpen(open, then = null) {
+  document.body.classList.toggle("map-open", open);
+  els.mapToggle.setAttribute("aria-expanded", String(open));
+  els.mapToggle.textContent = open ? "Hide map" : (current && current.kind === "route" ? `Show map (${current.points.length} stops)` : "Show map");
+  // Wait for the panel to finish opening, then resize the map and either focus a bar or fit the view
+  if (map) setTimeout(() => { map.resize(); if (then) then(); else fitTo(current); }, 280);
+}
+els.mapToggle.addEventListener("click", () => setMapOpen(!document.body.classList.contains("map-open")));
+const isSmall = () => window.matchMedia("(max-width: 900px)").matches;
+
+/* ===== Map: MapLibre with OpenFreeMap vector tiles (no key), restyled to the paper palette ===== */
+
+const MAP_STYLE = "https://tiles.openfreemap.org/styles/positron";
+const C = {
+  bg: "#EFE7DC", water: "#CBCFC8", park: "#E2DCC9", building: "#E6DDD1",
+  road: "#FBF8F2", roadMajor: "#F5ECDB", casing: "#D9CEBF", rail: "#BDB2A6",
+  text: "#6F625F", halo: "#EFE7DC", ink: "#2B2124", cover: "#5A1A21", head: "#B8392B",
+};
+let map = null, mapReady = false, pending = null, markers = [], current = null;
+
+const hoodBounds = () => {
+  const pts = NEIGHBORHOODS.flatMap(h => h.polygon);
+  return [[Math.min(...pts.map(p => p[1])), Math.min(...pts.map(p => p[0]))],
+          [Math.max(...pts.map(p => p[1])), Math.max(...pts.map(p => p[0]))]];
+};
+
+function initMap() {
+  if (typeof maplibregl === "undefined") { els.mapNote.hidden = false; return; }
+  try {
+    map = new maplibregl.Map({
+      container: "map", style: MAP_STYLE, bounds: hoodBounds(), fitBoundsOptions: { padding: 30 },
+      attributionControl: false, dragRotate: false, pitchWithRotate: false,
+    });
+  } catch (e) {
+    els.mapNote.hidden = false;
+    return;
+  }
+  map.touchZoomRotate.disableRotation();
+  map.addControl(new maplibregl.NavigationControl({ showCompass: false }), "top-left");
+  map.addControl(new maplibregl.AttributionControl({ compact: true }), "bottom-right");
+  const giveUp = setTimeout(() => { if (!mapReady) els.mapNote.hidden = false; }, 12000);
+  map.on("load", () => {
+    clearTimeout(giveUp);
+    try { restyle(); } catch (e) { console.warn("Map restyle skipped:", e); }
+    addNeighborhoods();
+    mapReady = true;
+    if (pending) { const p = pending; pending = null; updateMap(p.data, p.focus); }
+  });
+}
+
+// Keep street names and subway stations; hide landmarks, highway shields, peaks, house numbers.
+function restyle() {
+  const style = map.getStyle();
+  const source = Object.keys(style.sources).find(k => style.sources[k].type === "vector");
+  let font = null;
+  for (const layer of style.layers) {
+    const id = layer.id, sl = layer["source-layer"] || "", type = layer.type;
+    const hide = () => map.setLayoutProperty(id, "visibility", "none");
+    const paint = (k, v) => { try { map.setPaintProperty(id, k, v); } catch (e) { /* layer lacks this property */ } };
+    if (type === "symbol") {
+      const icon = JSON.stringify((layer.layout || {})["icon-image"] || "");
+      if (["poi", "mountain_peak", "aerodrome_label", "housenumber", "place", "park", "landcover", "landuse"].includes(sl)) { hide(); continue; }
+      if (sl === "transportation_name" && (/shield|motorway|ref/i.test(id) || /shield|road_/i.test(icon))) { hide(); continue; }
+      if (sl === "transportation_name") {
+        if (!font && (layer.layout || {})["text-font"]) font = layer.layout["text-font"];
+        paint("text-color", C.text); paint("text-halo-color", C.halo);
+      } else if (sl === "water_name") {
+        paint("text-color", "#8C918A"); paint("text-halo-color", C.halo);
+      } else {
+        hide();
+      }
+      continue;
+    }
+    if (type === "background") paint("background-color", C.bg);
+    else if (type === "fill") {
+      if (sl === "water") paint("fill-color", C.water);
+      else if (sl === "building") paint("fill-color", C.building);
+      else if (["park", "landcover", "landuse"].includes(sl)) paint("fill-color", C.park);
+    } else if (type === "line") {
+      if (sl === "transportation") {
+        if (/rail|transit|subway/i.test(id)) paint("line-color", C.rail);
+        else paint("line-color", /casing/i.test(id) ? C.casing : (/motorway|trunk|primary/i.test(id) ? C.roadMajor : C.road));
+      } else if (sl === "waterway") paint("line-color", C.water);
+      else if (sl === "boundary") hide();
+    }
+  }
+  if (source && font) {
+    const stations = ["all", ["==", ["get", "class"], "railway"]];
+    map.addLayer({ id: "nr-stations", type: "circle", source, "source-layer": "poi", minzoom: 13, filter: stations,
+      paint: { "circle-radius": 3.5, "circle-color": C.ink, "circle-stroke-color": C.halo, "circle-stroke-width": 1.5 } });
+    map.addLayer({ id: "nr-station-names", type: "symbol", source, "source-layer": "poi", minzoom: 14, filter: stations,
+      layout: { "text-field": ["get", "name"], "text-font": font, "text-size": 11, "text-offset": [0, 0.9],
+                "text-anchor": "top", "text-optional": true, "text-max-width": 8 },
+      paint: { "text-color": C.ink, "text-halo-color": C.halo, "text-halo-width": 1.5 } });
+  }
+}
+
+function addNeighborhoods() {
+  map.addSource("nr-hoods", { type: "geojson", data: { type: "FeatureCollection", features: NEIGHBORHOODS.map(h => ({
+    type: "Feature", properties: { name: h.name },
+    geometry: { type: "Polygon", coordinates: [[...h.polygon, h.polygon[0]].map(([lat, lng]) => [lng, lat])] },
+  })) } });
+  map.addLayer({ id: "nr-hood-fill", type: "fill", source: "nr-hoods", paint: { "fill-color": C.cover, "fill-opacity": 0.04 } });
+  map.addLayer({ id: "nr-hood-line", type: "line", source: "nr-hoods",
+    paint: { "line-color": C.cover, "line-opacity": 0.55, "line-width": 1.5, "line-dasharray": [3, 3] } });
+  for (const h of NEIGHBORHOODS) {
+    const lat = h.polygon.reduce((s, p) => s + p[0], 0) / h.polygon.length;
+    const lng = h.polygon.reduce((s, p) => s + p[1], 0) / h.polygon.length;
+    const el = document.createElement("div");
+    el.className = "hood-label";
+    el.textContent = h.name;
+    new maplibregl.Marker({ element: el, anchor: "center" }).setLngLat([lng, lat]).addTo(map);
+  }
+  map.addSource("nr-route", { type: "geojson", data: { type: "FeatureCollection", features: [] } });
+  map.addLayer({ id: "nr-route-line", type: "line", source: "nr-route",
+    layout: { "line-cap": "round", "line-join": "round" },
+    paint: { "line-color": C.cover, "line-width": 3, "line-opacity": 0.85, "line-dasharray": [1, 2] } });
+}
+
+function fitTo(data) {
+  if (!map || !mapReady) return;
+  if (!data) { map.fitBounds(hoodBounds(), { padding: 30, duration: 600 }); return; }
+  const b = new maplibregl.LngLatBounds();
+  data.points.forEach(p => b.extend([p.lng, p.lat]));
+  map.fitBounds(b, { padding: { top: 50, left: 50, right: 50, bottom: 80 }, maxZoom: 16, duration: 700 });
+}
+
+function clearMap() {
+  current = null;
+  els.legend.textContent = "";
+  if (!document.body.classList.contains("map-open")) els.mapToggle.textContent = "Show map";
+  if (!mapReady) { pending = null; return; }
+  markers.forEach(m => m.marker.remove());
+  markers = [];
+  map.getSource("nr-route").setData({ type: "FeatureCollection", features: [] });
+  fitTo(null);
+}
+
+function updateMap(data, focus = null) {
+  if (!data) return;
+  if (!mapReady) { pending = { data, focus }; current = data; return; }
+  markers.forEach(m => m.marker.remove());
+  markers = [];
+  current = data;
+  const route = data.kind === "route";
+  map.getSource("nr-route").setData(route
+    ? { type: "Feature", geometry: { type: "LineString", coordinates: data.points.map(p => [p.lng, p.lat]) } }
+    : { type: "FeatureCollection", features: [] });
+  for (const p of data.points) {
+    const el = document.createElement("div");
+    el.className = route ? "stop" : "pin";
+    if (route) el.textContent = p.n;
+    el.setAttribute("role", "button");
+    el.setAttribute("tabindex", "0");
+    el.setAttribute("aria-label", `${p.name}. ${p.line || ""}`);
+    const popup = new maplibregl.Popup({ offset: route ? 18 : 12, closeButton: true, maxWidth: "260px" })
+      .setHTML(`<strong>${escapeHtml(p.name)}</strong>${escapeHtml(p.line || "")}`);
+    const marker = new maplibregl.Marker({ element: el, anchor: "center" }).setLngLat([p.lng, p.lat]).setPopup(popup).addTo(map);
+    el.addEventListener("keydown", e => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); marker.togglePopup(); } });
+    markers.push({ name: p.name, marker });
+  }
+  els.legend.textContent = route ? `Your route, ${data.points.length} stops in order` : `${data.points.length} bars from this answer`;
+  if (!document.body.classList.contains("map-open")) {
+    els.mapToggle.textContent = route ? `Show map (${data.points.length} stops)` : "Show map";
+  }
+  if (focus) focusBar(focus); else fitTo(data);
+}
+
+function focusBar(name) {
+  const m = markers.find(x => x.name === name);
+  if (!m) return;
+  markers.forEach(x => { if (x !== m && x.marker.getPopup().isOpen()) x.marker.togglePopup(); });
+  map.flyTo({ center: m.marker.getLngLat(), zoom: Math.max(map.getZoom(), 15.5), duration: 700 });
+  if (!m.marker.getPopup().isOpen()) m.marker.togglePopup();
+}
+
+// From a bar name in any reply: show that reply's bars (or route) and open this one.
+function showOnMap(data, name) {
+  const go = () => {
+    if (!mapReady) { pending = { data, focus: name }; return; }
+    if (current !== data) updateMap(data, name);
+    else focusBar(name);
+  };
+  if (isSmall() && !document.body.classList.contains("map-open")) setMapOpen(true, go);
+  else go();
+}
+
+initMap();
+els.input.focus();
+</script>
+</body>
 </html>

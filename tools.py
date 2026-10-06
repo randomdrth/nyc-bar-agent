@@ -1,4 +1,4 @@
-"""The tools Two-Drink Minimum can run, and the JSON schemas that describe them to the model.
+"""The tools Next Round can run, and the JSON schemas that describe them to the model.
 
 Every tool returns a JSON string. Errors come back as {"error": "..."} with a
 message written for the model: what went wrong and what to try instead.
@@ -47,15 +47,35 @@ def _matches_style(bar: dict, style: str) -> bool:
 
 
 def _check_price(max_price) -> int | None:
-    if max_price is None:
+    if max_price is None or max_price == "":
         return None
+    if isinstance(max_price, str) and re.fullmatch(r"\s*\$+\s*", max_price):
+        max_price = max_price.strip().count("$")  # "$$" means 2
     try:
-        max_price = int(max_price)
+        max_price = int(float(max_price))
     except (TypeError, ValueError):
         raise ToolError("max_price must be a number from 1 ($) to 4 ($$$$).")
     if not 1 <= max_price <= 4:
         raise ToolError("max_price must be from 1 ($) to 4 ($$$$).")
     return max_price
+
+
+def _check_rating(min_rating) -> float | None:
+    """Accept 4, 4.5, '4+', '4 stars', '4.5 and up'."""
+    if min_rating is None or min_rating == "":
+        return None
+    if isinstance(min_rating, str):
+        m = re.search(r"\d+(\.\d+)?", min_rating)
+        if not m:
+            raise ToolError("min_rating must be a number from 1 to 5, like 4 or 4.5.")
+        min_rating = m.group()
+    try:
+        value = float(min_rating)
+    except (TypeError, ValueError):
+        raise ToolError("min_rating must be a number from 1 to 5, like 4 or 4.5.")
+    if not 1 <= value <= 5:
+        raise ToolError("min_rating must be from 1 to 5. Google ratings go up to 5 stars.")
+    return value
 
 
 def _resolve_when(day: str | None, time: str | None) -> tuple[int, int, list[str]]:
@@ -98,7 +118,8 @@ def _deal_info(deal: dict) -> dict:
 # --- Tool: get_happy_hours ---
 
 def get_happy_hours(neighborhood: str, day: str | None = None, time: str | None = None,
-                    style: str = "any", with_food: bool = False, max_price: int | None = None) -> str:
+                    style: str = "any", with_food: bool = False, max_price: int | None = None,
+                    min_rating: float | None = None) -> str:
     try:
         hood = bd.resolve_neighborhood(neighborhood)
         style = (style or "any").strip().lower()
@@ -106,6 +127,7 @@ def get_happy_hours(neighborhood: str, day: str | None = None, time: str | None 
             raise ToolError(f"Unknown style '{style}'. Use one of: any, cocktail, wine, beer. "
                             f"Dive bars are not a filter; use find_bars and judge from the results.")
         max_price = _check_price(max_price)
+        min_rating = _check_rating(min_rating)
         day_idx, t, notes = _resolve_when(day, time)
     except ToolError as e:
         return json.dumps({"error": str(e)})
@@ -123,6 +145,15 @@ def get_happy_hours(neighborhood: str, day: str | None = None, time: str | None 
                 kept.append(b)
             elif level <= max_price:
                 kept.append(b)
+        candidates = kept
+    below_rating = 0
+    if min_rating is not None:
+        kept = []
+        for b in candidates:
+            if (b.get("rating") or 0) >= min_rating:
+                kept.append(b)
+            else:
+                below_rating += 1
         candidates = kept
 
     for bar in candidates:
@@ -171,6 +202,7 @@ def get_happy_hours(neighborhood: str, day: str | None = None, time: str | None 
             "style": style,
             "with_food": with_food,
             "max_price": ("$" * max_price) if max_price else None,
+            "min_rating": min_rating,
         },
         "happening_now": now_list[:MAX_RESULTS],
         "starting_soon": soon_list[:MAX_SOON_RESULTS],
@@ -184,6 +216,9 @@ def get_happy_hours(neighborhood: str, day: str | None = None, time: str | None 
         result["assumptions"] = notes
     if price_unknown:
         result["price_note"] = f"{price_unknown} bars have no price level on Google and were kept."
+    if below_rating:
+        noun = "bar with a deal was" if below_rating == 1 else "bars with deals were"
+        result["rating_note"] = f"{below_rating} {noun} left out for a Google rating below {min_rating:g}."
     if not now_list and not soon_list:
         result["suggestion"] = _nothing_found_hint(candidates, day_idx, t, with_food)
     return json.dumps(result)
@@ -456,8 +491,8 @@ def _happy_hour_status(place_id: str, day_idx: int) -> str:
 
 
 def find_bars(neighborhood: str, style: str = "any", query: str | None = None, day: str | None = None,
-              time: str | None = None, max_price: int | None = None, outdoor_seating: bool = False,
-              live_music: bool = False, good_for_groups: bool = False) -> str:
+              time: str | None = None, max_price: int | None = None, min_rating: float | None = None,
+              outdoor_seating: bool = False, live_music: bool = False, good_for_groups: bool = False) -> str:
     try:
         hood = bd.resolve_neighborhood(neighborhood)
         style = (style or "any").strip().lower()
@@ -465,6 +500,7 @@ def find_bars(neighborhood: str, style: str = "any", query: str | None = None, d
             raise ToolError(f"Unknown style '{style}'. Use any, cocktail, wine, or beer. For dive bars, "
                             f"rooftops, speakeasies and similar, put the word in 'query'.")
         max_price = _check_price(max_price)
+        min_rating = _check_rating(min_rating)
         query = (query or "").strip()
         if len(query) > 60:
             raise ToolError("Keep 'query' short, a few words like 'dive', 'rooftop', or 'jazz'.")
@@ -500,6 +536,9 @@ def find_bars(neighborhood: str, style: str = "any", query: str | None = None, d
         level = bd.price_level(b)
         if max_price is not None and level is not None and level > max_price:
             dropped["over the price limit"] += 1
+            continue
+        if min_rating is not None and (b.get("rating") or 0) < min_rating:
+            dropped[f"rated below {min_rating:g}"] += 1
             continue
         hours = bd.open_intervals(b)
         if hours is None:
@@ -541,6 +580,7 @@ def find_bars(neighborhood: str, style: str = "any", query: str | None = None, d
         "query": {"neighborhood": hood_name, "style": style, "search_words": query or None,
                   "open_at": f"{bd.DAY_NAMES[day_idx]} {bd.fmt_clock(t)}" if open_filter else None,
                   "max_price": ("$" * max_price) if max_price else None,
+                  "min_rating": min_rating,
                   "features": [FEATURES[f] for f in wanted] or None},
         "results": results,
         "counts": {"found": len(bars), "matched": len(kept), "shown": len(results)},
@@ -677,16 +717,20 @@ TOOLS = [
                                      "description": "'West Village', 'East Village', or 'Upper West Side' "
                                                     "(aliases WV, EV, UWS work)."},
                     "day": {"type": "string",
-                            "description": "Weekday like 'Thursday', or 'today', 'tomorrow', or YYYY-MM-DD. "
-                                           "Omit for today in New York."},
+                            "description": "Weekday like 'Thursday' or 'Friday night', or 'today', 'tomorrow', "
+                                           "or YYYY-MM-DD. Omit for today in New York."},
                     "time": {"type": "string",
-                             "description": "Time like '6pm', '6:30 pm', or '18:00'. Omit for now in New York."},
+                             "description": "Time like '6pm', '6:30 pm', '18:00', or 'after work', 'evening', "
+                                            "'late'. Omit for now in New York."},
                     "style": {"type": "string", "enum": ["any", "cocktail", "wine", "beer"],
                               "description": "Kind of bar or drinks. Default 'any'."},
                     "with_food": {"type": "boolean",
                                   "description": "Only deals that include food. Default false."},
                     "max_price": {"type": "integer",
                                   "description": "Google price level cap, 1 ($) to 4 ($$$$). Omit for no cap."},
+                    "min_rating": {"type": "number",
+                                   "description": "Only bars with at least this Google rating, 1 to 5, e.g. 4 or 4.5. "
+                                                  "Omit for no minimum."},
                 },
                 "required": ["neighborhood"],
             },
@@ -754,6 +798,9 @@ TOOLS += [
                     "time": {"type": "string",
                              "description": "Only bars open at this time, e.g. '11pm'. Optional."},
                     "max_price": {"type": "integer", "description": "Price cap, 1 ($) to 4 ($$$$). Optional."},
+                    "min_rating": {"type": "number",
+                                   "description": "Only bars with at least this Google rating, 1 to 5, e.g. 4 or 4.5. "
+                                                  "Omit for no minimum."},
                     "outdoor_seating": {"type": "boolean", "description": "Only bars with outdoor seating."},
                     "live_music": {"type": "boolean", "description": "Only bars with live music."},
                     "good_for_groups": {"type": "boolean", "description": "Only bars good for groups."},

@@ -1,7 +1,8 @@
 """Run scripted conversations against the real agent (Gemini + live tools) and print every step.
 
 Usage:
-    uv run scripts/test_conversations.py
+    uv run scripts/test_conversations.py          # all conversations
+    uv run scripts/test_conversations.py 6 7 8    # only these (numbered from 1)
 
 Uses a few Places searches and about 15 Gemini calls. Each conversation runs in
 its own session, the same way the browser does.
@@ -33,6 +34,16 @@ CONVERSATIONS = [
     ("A brand new session should remember nothing", [
         "What did I just ask you about?",
     ]),
+    ("Rating filter and natural phrasing", [
+        "Wine bars rated 4 stars and up with happy hour food on the Upper West Side, Saturday 4pm",
+        "What about Friday after work in the East Village, only 4.5 and up?",
+    ]),
+    ("A live website check (should call check_happy_hour_online)", [
+        "Can you check Bateman's website right now and see if they have a happy hour?",
+    ]),
+    ("An ambiguous bar name in a crawl (two Vin Sur Vingt locations)", [
+        "Plan a crawl Thursday at 5pm on the UWS: Vin Sur Vingt, Jake's Dilemma, and The Consulate.",
+    ]),
 ]
 
 
@@ -55,8 +66,11 @@ def summarize(result: str) -> str:
     return result[:120]
 
 
-def run() -> None:
-    for title, turns in CONVERSATIONS:
+def run(only: set[int] | None = None) -> None:
+    for number, (title, turns) in enumerate(CONVERSATIONS, 1):
+        if only and number not in only:
+            continue
+        title = f"{number}. {title}"
         print(f"\n{'=' * 70}\n{title}\n{'=' * 70}")
         session_id = None
         for message in turns:
@@ -71,4 +85,4 @@ def run() -> None:
 
 
 if __name__ == "__main__":
-    run()
+    run({int(a) for a in sys.argv[1:]} or None)

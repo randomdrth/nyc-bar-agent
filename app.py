@@ -1,4 +1,4 @@
-"""Two-Drink Minimum: a tool-calling agent for happy hours and bar crawls in Manhattan.
+"""Next Round: a tool-calling agent for happy hours and bar crawls in Manhattan.
 
 FastAPI + LiteLLM + Gemini. Keeps the starter's /chat shape:
 {"response": str, "session_id": str, "tool_calls": [{"name", "args", "result"}]}.
@@ -36,7 +36,7 @@ MAX_SESSIONS = 500
 MAX_MESSAGE_CHARS = 2000
 
 logging.getLogger("LiteLLM").setLevel(logging.ERROR)
-log = logging.getLogger("two_drink_minimum")
+log = logging.getLogger("next_round")
 logging.basicConfig(level=logging.INFO)
 
 bd.load()  # fail at startup, not on the first question, if the data file is missing
@@ -150,7 +150,7 @@ def trim_history(history: list[dict], limit: int = MAX_HISTORY_MESSAGES) -> list
 
 # --- FastAPI App ---
 
-app = FastAPI(title="Two-Drink Minimum")
+app = FastAPI(title="Next Round")
 
 
 class ChatRequest(BaseModel):

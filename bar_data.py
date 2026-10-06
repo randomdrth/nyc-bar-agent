@@ -1,4 +1,4 @@
-"""Shared data and time logic for the Two-Drink Minimum tools.
+"""Shared data and time logic for the Next Round tools.
 
 Time model: every moment in the week is a "week minute", minutes since Monday
 00:00 (0 to 10,079). Opening hours and happy hour windows become intervals of
@@ -126,8 +126,11 @@ def now_nyc() -> datetime:
 def parse_day(text: str | None, now: datetime | None = None) -> int:
     """Return a day index, 0 = Monday. Accepts names, abbreviations, today/tonight/tomorrow, or YYYY-MM-DD."""
     now = now or now_nyc()
-    t = (text or "").strip().lower()
-    t = re.sub(r"^(this|next|on|coming)\s+", "", t)
+    t = re.sub(r"\s+", " ", (text or "").strip().lower())
+    t = re.sub(r"^(on |this |next |coming |the )+", "", t)
+    t = re.sub(r" (night|nite|evening|afternoon|morning|eve)$", "", t)  # "Friday night" is Friday
+    if t in ("weekend", "the weekend", "this weekend"):
+        raise ToolError("'weekend' covers two days. Pick 'Saturday' or 'Sunday', or call once for each.")
     if t in ("", "today", "tonight", "now"):
         return now.weekday()
     if t == "tomorrow":
@@ -147,9 +150,14 @@ def parse_day(text: str | None, now: datetime | None = None) -> int:
 def parse_time(text: str | None, now: datetime | None = None) -> tuple[int, str | None]:
     """Return (minutes after midnight, note). The note explains any assumption made."""
     now = now or now_nyc()
-    t = (text or "").strip().lower().replace(".", "")
+    raw = (text or "").strip()
+    t = re.sub(r"\s+", " ", raw.lower().replace(".", ""))
+    t = re.sub(r"^(at|around|about|by|from|~) ", "", t).strip()
     if t in ("", "now", "right now"):
         return now.hour * 60 + now.minute, None
+    if t in TIME_PHRASES:
+        minutes = TIME_PHRASES[t]
+        return minutes, f"'{raw}' read as {fmt_clock(minutes)}"
     if t == "noon":
         return 12 * 60, None
     if t == "midnight":
@@ -166,6 +174,17 @@ def parse_time(text: str | None, now: datetime | None = None) -> tuple[int, str 
     if 1 <= hour <= 11:  # "6" at a bar means 6pm
         return (hour + 12) * 60 + minute, f"'{text}' read as {hour}:{minute:02d} PM"
     return hour * 60 + minute, None
+
+
+# Everyday time words, matching the definitions in the system prompt
+TIME_PHRASES = {
+    "after work": 17 * 60 + 30, "afterwork": 17 * 60 + 30,
+    "early evening": 17 * 60, "happy hour": 17 * 60,
+    "evening": 18 * 60, "this evening": 18 * 60,
+    "afternoon": 15 * 60, "this afternoon": 15 * 60,
+    "night": 20 * 60, "tonight": 20 * 60,
+    "late": 22 * 60, "late night": 22 * 60, "latenight": 22 * 60,
+}
 
 
 def week_minute(day: int, minutes: int) -> int:
