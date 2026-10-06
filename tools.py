@@ -367,9 +367,13 @@ def plan_bar_crawl(bars: list, day: str | None = None, start_time: str | None = 
 
     meters = sum(bd.walk_meters(a, b) for a, b in zip(best["stops"], best["stops"][1:]))
     stops_out = []
-    for i, s in enumerate(best["stops"], 1):
-        stop = {k: v for k, v in s.items() if not k.startswith("_") and k != "notes"}
-        stops_out.append({"stop": i, **stop})
+    for i, s in enumerate(best["stops"]):
+        stop = {k: v for k, v in s.items()
+                if not k.startswith("_") and k not in ("notes", "walk_minutes_from_previous")}
+        # Walk to the NEXT stop, so each line of the answer reads "...then walk N min"
+        nxt = best["stops"][i + 1] if i + 1 < len(best["stops"]) else None
+        stop["walk_to_next_minutes"] = nxt["walk_minutes_from_previous"] if nxt else None
+        stops_out.append({"stop": i + 1, **stop})
 
     result = {
         "query": {"day": bd.DAY_NAMES[day_idx], "start": bd.fmt_clock(t0),
@@ -796,8 +800,13 @@ def run_tool(name: str, args: dict) -> str:
         return json.dumps({"error": f"Arguments for {name} must be a JSON object."})
     try:
         return TOOL_MAP[name](**args)
-    except TypeError as e:
-        return json.dumps({"error": f"Bad arguments for {name}: {e}. Check the parameter names in its schema."})
+    except TypeError:
+        params = next(t["function"]["parameters"] for t in TOOLS if t["function"]["name"] == name)
+        required = params.get("required", [])
+        optional = [p for p in params["properties"] if p not in required]
+        return json.dumps({"error": f"Bad arguments for {name}. Required: {', '.join(required) or 'none'}. "
+                                    f"Optional: {', '.join(optional) or 'none'}. You sent: "
+                                    f"{', '.join(args) or 'nothing'}. Call it again with these names."})
     except Exception as e:  # never crash the agent loop
         return json.dumps({"error": f"{name} failed unexpectedly ({type(e).__name__}: {str(e)[:200]}). "
                                     f"Try different arguments, or answer without this tool and say so."})
