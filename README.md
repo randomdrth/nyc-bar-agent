@@ -2,7 +2,7 @@
 
 Happy hours and bar crawls for the West Village, East Village, and Upper West Side.
 
-**Live app:** [add Cloud Run URL]
+**Live app:** https://nyc-bar-agent-git-808237570445.europe-west1.run.app
 
 ## What it is
 
